@@ -1,0 +1,38 @@
+<section class="page-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a routerLink="/">Inicio</a> &gt; <span>Preguntas Frecuentes</span>
+    </nav>
+    <h1>Preguntas Frecuentes</h1>
+    <p>Resolvemos las dudas más comunes sobre nuestros servicios de plomería en Bogotá.</p>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="faq__list">
+      @for (faq of faqs; track $index) {
+        <div class="faq__item" [class.faq__item--open]="expandedIndex === $index">
+          <button class="faq__question" (click)="toggle($index)" [attr.aria-expanded]="expandedIndex === $index">
+            <h2>{{ faq.pregunta }}</h2>
+            <span class="faq__icon">{{ expandedIndex === $index ? '−' : '+' }}</span>
+          </button>
+          @if (expandedIndex === $index) {
+            <div class="faq__answer">
+              <p>{{ faq.respuesta }}</p>
+            </div>
+          }
+        </div>
+      }
+    </div>
+
+    <div class="faq__cta">
+      <h2>¿Tiene otra pregunta?</h2>
+      <p>No dude en contactarnos. Estamos disponibles para resolver todas sus dudas.</p>
+      <div class="faq__cta-actions">
+        <a href="tel:+573001234567" class="btn btn--primary">📞 Llamar Ahora</a>
+        <a routerLink="/contacto" class="btn btn--secondary">Ir a Contacto</a>
+      </div>
+    </div>
+  </div>
+</section>

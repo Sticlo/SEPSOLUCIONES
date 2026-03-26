@@ -1,0 +1,24 @@
+<section class="page-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a routerLink="/">Inicio</a> &gt; <span>Servicios</span>
+    </nav>
+    <h1>Servicios de Plomería en Bogotá</h1>
+    <p>Detección de fugas, destapes, inspección con cámara y mantenimiento empresarial en toda Bogotá.</p>
+  </div>
+</section>
+
+<section class="servicios-list">
+  <div class="container">
+    <div class="servicios-list__grid">
+      @for (servicio of servicios; track servicio.slug) {
+        <a [routerLink]="['/servicios', servicio.slug]" class="servicio-card">
+          <span class="servicio-card__icon">{{ servicio.icono }}</span>
+          <h2>{{ servicio.nombre }}</h2>
+          <p>{{ servicio.descripcionCorta }}</p>
+          <span class="servicio-card__link">Ver más →</span>
+        </a>
+      }
+    </div>
+  </div>
+</section>
