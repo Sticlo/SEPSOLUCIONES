@@ -1,0 +1,54 @@
+<section class="page-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a routerLink="/">Inicio</a> &gt;
+      <a routerLink="/zonas">Zonas</a> &gt;
+      <span>{{ zona.nombre }}</span>
+    </nav>
+    <h1>Plomero en {{ zona.nombre }}, Bogotá</h1>
+    <p>Servicio profesional de plomería en {{ zona.nombre }} y alrededores.</p>
+  </div>
+</section>
+
+<section class="zona-detail">
+  <div class="container">
+    <div class="zona-detail__content">
+      <div class="zona-detail__main">
+        @for (parrafo of zona.contenido; track $index) {
+          <p>{{ parrafo }}</p>
+        }
+
+        <h2>Servicios de Plomería en {{ zona.nombre }}</h2>
+        <div class="zona-detail__servicios">
+          @for (servicio of servicios; track servicio.slug) {
+            <a [routerLink]="['/servicios', servicio.slug]" class="servicio-mini">
+              <div>
+                <h3>{{ servicio.nombre }}</h3>
+                <p>{{ servicio.descripcionCorta }}</p>
+              </div>
+            </a>
+          }
+        </div>
+
+        <div class="zona-detail__cta">
+          <h2>¿Necesita un plomero en {{ zona.nombre }}?</h2>
+          <p>Llámenos ahora y un técnico estará en su ubicación en el menor tiempo posible.</p>
+          <div class="zona-detail__cta-actions">
+            <a href="tel:+573001234567" class="btn btn--primary">Llamar Ahora</a>
+            <a href="https://wa.me/573001234567" class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <aside class="zona-detail__sidebar">
+        <h3>Otras Zonas</h3>
+        @for (otra of otrasZonas; track otra.slug) {
+          <a [routerLink]="['/zonas', otra.slug]" class="sidebar-link">
+            {{ otra.nombre }}
+          </a>
+        }
+        <a routerLink="/zonas" class="sidebar-link sidebar-link--all">Ver todas las zonas →</a>
+      </aside>
+    </div>
+  </div>
+</section>

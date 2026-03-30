@@ -1,0 +1,123 @@
+<section class="page-header page-header--zonas">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a routerLink="/">Inicio</a> &gt; <span>Zonas de Servicio</span>
+    </nav>
+    <h1>Zonas de Servicio de Plomería en Bogotá</h1>
+    <p>Cobertura profesional en las 20 localidades de Bogotá con respuesta inmediata 24/7.</p>
+  </div>
+</section>
+
+<!-- Trust strip -->
+<section class="zonas-trust">
+  <div class="container">
+    <div class="zonas-trust__inner">
+      <div class="zonas-trust__item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span><strong>20</strong> localidades</span>
+      </div>
+      <div class="zonas-trust__item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Respuesta en <strong>20–55 min</strong></span>
+      </div>
+      <div class="zonas-trust__item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>Emergencias <strong>24/7</strong></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Map + Cards -->
+<section class="zonas-main">
+  <div class="container">
+    <div class="zonas-main__layout">
+
+      <!-- Mapa interactivo de Bogota -->
+      <div class="zonas-main__map" data-animate="fade-up">
+        <h2 class="zonas-main__map-title">Cobertura en Bogota, D.C.</h2>
+        <div class="zonas-main__svg-wrap">
+          <div class="bogota-map__frame">
+            <img src="images/og/Mapa_Bogota.svg" alt="Mapa de localidades de Bogotá" class="bogota-map__img">
+            <svg viewBox="0 0 1024 720" class="bogota-map__overlay" xmlns="http://www.w3.org/2000/svg" aria-label="Puntos de cobertura de plomería en Bogotá">
+
+              <!-- Todas las localidades de Bogotá (interactivas) -->
+              @for (zona of zonas; track zona.slug) {
+                <g class="bogota-map__zone"
+                   [class.is-active]="hoveredSlug === zona.slug"
+                   (mouseenter)="hoveredSlug = zona.slug"
+                   (mouseleave)="hoveredSlug = null"
+                   (click)="goToZona(zona.slug)"
+                   (keydown.enter)="goToZona(zona.slug)"
+                   tabindex="0"
+                   [attr.aria-label]="'Ver zona ' + zona.nombre"
+                   style="cursor:pointer">
+                  <circle class="bogota-map__pulse"
+                    [attr.cx]="mapDots[zona.slug].x"
+                    [attr.cy]="mapDots[zona.slug].y" r="26"/>
+                  <circle class="bogota-map__dot"
+                    [attr.cx]="mapDots[zona.slug].x"
+                    [attr.cy]="mapDots[zona.slug].y" r="8"/>
+                  <text class="bogota-map__label"
+                    [attr.x]="mapDots[zona.slug].x"
+                    [attr.y]="mapDots[zona.slug].y - 18"
+                    text-anchor="middle">{{ zona.nombre }}</text>
+                </g>
+              }
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cards (todas iguales) -->
+      <div class="zonas-main__cards">
+        @for (zona of zonas; track zona.slug; let i = $index) {
+          <a [routerLink]="['/zonas', zona.slug]" class="zona-card"
+             [class.is-active]="hoveredSlug === zona.slug"
+             (mouseenter)="hoveredSlug = zona.slug"
+             (mouseleave)="hoveredSlug = null"
+             data-animate="fade-up" [attr.data-animate-delay]="i * 60">
+            <div class="zona-card__head">
+              <h2 class="zona-card__title">Plomero en {{ zona.nombre }}</h2>
+              <div class="zona-card__time">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                {{ zona.tiempoRespuesta }}
+              </div>
+            </div>
+            <p class="zona-card__desc">{{ zona.destacado }}</p>
+            <div class="zona-card__footer">
+              <div class="zona-card__barrios">
+                @for (barrio of zona.barrios; track barrio) {
+                  <span>{{ barrio }}</span>
+                }
+              </div>
+              <span class="zona-card__arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="zonas-cta" data-animate="fade-up">
+  <div class="container">
+    <div class="zonas-cta__content">
+      <h2>¿Necesita un plomero en Bogotá?</h2>
+      <p>Tenemos cobertura en las 20 localidades de Bogotá. Contáctenos para atención inmediata en su zona.</p>
+      <div class="zonas-cta__actions">
+        <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer" class="zonas-cta__btn zonas-cta__btn--wa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          Escribir por WhatsApp
+        </a>
+        <a href="tel:+573001234567" class="zonas-cta__btn zonas-cta__btn--call">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Llamar Ahora — 24/7
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
