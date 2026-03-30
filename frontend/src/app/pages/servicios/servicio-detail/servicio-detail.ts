@@ -22,7 +22,9 @@ export default class ServicioDetail implements OnInit {
     if (!found) return;
 
     this.servicio = found;
-    this.otrosServicios = SERVICIOS.filter(s => s.slug !== slug).slice(0, 4);
+    this.otrosServicios = SERVICIOS
+      .filter(s => s.categoria === found.categoria && s.slug !== slug)
+      .slice(0, 5);
 
     this.seo.updateSeo({
       title: `${this.servicio.nombre} en Bogotá`,

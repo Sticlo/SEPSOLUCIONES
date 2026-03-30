@@ -1355,7 +1355,6 @@
   position: relative;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  animation: zona-fade-in 0.5s ease both;
 
   &__pin {
     width: 44px;
@@ -1708,6 +1707,33 @@
   }
 }
 
+// ══════════════════════════════════════════════════════════
+//  SCROLL REVEAL – GPU-composited (opacity + transform only)
+//  Activated by IntersectionObserver via .animate-init + .is-visible
+//  SSR-safe: elements stay visible until JS hydrates
+// ══════════════════════════════════════════════════════════
+[data-animate].animate-init {
+  opacity: 0;
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+
+  &[data-animate="fade-up"] {
+    transform: translateY(40px);
+  }
+
+  &[data-animate="scale-up"] {
+    transform: translateY(30px) scale(0.96);
+  }
+
+  // ── Visible state ──
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
 // ── Reducir animaciones para rendimiento ────────
 @media (prefers-reduced-motion: reduce) {
   .hero__announcement-dot,
@@ -1723,5 +1749,11 @@
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
+  }
+
+  [data-animate].animate-init {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }

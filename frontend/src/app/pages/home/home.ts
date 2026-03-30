@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, afterNextRender, DestroyRef, ElementRef } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { SeoService } from '../../core/services/seo.service';
@@ -13,8 +13,45 @@ import { ZONAS } from '../../shared/data/zonas.data';
 })
 export default class Home implements OnInit {
   private readonly seo = inject(SeoService);
+  private readonly el = inject(ElementRef);
+  private readonly destroyRef = inject(DestroyRef);
   readonly servicios = SERVICIOS;
+  readonly serviciosDestacados = SERVICIOS.filter(s =>
+    ['destaqueos-y-desagues', 'deteccion-de-fugas', 'redes-hidraulicas-y-sanitarias', 'plomeria-restaurantes'].includes(s.slug)
+  );
   readonly zonas = ZONAS.slice(0, 6);
+
+  constructor() {
+    afterNextRender(() => this.initScrollAnimations());
+  }
+
+  private initScrollAnimations(): void {
+    if (globalThis.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const elements = this.el.nativeElement.querySelectorAll('[data-animate]') as NodeListOf<HTMLElement>;
+    if (!elements.length) return;
+
+    elements.forEach(el => {
+      el.classList.add('animate-init');
+      const delay = el.dataset['animateDelay'];
+      if (delay) el.style.transitionDelay = `${delay}ms`;
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            (entry.target as HTMLElement).classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        }
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
+    );
+
+    elements.forEach(el => observer.observe(el));
+    this.destroyRef.onDestroy(() => observer.disconnect());
+  }
 
   formData = {
     nombre: '',
