@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy, NgZone, inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { CONTACT_INFO } from '../../../shared/constants/contact-info';
 
 @Component({
   selector: 'app-header',
@@ -12,6 +13,7 @@ export class Header implements OnInit, OnDestroy {
   private readonly ngZone = inject(NgZone);
   private readonly platformId = inject(PLATFORM_ID);
   private scrollListener?: () => void;
+  readonly contact = CONTACT_INFO;
   menuOpen = false;
   scrolled = false;
 

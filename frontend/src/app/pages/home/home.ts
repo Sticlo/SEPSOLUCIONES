@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { SeoService } from '../../core/services/seo.service';
 import { SERVICIOS } from '../../shared/data/servicios.data';
 import { ZONAS } from '../../shared/data/zonas.data';
+import { CONTACT_INFO } from '../../shared/constants/contact-info';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,7 @@ export default class Home implements OnInit {
   private readonly seo = inject(SeoService);
   private readonly el = inject(ElementRef);
   private readonly destroyRef = inject(DestroyRef);
+  readonly contact = CONTACT_INFO;
   readonly servicios = SERVICIOS;
   readonly serviciosDestacados = SERVICIOS.filter(s =>
     ['destaqueos-y-desagues', 'deteccion-de-fugas', 'redes-hidraulicas-y-sanitarias', 'plomeria-restaurantes'].includes(s.slug)
@@ -22,7 +24,50 @@ export default class Home implements OnInit {
   readonly zonas = ZONAS.slice(0, 6);
 
   constructor() {
-    afterNextRender(() => this.initScrollAnimations());
+    afterNextRender(() => {
+      this.initScrollAnimations();
+      this.initCounterAnimations();
+    });
+  }
+
+  private initCounterAnimations(): void {
+    if (globalThis.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const counters = this.el.nativeElement.querySelectorAll('[data-count]') as NodeListOf<HTMLElement>;
+    if (!counters.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            this.animateCounter(entry.target as HTMLElement);
+            observer.unobserve(entry.target);
+          }
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    counters.forEach(el => observer.observe(el));
+    this.destroyRef.onDestroy(() => observer.disconnect());
+  }
+
+  private animateCounter(el: HTMLElement): void {
+    const target = parseInt(el.dataset['count'] || '0', 10);
+    const prefix = el.dataset['prefix'] || '';
+    const suffix = el.dataset['suffix'] || '';
+    const duration = 2200;
+    const start = performance.now();
+
+    const step = (now: number) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(eased * target);
+      el.textContent = `${prefix}${current}${suffix}`;
+      if (progress < 1) requestAnimationFrame(step);
+    };
+
+    requestAnimationFrame(step);
   }
 
   private initScrollAnimations(): void {
@@ -69,7 +114,7 @@ export default class Home implements OnInit {
       mensaje ? `Mensaje: ${mensaje}` : ''
     ].filter(Boolean);
     const text = encodeURIComponent(lines.join('\n'));
-    window.open(`https://wa.me/573001234567?text=${text}`, '_blank');
+    window.open(`${this.contact.whatsapp}?text=${text}`, '_blank');
   }
 
   ngOnInit(): void {
@@ -89,8 +134,8 @@ export default class Home implements OnInit {
         'alternateName': 'SEP Soluciones',
         'description': 'Empresa de plomería profesional en Bogotá. Detección de fugas, destape de tuberías, inspección con cámara y mantenimiento para empresas. Atención 24/7.',
         'url': 'https://www.sepsoluciones.com',
-        'telephone': '+573001234567',
-        'email': 'info@sepsoluciones.com',
+        'telephone': CONTACT_INFO.phoneFormatted,
+        'email': CONTACT_INFO.email,
         'address': {
           '@type': 'PostalAddress',
           'addressLocality': 'Bogotá',

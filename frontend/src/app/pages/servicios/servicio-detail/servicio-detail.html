@@ -36,7 +36,7 @@
           <h2>¿Necesita servicio de {{ servicio.nombre }}?</h2>
           <p>Contáctenos ahora para una cotización sin compromiso.</p>
           <div class="servicio-detail__cta-actions">
-            <a href="tel:+573001234567" class="btn btn--primary">Llamar Ahora</a>
+            <a [href]="'tel:' + contact.phoneFormatted" class="btn btn--primary">Llamar Ahora</a>
             <a routerLink="/contacto" class="btn btn--secondary">Solicitar Cotización</a>
           </div>
         </div>

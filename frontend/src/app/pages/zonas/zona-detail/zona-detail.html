@@ -34,8 +34,8 @@
           <h2>¿Necesita un plomero en {{ zona.nombre }}?</h2>
           <p>Llámenos ahora y un técnico estará en su ubicación en el menor tiempo posible.</p>
           <div class="zona-detail__cta-actions">
-            <a href="tel:+573001234567" class="btn btn--primary">Llamar Ahora</a>
-            <a href="https://wa.me/573001234567" class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a [href]="'tel:' + contact.phoneFormatted" class="btn btn--primary">Llamar Ahora</a>
+            <a [href]="contact.whatsapp" class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           </div>
         </div>
       </div>

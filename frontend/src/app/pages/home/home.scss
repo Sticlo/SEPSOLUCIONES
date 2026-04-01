@@ -275,7 +275,7 @@
   // Stats row
   &__stats {
     display: flex;
-    gap: 0;
+    gap: 1rem;
     flex-wrap: wrap;
     padding-top: 2.25rem;
     border-top: 1px solid #162440;
@@ -286,9 +286,22 @@
   &__stat {
     display: flex;
     flex-direction: column;
-    padding: 0 1.75rem;
+    align-items: center;
+    padding: 1.25rem 1.75rem;
+    background: rgba(13, 27, 46, 0.5);
+    border: 1px solid rgba(43, 108, 176, 0.35);
+    border-radius: 14px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    cursor: default;
 
-    &:first-child { padding-left: 0; }
+    &:hover {
+      transform: translateY(-4px);
+      border-color: rgba(43, 108, 176, 0.7);
+      background: rgba(13, 27, 46, 0.7);
+      box-shadow: 0 8px 24px rgba(43, 108, 176, 0.2);
+    }
+
+    &:first-child { padding-left: 1.75rem; }
 
     &-number {
       font-size: 2rem;
@@ -298,6 +311,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.3rem;
+      min-width: 3ch;
 
       svg { flex-shrink: 0; }
     }
@@ -948,20 +962,21 @@
 //  POR QUÉ ELEGIRNOS – Animated carousel
 // ══════════════════════════════════════════════════════════
 .porque-elegirnos {
-  padding: 5.5rem 0;
+  padding: 6rem 0 5rem;
   background:
     linear-gradient(
       180deg,
-      rgba(248, 250, 252, 0.70) 0%,
-      rgba(255, 255, 255, 0.75) 50%,
-      rgba(248, 250, 252, 0.70) 100%
+      rgba(255, 255, 255, 0.92) 0%,
+      rgba(248, 250, 252, 0.95) 50%,
+      rgba(255, 255, 255, 0.92) 100%
     ),
     url('/images/hero/hero.webp') center center / cover no-repeat;
   overflow: hidden;
   position: relative;
 
   @media (max-width: 768px) {
-    background: linear-gradient(180deg, #f8fafc 0%, #fff 50%, #f8fafc 100%);
+    background: linear-gradient(180deg, #fff 0%, #f8fafc 50%, #fff 100%);
+    padding: 4rem 0 3.5rem;
   }
 
   &::before {
@@ -976,10 +991,29 @@
 
   &__header {
     text-align: center;
-    margin-bottom: 3.5rem;
-    animation: content-fade-up 0.6s ease both;
+    margin-bottom: 3rem;
     position: relative;
     z-index: 1;
+  }
+
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #ed8936;
+    background: linear-gradient(135deg, #fef5e7, #fff5e1);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(246, 173, 85, 0.25);
+
+    svg {
+      color: #ed8936;
+    }
   }
 
   &__title {
@@ -996,210 +1030,235 @@
     font-weight: 400;
   }
 
-  &__carousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding: 2rem 0;
-  }
+  // ── Grid container ───────────────────────
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.75rem;
+    padding: 1.5rem 0;
 
-  &__track {
-    display: flex;
-    gap: 2rem;
-    padding: 0 2rem;
-    animation: carousel-slide 24s linear infinite;
-    width: max-content;
-    will-change: transform;
-
-    &:hover {
-      animation-play-state: paused;
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
     }
-  }
 
-  &__indicators {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 2rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  &__indicator {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #f6ad55;
-    animation: indicator-pulse 6s ease-in-out infinite;
-    will-change: transform, opacity;
-
-    &:nth-child(1) { animation-delay: 0s; }
-    &:nth-child(2) { animation-delay: 6s; }
-    &:nth-child(3) { animation-delay: 12s; }
-    &:nth-child(4) { animation-delay: 18s; }
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
-// ── Individual cards ───────────────────────────
+// ── Card ────────────────────────────────────────
+
 .ventaja-card {
-  flex: 0 0 340px;
   background: #fff;
-  border-radius: 20px;
-  padding: 2.5rem 2rem;
-  box-shadow:
-    0 10px 40px rgba(13, 27, 46, 0.08),
-    0 0 0 1px rgba(13, 27, 46, 0.04);
+  border-radius: 24px;
+  padding: 2.5rem 2rem 2rem;
   text-align: center;
   position: relative;
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s;
   overflow: hidden;
+  border: 1.5px solid rgba(237, 137, 54, 0.25);
+  box-shadow:
+    0 4px 24px rgba(13, 27, 46, 0.06),
+    0 0 0 1px rgba(13, 27, 46, 0.03);
+  transition:
+    transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.45s ease,
+    border-color 0.4s ease;
 
-  // Gradient accent on top
-  &::before {
-    content: '';
+  // Top accent bar – slides in on hover
+  &__accent {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #f6ad55, #ed8936);
-    opacity: 0;
-    transition: opacity 0.3s;
+    background: linear-gradient(90deg, #f6ad55, #ed8936, #dd6b20);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
+  // ── Hover state ──
   &:hover {
-    transform: translateY(-8px) scale(1.02);
+    transform: translateY(-10px) scale(1.03);
+    border-color: rgba(237, 137, 54, 0.55);
     box-shadow:
-      0 20px 60px rgba(246, 173, 85, 0.25),
-      0 0 0 1px rgba(246, 173, 85, 0.2);
+      0 28px 56px rgba(13, 27, 46, 0.12),
+      0 0 0 1px rgba(237, 137, 54, 0.3),
+      0 0 60px rgba(237, 137, 54, 0.08);
 
-    &::before {
-      opacity: 1;
+    .ventaja-card__accent {
+      transform: scaleX(1);
     }
 
-    .ventaja-card__icon-wrap {
-      transform: scale(1.1) rotate(5deg);
-      background: linear-gradient(135deg, #f6ad55, #ed8936);
+    .ventaja-card__icon-bg {
+      background: linear-gradient(135deg, #ed8936, #dd6b20);
+      box-shadow:
+        0 8px 28px rgba(237, 137, 54, 0.4),
+        0 0 40px rgba(237, 137, 54, 0.15);
+      transform: translateY(-4px) scale(1.05);
     }
 
-    .ventaja-card__badge {
-      transform: scale(1.1);
+    .ventaja-card__icon {
+      color: #fff;
+    }
+
+    .ventaja-card__icon-ring {
+      animation: icon-ring-glow 1.8s ease-out infinite;
+    }
+
+    .ventaja-card__metric-number {
+      transform: scale(1.12);
+      color: #dd6b20;
     }
   }
 
+  // ── Icon ──
   &__icon-wrap {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     margin: 0 auto 1.5rem;
-    border-radius: 20px;
-    background: linear-gradient(135deg, #fef5e7, #fff5e1);
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s;
-    box-shadow: 0 8px 24px rgba(246, 173, 85, 0.15);
+  }
+
+  &__icon-bg {
+    width: 88px;
+    height: 88px;
+    border-radius: 24px;
+    background: linear-gradient(145deg, #0d1b2e, #1a365d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    transition:
+      background 0.4s ease,
+      box-shadow 0.4s ease,
+      transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow:
+      0 8px 24px rgba(13, 27, 46, 0.25),
+      0 0 0 1px rgba(246, 173, 85, 0.1);
+  }
+
+  &__icon-ring {
+    position: absolute;
+    inset: -6px;
+    border-radius: 28px;
+    border: 2px solid rgba(237, 137, 54, 0.25);
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
   }
 
   &__icon {
-    width: 40px;
-    height: 40px;
+    width: 46px;
+    height: 46px;
     color: #f6ad55;
-    stroke-width: 2.5;
+    transition: color 0.35s ease;
+    filter: drop-shadow(0 2px 4px rgba(246, 173, 85, 0.3));
+  }
+
+  // ── Text ──
+  &__body {
+    margin-bottom: 1.25rem;
   }
 
   &__title {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: #0d1b2e;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     line-height: 1.3;
   }
 
   &__description {
-    font-size: 0.95rem;
+    font-size: 0.88rem;
     color: #4a5568;
-    line-height: 1.6;
-    margin-bottom: 1.25rem;
+    line-height: 1.65;
   }
 
-  &__badge {
-    display: inline-block;
-    background: linear-gradient(135deg, #fef5e7, #fff5e1);
-    color: #9c4221;
-    font-size: 0.8rem;
-    font-weight: 700;
-    padding: 0.4rem 1rem;
-    border-radius: 50px;
-    border: 1px solid #f6ad55;
-    transition: transform 0.3s;
+  // ── Metric ──
+  &__metric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(226, 232, 240, 0.6);
+  }
+
+  &__metric-number {
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: #ed8936;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s;
+  }
+
+  &__metric-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #718096;
   }
 }
 
-// ── Animations ─────────────────────────────────
-@keyframes carousel-slide {
+// ── Animations ──────────────────────────────────
+
+@keyframes icon-ring-glow {
   0% {
-    transform: translateX(0);
+    opacity: 0.7;
+    transform: scale(1);
+    border-color: rgba(237, 137, 54, 0.4);
   }
   100% {
-    transform: translateX(calc(-340px * 4 - 8rem));
+    opacity: 0;
+    transform: scale(1.5);
+    border-color: rgba(237, 137, 54, 0);
   }
 }
 
-@keyframes indicator-pulse {
-  0%, 20%, 100% {
-    opacity: 0.5;
-    transform: scale(1);
-  }
-  10% {
-    opacity: 1;
-    transform: scale(1.4);
-  }
-}
-
-// ── Responsive ─────────────────────────────────
+// ── Responsive ──────────────────────────────────
 @media (max-width: 768px) {
-  .porque-elegirnos {
-    padding: 4rem 0;
-
-    &__carousel {
-      padding: 1.5rem 0;
-    }
-
-    &__track {
-      gap: 1.5rem;
-      padding: 0 1rem;
-    }
-  }
-
   .ventaja-card {
-    flex: 0 0 280px;
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.5rem 1.5rem;
+
+    &__icon-bg {
+      width: 74px;
+      height: 74px;
+      border-radius: 20px;
+    }
 
     &__icon-wrap {
-      width: 70px;
-      height: 70px;
+      width: 86px;
+      height: 86px;
+    }
+
+    &__icon-ring {
+      inset: -5px;
+      border-radius: 24px;
     }
 
     &__icon {
-      width: 35px;
-      height: 35px;
+      width: 38px;
+      height: 38px;
     }
 
     &__title {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
     }
 
     &__description {
-      font-size: 0.88rem;
+      font-size: 0.82rem;
     }
-  }
 
-  @keyframes carousel-slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-280px * 4 - 6rem));
+    &__metric-number {
+      font-size: 1.35rem;
     }
   }
 }
@@ -1738,7 +1797,6 @@
 @media (prefers-reduced-motion: reduce) {
   .hero__announcement-dot,
   .cta-final__badge svg,
-  .porque-elegirnos__track,
   .porque-elegirnos__indicator,
   .zona-card {
     animation: none !important;

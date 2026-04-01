@@ -1,4 +1,4 @@
-﻿export interface BlogPost {
+export interface BlogPost {
   slug: string;
   titulo: string;
   extracto: string;
@@ -86,7 +86,7 @@ export const BLOG_POSTS: BlogPost[] = [
       
       'Proteja las tuberías exteriores del sol directo y cambios extremos de temperatura. Asegúrese de que las tuberías tengan suficiente soporte y no estén sometidas a esfuerzos mecánicos. Durante trabajos de remodelación o construcción, localice y proteja las tuberías existentes para evitar perforaciones accidentales.',
       
-      '**Conclusión:** La detección temprana de fugas de agua puede ahorrarle miles de pesos en reparaciones y facturas de agua. Esté atento a las señales: manchas de humedad, moho, incrementos en la factura, sonidos de agua, cambios en presión y resultados positivos en la prueba del medidor. Ante la sospecha de una fuga, especialmente si es oculta, no espere a que el problema empeore. En SEP Soluciones contamos con tecnología de detección electrónica que localiza fugas sin causar daños, ahorrándole tiempo, dinero y molestias. Llámenos al 300 123 4567 para una inspección profesional. La tranquilidad de saber que su sistema hidráulico está en perfecto estado no tiene precio.',
+      '**Conclusión:** La detección temprana de fugas de agua puede ahorrarle miles de pesos en reparaciones y facturas de agua. Esté atento a las señales: manchas de humedad, moho, incrementos en la factura, sonidos de agua, cambios en presión y resultados positivos en la prueba del medidor. Ante la sospecha de una fuga, especialmente si es oculta, no espere a que el problema empeore. En SEP Soluciones contamos con tecnología de detección electrónica que localiza fugas sin causar daños, ahorrándole tiempo, dinero y molestias. Llámenos al 314 815 3221 para una inspección profesional. La tranquilidad de saber que su sistema hidráulico está en perfecto estado no tiene precio.',
       
       'Recuerde: una fuga pequeña hoy puede convertirse en un problema estructural mañana. La inversión en detección profesional es mínima comparada con los costos de reparar daños por filtraciones prolongadas. Proteja su patrimonio, cuide el medio ambiente al evitar el desperdicio de agua, y mantenga su factura bajo control con revisiones periódicas y atención inmediata a cualquier síntoma de fuga.'
     ]
@@ -131,7 +131,7 @@ export const BLOG_POSTS: BlogPost[] = [
       
       '**Planes de mantenimiento profesional:** En SEP Soluciones ofrecemos planes de mantenimiento preventivo adaptados a las necesidades espec\u00edficas de hogares, conjuntos residenciales y empresas en Bogot\u00e1. Nuestros planes incluyen inspecciones programadas en horarios convenientes, precios especiales para suscriptores, atenci\u00f3n prioritaria en emergencias, documentaci\u00f3n completa de cada visita, y recordatorios autom\u00e1ticos de mantenimientos pr\u00f3ximos.',
       
-      '**Conclusi\u00f3n:** El mantenimiento preventivo de plomer\u00eda no es un gasto, es una inversi\u00f3n inteligente que protege su patrimonio, ahorra dinero a largo plazo, previene emergencias estresantes, prolonga la vida \u00fatil de instalaciones, y mantiene su propiedad funcionando \u00f3ptimamente. No espere a enfrentar una emergencia costosa. Contacte a SEP Soluciones al 300 123 4567 para dise\u00f1ar un plan de mantenimiento preventivo personalizado. La tranquilidad de saber que sus sistemas hidr\u00e1ulicos est\u00e1n en perfecto estado no tiene precio. Recuerde: prevenir siempre es m\u00e1s econ\u00f3mico, conveniente y sensato que reparar emergencias.'
+      '**Conclusi\u00f3n:** El mantenimiento preventivo de plomer\u00eda no es un gasto, es una inversi\u00f3n inteligente que protege su patrimonio, ahorra dinero a largo plazo, previene emergencias estresantes, prolonga la vida \u00fatil de instalaciones, y mantiene su propiedad funcionando \u00f3ptimamente. No espere a enfrentar una emergencia costosa. Contacte a SEP Soluciones al 314 815 3221 para dise\u00f1ar un plan de mantenimiento preventivo personalizado. La tranquilidad de saber que sus sistemas hidr\u00e1ulicos est\u00e1n en perfecto estado no tiene precio. Recuerde: prevenir siempre es m\u00e1s econ\u00f3mico, conveniente y sensato que reparar emergencias.'
     ]  },
   {
     slug: 'cuanto-cuesta-plomero-bogota',
@@ -169,7 +169,7 @@ export const BLOG_POSTS: BlogPost[] = [
       
       '**En SEP Soluciones ofrecemos**: Cotizaciones gratuitas y transparentes sin compromiso. Presupuestos detallados por escrito. Precios justos  y competitivos. Técnicos certificados con experiencia verificable. Equipos y herramientas profesionales. Materiales de primera calidad con garantía. Facturación formal. Garantía escrita en todos nuestros trabajos. Múltiples opciones de pago.',
       
-      'Recuerde que en plomería, como en muchos servicios, "lo barato sale caro". Invertir en un servicio profesional con garantía le ahorrará dinero a largo plazo al evitar reparaciones repetidas y daños adicionales causados por trabajos mal ejecutados. Llámenos al 300 123 4567 para un presupuesto justo y transparente.'
+      'Recuerde que en plomería, como en muchos servicios, "lo barato sale caro". Invertir en un servicio profesional con garantía le ahorrará dinero a largo plazo al evitar reparaciones repetidas y daños adicionales causados por trabajos mal ejecutados. Llámenos al 314 815 3221 para un presupuesto justo y transparente.'
     ]
   },
   {
@@ -214,7 +214,7 @@ export const BLOG_POSTS: BlogPost[] = [
       
       '**Qué hacer durante una emergencia por lluvias**: Si experimenta inundación interna, cierre inmediatamente la llave de paso principal del agua si la fuga es interna. Desconecte aparatos eléctricos en áreas afectadas. Documente daños con fotos para seguros. Retire muebles y objetos valiosos del agua. Contacte inmediatamente a un plomero profesional. No intente reparaciones eléctricas si hay agua presente.',
       
-      '**Servicio de emergencia 24/7 en temporada de lluvias**: En SEP Soluciones mantenemos equipos en alerta durante las temporadas de lluvias para responder rápidamente a emergencias. Ofrecemos destapes urgentes de bajantes y desagües, reparación de fugas causadas por inundaciones, inspección con cámara de sistemas afectados, bombeo de áreas inundadas, y soluciones de emergencia para prevenir daños mayores. Llámenos al 300 123 4567 cualquier hora, cualquier día.',
+      '**Servicio de emergencia 24/7 en temporada de lluvias**: En SEP Soluciones mantenemos equipos en alerta durante las temporadas de lluvias para responder rápidamente a emergencias. Ofrecemos destapes urgentes de bajantes y desagües, reparación de fugas causadas por inundaciones, inspección con cámara de sistemas afectados, bombeo de áreas inundadas, y soluciones de emergencia para prevenir daños mayores. Llámenos al 314 815 3221 cualquier hora, cualquier día.',
       
       'La prevención es la mejor estrategia. Una inversión de tiempo y dinero en mantenimiento preventivo antes de la temporada lluviosa le ahorrará el estrés y los costos de emergencias durante las lluvias intensas. No espere a que empiecen las precipitaciones para actuar; prepare su propiedad con anticipación y disfrute la temporada de lluvias con tranquilidad.'
     ]
@@ -267,7 +267,7 @@ export const BLOG_POSTS: BlogPost[] = [
       
       '**En SEP Soluciones cumplimos todos estos estándares**: Técnicos certificados con años de experiencia, referencias verificables de cientos de clientes satisfechos, equipos y herramientas profesionales de última tecnología, presupuestos detallados por escrito sin costos ocultos, garantía escrita en todos nuestros trabajos, seguro de responsabilidad civil, facturación legal con múltiples métodos de pago, puntualidad y profesionalismo en cada servicio, y comunicación clara y transparente en todo momento.',
       
-      'No deje la salud de su sistema hidráulico en manos de cualquiera. Tómese el tiempo de elegir correctamente. Llámenos al 300 123 4567 para un presupuesto gratuito y sin compromiso. Verificará por qué miles de hogares y empresas en Bogotá confían en nosotros.'
+      'No deje la salud de su sistema hidráulico en manos de cualquiera. Tómese el tiempo de elegir correctamente. Llámenos al 314 815 3221 para un presupuesto gratuito y sin compromiso. Verificará por qué miles de hogares y empresas en Bogotá confían en nosotros.'
     ]
   },
   {
@@ -316,7 +316,7 @@ export const BLOG_POSTS: BlogPost[] = [
       
       '**Seguridad primero**: El monóxido de carbono es mortal, inodoro e invisible. NUNCA bloquee ventilaciones de calentadores a gas. Instale detectores de monóxido de carbono en su hogar. Si huele gas, cierre la válvula, ventile, no accione interruptores eléctricos, y llame inmediatamente a emergencias. Revise anualmente que las conexiones de gas no tengan fugas (prueba con agua jabonosa, nunca con fuego).',
       
-      '**En SEP Soluciones somos especialistas en calentadores**: Ofrecemos asesoría gratuita para elegir el calentador adecuado según sus necesidades, instalación profesional cumpliendo todos los códigos de seguridad, mantenimiento preventivo programado, reparaciones de todas las marcas, y garantía en todos nuestros servicios. Llámenos al 300 123 4567 para más información. No arriesgue su seguridad y comodidad con instalaciones improvisadas.'
+      '**En SEP Soluciones somos especialistas en calentadores**: Ofrecemos asesoría gratuita para elegir el calentador adecuado según sus necesidades, instalación profesional cumpliendo todos los códigos de seguridad, mantenimiento preventivo programado, reparaciones de todas las marcas, y garantía en todos nuestros servicios. Llámenos al 314 815 3221 para más información. No arriesgue su seguridad y comodidad con instalaciones improvisadas.'
     ]
   },
   {
@@ -343,7 +343,7 @@ export const BLOG_POSTS: BlogPost[] = [
       
       '**Paso 5: Documente los daños**: Mientras contiene la situación, si es seguro, tome FOTOS Y VIDEOS del área afectada, la fuente del problema, y daños visibles. Esta documentación es crucial para reclamar seguros. Tome fotos de: la fuga en sí, áreas inundadas, altura del agua si es significativa, daños a paredes/pisos/techos, muebles o pertenencias dañadas, y cualquier cosa que causó el problema (tubería rota, electrodoméstico defectuoso). Esta documentación protegerá sus intereses legales y financieros.',
       
-      '**Paso 6: Llame a un plomero profesional INMEDIATAMENTE**: No espere "a ver si puedo arreglarlo yo". Emergencias de plomería requieren atención profesional. Contacte un servicio de plomería 24/7 confiable. SEP Soluciones ofrece servicio de emergencia las 24 horas: 300 123 4567. Al llamar, proporcione: descripción clara del problema (tubería rota, sanitario rebosando, inundación, etc.), ubicación exacta (dirección completa, indicaciones), su nombre y teléfono de contacto, y si ya cerró el agua/electricidad. Cuanta más información proporcione, mejor preparado llegará el técnico.',
+      '**Paso 6: Llame a un plomero profesional INMEDIATAMENTE**: No espere "a ver si puedo arreglarlo yo". Emergencias de plomería requieren atención profesional. Contacte un servicio de plomería 24/7 confiable. SEP Soluciones ofrece servicio de emergencia las 24 horas: 314 815 3221. Al llamar, proporcione: descripción clara del problema (tubería rota, sanitario rebosando, inundación, etc.), ubicación exacta (dirección completa, indicaciones), su nombre y teléfono de contacto, y si ya cerró el agua/electricidad. Cuanta más información proporcione, mejor preparado llegará el técnico.',
       
       '**Tipos específicos de emergencias y respuestas**:',
       
@@ -377,7 +377,7 @@ export const BLOG_POSTS: BlogPost[] = [
       '• Considere instalar detectores de agua en áreas críticas (bajo lavamanos, cerca de calentador, área de lavadora)',
       '• Realice mantenimiento preventivo regular para evitar emergencias',
       
-      '**SEP Soluciones - Su respuesta de emergencia 24/7 en Bogotá**: Emergencias no respetan horarios. Nuestro equipo está disponible 24 horas, 7 días, incluyendo festivos. Tiempo de respuesta promedio: 30-60 minutos en Bogotá. Equipos móviles completamente equipados. Técnicos experimentados para resolver su emergencia correctamente la primera vez. Sin recargos excesivos nocturnos o de festivos. Llámenos ahora: 300 123 4567. Cuando cada minuto cuenta, confíe en profesionales.'
+      '**SEP Soluciones - Su respuesta de emergencia 24/7 en Bogotá**: Emergencias no respetan horarios. Nuestro equipo está disponible 24 horas, 7 días, incluyendo festivos. Tiempo de respuesta promedio: 30-60 minutos en Bogotá. Equipos móviles completamente equipados. Técnicos experimentados para resolver su emergencia correctamente la primera vez. Sin recargos excesivos nocturnos o de festivos. Llámenos ahora: 314 815 3221. Cuando cada minuto cuenta, confíe en profesionales.'
     ]
   },
   {
@@ -434,7 +434,7 @@ export const BLOG_POSTS: BlogPost[] = [
       
       '**Retorno de inversión total**: Implementar paquete básico eco (sanitarios ahorradores, regaderas eficientes, aireadores, reprar fugas): Inversión ~$1,500,000-$2,500,000. Ahorro mensual: $80,000-$150,000. Retorno: 12-24 meses. Paquete avanzado (adding aguas grises o recolección lluvia): Inversión add. ~$2,000,000-$6,000,000. Ahorro adicional: $30,000-$60,000/mes. Retorno total: 3-6 años. Después del retorno, el ahorro es UTILIDAD DIRECTA, año tras año.',
       
-      '**En SEP Soluciones somos especialistas en plomería ecológica**: Asesoría gratuita para identificar oportunidades de ahorro en su propiedad, diseño e instalación de sistemas de aguas grises y recolección de lluvias, instalación de todos los dispositivos ahorradores, auditorías de consumo y detección profesional de fugas, y mantenimiento de sistemas ecológicos. Llámenos: 300 123 4567. Invierta en su futuro y el del planeta.'
+      '**En SEP Soluciones somos especialistas en plomería ecológica**: Asesoría gratuita para identificar oportunidades de ahorro en su propiedad, diseño e instalación de sistemas de aguas grises y recolección de lluvias, instalación de todos los dispositivos ahorradores, auditorías de consumo y detección profesional de fugas, y mantenimiento de sistemas ecológicos. Llámenos: 314 815 3221. Invierta en su futuro y el del planeta.'
     ]
   },
   {
@@ -531,7 +531,7 @@ export const BLOG_POSTS: BlogPost[] = [
       
       '**En SEP Soluciones ofrecemos**: Inspección y evaluación completa de sistemas de tubería antiguos (gratis con compromiso de trabajo), uso de cámara endoscópica para evaluación sin destrucción, recomendaciones honestas (si su sistema tiene vida, le diremos; no presionamos a reemplazo innecesario), repiping completo con materiales de primera calidad, garantía extendida en todo trabajo de repiping, financiamiento en conjunto con entidades financieras, y equipo altamente experimentado - hemos hecho repiping en centenas de propiedades bogotanas.',
       
-      'No espere al desastre. Llámenos hoy para evaluación: 300 123 4567. La tranquilidad tiene valor.'
+      'No espere al desastre. Llámenos hoy para evaluación: 314 815 3221. La tranquilidad tiene valor.'
     ]
   }
 ];

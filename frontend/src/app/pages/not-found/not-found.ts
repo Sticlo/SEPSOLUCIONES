@@ -1,6 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SeoService } from '../../core/services/seo.service';
+import { CONTACT_INFO } from '../../shared/constants/contact-info';
 
 @Component({
   selector: 'app-not-found',
@@ -10,6 +11,7 @@ import { SeoService } from '../../core/services/seo.service';
 })
 export default class NotFound implements OnInit {
   private readonly seo = inject(SeoService);
+  readonly contact = CONTACT_INFO;
 
   ngOnInit(): void {
     this.seo.updateSeo({

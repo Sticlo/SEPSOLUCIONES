@@ -30,7 +30,7 @@
       <h2>¿Tiene otra pregunta?</h2>
       <p>No dude en contactarnos. Estamos disponibles para resolver todas sus dudas.</p>
       <div class="faq__cta-actions">
-        <a href="tel:+573001234567" class="btn btn--primary">📞 Llamar Ahora</a>
+        <a [href]="'tel:' + contact.phoneFormatted" class="btn btn--primary">📞 Llamar Ahora</a>
         <a routerLink="/contacto" class="btn btn--secondary">Ir a Contacto</a>
       </div>
     </div>

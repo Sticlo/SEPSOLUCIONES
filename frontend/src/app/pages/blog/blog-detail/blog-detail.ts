@@ -2,6 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { SeoService } from '../../../core/services/seo.service';
 import { BLOG_POSTS, BlogPost } from '../../../shared/data/blog.data';
+import { CONTACT_INFO } from '../../../shared/constants/contact-info';
 
 @Component({
   selector: 'app-blog-detail',
@@ -13,6 +14,7 @@ export default class BlogDetail implements OnInit {
   private readonly seo = inject(SeoService);
   private readonly route = inject(ActivatedRoute);
 
+  readonly contact = CONTACT_INFO;
   post!: BlogPost;
   otrosPosts: BlogPost[] = [];
 
