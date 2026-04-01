@@ -85,7 +85,9 @@ img {
   text-align: center;
 }
 
-h2 {
+// Section h2 — only apply center to legacy pages using .page-header sibling sections
+.section-subtitle + h2,
+.page-header ~ section h2 {
   text-align: center;
   font-size: 1.75rem;
   color: #1a365d;
@@ -109,41 +111,41 @@ h2 {
   }
 
   &--primary {
-    background: #2b6cb0;
+    background: #0066FF;
     color: #fff;
 
     &:hover {
-      background: #2c5282;
+      background: #0052cc;
     }
   }
 
   &--secondary {
     background: #fff;
-    color: #2b6cb0;
-    border: 2px solid #2b6cb0;
+    color: #0066FF;
+    border: 2px solid #0066FF;
 
     &:hover {
-      background: #ebf8ff;
+      background: #f0f4ff;
     }
   }
 
   &--outline {
     background: transparent;
-    color: #2b6cb0;
-    border: 2px solid #2b6cb0;
+    color: #0066FF;
+    border: 2px solid #0066FF;
 
     &:hover {
-      background: #2b6cb0;
+      background: #0066FF;
       color: #fff;
     }
   }
 
   &--whatsapp {
-    background: #25d366;
+    background: #10B981;
     color: #fff;
 
     &:hover {
-      background: #1da851;
+      background: #059669;
     }
   }
 
