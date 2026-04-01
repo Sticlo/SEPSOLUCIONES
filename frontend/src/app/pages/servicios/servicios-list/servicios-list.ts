@@ -49,6 +49,10 @@ export default class ServiciosList implements OnInit {
     empresarial: SERVICIOS.filter(s => s.categoria === 'empresarial'),
     especializado: SERVICIOS.filter(s => s.categoria === 'especializado'),
   };
+  scrollToGroup(cat: CategoriaServicio): void {
+    const el = this.el.nativeElement.querySelector(`#cat-${cat}`) as HTMLElement | null;
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 
   constructor() {
     afterNextRender(() => {
