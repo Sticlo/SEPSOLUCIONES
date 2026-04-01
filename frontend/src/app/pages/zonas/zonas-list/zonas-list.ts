@@ -17,7 +17,6 @@ export default class ZonasList implements OnInit {
   private readonly router = inject(Router);
   readonly contact = CONTACT_INFO;
   readonly zonas = ZONAS;
-  readonly contact = CONTACT_INFO;
 
   hoveredSlug: string | null = null;
 

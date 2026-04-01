@@ -11,12 +11,12 @@ import { CONTACT_INFO } from '../../shared/constants/contact-info';
 })
 export default class Nosotros implements OnInit {
   private readonly seo = inject(SeoService);
-<<<<<<< HEAD
+
   readonly contact = CONTACT_INFO;
-=======
+
   private readonly el = inject(ElementRef);
   private readonly destroyRef = inject(DestroyRef);
-  readonly contact = CONTACT_INFO;
+
 
   constructor() {
     afterNextRender(() => {
@@ -51,7 +51,7 @@ export default class Nosotros implements OnInit {
     elements.forEach((el: HTMLElement) => observer.observe(el));
     this.destroyRef.onDestroy(() => observer.disconnect());
   }
->>>>>>> origin/main
+
 
   ngOnInit(): void {
     this.seo.updateSeo({
