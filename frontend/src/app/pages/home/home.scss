@@ -1061,10 +1061,16 @@
     0 4px 24px rgba(13, 27, 46, 0.06),
     0 0 0 1px rgba(13, 27, 46, 0.03);
   transition:
-    transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
     box-shadow 0.45s ease,
     border-color 0.4s ease;
 
+  // Slow floating animation
+  animation: ventajaFloat 6s ease-in-out infinite;
+
+  &:nth-child(1) { animation-delay: 0s; }
+  &:nth-child(2) { animation-delay: 1.5s; }
+  &:nth-child(3) { animation-delay: 3s; }
+  &:nth-child(4) { animation-delay: 4.5s; }
   // Top accent bar – slides in on hover
   &__accent {
     position: absolute;
@@ -1080,6 +1086,7 @@
 
   // ── Hover state ──
   &:hover {
+    animation-play-state: paused;
     transform: translateY(-10px) scale(1.03);
     border-color: rgba(237, 137, 54, 0.55);
     box-shadow:
@@ -1220,6 +1227,21 @@
     opacity: 0;
     transform: scale(1.5);
     border-color: rgba(237, 137, 54, 0);
+  }
+}
+
+@keyframes ventajaFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ventaja-card {
+    animation: none;
   }
 }
 
