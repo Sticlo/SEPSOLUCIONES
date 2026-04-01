@@ -41,7 +41,7 @@ export default class ZonaDetail implements OnInit {
         '@type': 'LocalBusiness',
         'name': `SEP Soluciones - Plomería en ${this.zona.nombre}`,
         'description': this.zona.descripcionSeo,
-        'telephone': '+573001234567',
+        'telephone': CONTACT_INFO.phoneFormatted,
         'address': {
           '@type': 'PostalAddress',
           'addressLocality': 'Bogotá',

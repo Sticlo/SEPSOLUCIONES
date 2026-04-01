@@ -4,6 +4,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { SeoService } from '../../../core/services/seo.service';
 import { BLOG_POSTS, BlogPost } from '../../../shared/data/blog.data';
 import { CONTACT_INFO } from '../../../shared/constants/contact-info';
+<<<<<<< HEAD
 
 interface ContentBlock {
   type: 'paragraph' | 'list' | 'section';
@@ -12,6 +13,8 @@ interface ContentBlock {
   body?: string;
   items?: string[];
 }
+=======
+>>>>>>> origin/main
 
 @Component({
   selector: 'app-blog-detail',

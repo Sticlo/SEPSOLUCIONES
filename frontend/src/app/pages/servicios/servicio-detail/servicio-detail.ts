@@ -44,7 +44,7 @@ export default class ServicioDetail implements OnInit {
         'provider': {
           '@type': 'LocalBusiness',
           'name': 'SEP Soluciones',
-          'telephone': '+573001234567',
+          'telephone': CONTACT_INFO.phoneFormatted,
           'address': {
             '@type': 'PostalAddress',
             'addressLocality': 'Bogotá',

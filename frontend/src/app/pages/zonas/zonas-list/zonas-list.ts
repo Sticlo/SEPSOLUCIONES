@@ -15,6 +15,7 @@ export default class ZonasList implements OnInit {
   private readonly el = inject(ElementRef);
   private readonly destroyRef = inject(DestroyRef);
   private readonly router = inject(Router);
+  readonly contact = CONTACT_INFO;
   readonly zonas = ZONAS;
   readonly contact = CONTACT_INFO;
 

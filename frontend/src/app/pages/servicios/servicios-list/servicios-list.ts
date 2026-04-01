@@ -2,6 +2,7 @@ import { Component, OnInit, inject, afterNextRender, DestroyRef, ElementRef } fr
 import { RouterLink } from '@angular/router';
 import { SeoService } from '../../../core/services/seo.service';
 import { SERVICIOS, CATEGORIAS, CategoriaServicio, Servicio } from '../../../shared/data/servicios.data';
+import { CONTACT_INFO } from '../../../shared/constants/contact-info';
 
 // SVG path data per slug — no emojis, rendered as <svg> in template
 const ICON_PATHS: Record<string, string> = {
@@ -42,6 +43,7 @@ export default class ServiciosList implements OnInit {
   private readonly destroyRef = inject(DestroyRef);
   readonly categorias = CATEGORIAS;
   readonly iconPaths = ICON_PATHS;
+  readonly contact = CONTACT_INFO;
   readonly serviciosPorCategoria: Record<CategoriaServicio, Servicio[]> = {
     residencial: SERVICIOS.filter(s => s.categoria === 'residencial'),
     empresarial: SERVICIOS.filter(s => s.categoria === 'empresarial'),
@@ -49,7 +51,49 @@ export default class ServiciosList implements OnInit {
   };
 
   constructor() {
-    afterNextRender(() => this.initScrollAnimations());
+    afterNextRender(() => {
+      this.initScrollAnimations();
+      this.initCounterAnimations();
+    });
+  }
+
+  private initCounterAnimations(): void {
+    if (globalThis.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const counters = this.el.nativeElement.querySelectorAll('[data-count]') as NodeListOf<HTMLElement>;
+    if (!counters.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            this.animateCounter(entry.target as HTMLElement);
+            observer.unobserve(entry.target);
+          }
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    counters.forEach(el => observer.observe(el));
+    this.destroyRef.onDestroy(() => observer.disconnect());
+  }
+
+  private animateCounter(el: HTMLElement): void {
+    const target = parseInt(el.dataset['count'] || '0', 10);
+    const prefix = el.dataset['prefix'] || '';
+    const duration = 2000;
+    const start = performance.now();
+
+    const step = (now: number) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(eased * target);
+      el.textContent = `${prefix}${current}`;
+      if (progress < 1) requestAnimationFrame(step);
+    };
+
+    requestAnimationFrame(step);
   }
 
   private initScrollAnimations(): void {

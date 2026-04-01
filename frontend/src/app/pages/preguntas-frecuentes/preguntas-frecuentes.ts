@@ -12,8 +12,11 @@ import { CONTACT_INFO } from '../../shared/constants/contact-info';
 })
 export default class PreguntasFrecuentes implements OnInit {
   private readonly seo = inject(SeoService);
+<<<<<<< HEAD
   private readonly el = inject(ElementRef);
   private readonly destroyRef = inject(DestroyRef);
+=======
+>>>>>>> origin/main
   readonly contact = CONTACT_INFO;
   readonly faqs = FAQ_DATA;
   expandedIndex: number | null = null;

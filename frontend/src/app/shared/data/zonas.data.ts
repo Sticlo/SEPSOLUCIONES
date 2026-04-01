@@ -33,7 +33,7 @@ export const ZONAS: Zona[] = [
       
       'Para emergencias de plomería en Usaquén disponemos de servicio 24 horas los 7 días de la semana. Atendemos urgencias como inundaciones, fugas graves, taponamientos severos, daños en tuberías principales y cualquier situación que requiera atención inmediata. Nuestro personal de guardia está siempre disponible para responder a su emergencia.',
       
-      'Solicite su cotización gratuita llamando al 300 123 4567 o escríbanos por WhatsApp. Le brindaremos un presupuesto transparente antes de iniciar cualquier trabajo. Aceptamos múltiples métodos de pago y ofrecemos facilidades según el servicio requerido.'
+      'Solicite su cotización gratuita llamando al 314 815 3221 o escríbanos por WhatsApp. Le brindaremos un presupuesto transparente antes de iniciar cualquier trabajo. Aceptamos múltiples métodos de pago y ofrecemos facilidades según el servicio requerido.'
     ]
   },
   {
@@ -57,7 +57,7 @@ export const ZONAS: Zona[] = [
       
       'Trabajamos con propietarios residenciales, administraciones de edificios, empresas, restaurantes, hoteles y todo tipo de establecimientos comerciales en Chapinero. Entendemos que cada cliente tiene necesidades diferentes, por eso ofrecemos soluciones personalizadas y presupuestos ajustados a cada proyecto. Todos nuestros trabajos incluyen garantía escrita.',
       
-      'El servicio de emergencias 24/7 en Chapinero está siempre activo. Atendemos urgencias de plomería cualquier día de la semana, incluidos domingos y festivos. Si tiene una inundación, fuga grave o cualquier emergencia, llámenos inmediatamente al 300 123 4567 y le enviaremos un técnico de inmediato.',
+      'El servicio de emergencias 24/7 en Chapinero está siempre activo. Atendemos urgencias de plomería cualquier día de la semana, incluidos domingos y festivos. Si tiene una inundación, fuga grave o cualquier emergencia, llámenos inmediatamente al 314 815 3221 y le enviaremos un técnico de inmediato.',
       
       'Solicite su cotización sin compromiso. Ofrecemos presupuestos transparentes, sin costos ocultos. Para negocios y empresas, contamos con planes de mantenimiento corporativo que garantizan el funcionamiento óptimo de sus instalaciones hidráulicas durante todo el año.'
     ]
@@ -85,7 +85,7 @@ export const ZONAS: Zona[] = [
       
       'Nuestro servicio de emergencias 24/7 está disponible todos los días del año en Suba. Si tiene una urgencia de plomería como inundación, fuga grave, taponamiento severo o cualquier situación crítica, comuníquese inmediatamente y enviaremos un técnico en el menor tiempo posible. Nuestro personal de guardia está capacitado para manejar cualquier tipo de emergencia hidráulica.',
       
-      'Solicite su cotización gratuita por WhatsApp al 300 123 4567 o llámenos directamente. Le proporcionaremos un presupuesto detallado antes de iniciar el trabajo. Aceptamos efectivo, transferencias, Nequi, Daviplata y tarjetas. Para su tranquilidad, todos nuestros servicios cuentan con garantía escrita.'
+      'Solicite su cotización gratuita por WhatsApp al 314 815 3221 o llámenos directamente. Le proporcionaremos un presupuesto detallado antes de iniciar el trabajo. Aceptamos efectivo, transferencias, Nequi, Daviplata y tarjetas. Para su tranquilidad, todos nuestros servicios cuentan con garantía escrita.'
     ]
   },
   {
@@ -111,7 +111,7 @@ export const ZONAS: Zona[] = [
       
       'Disponemos de servicio de emergencias 24 horas en Kennedy todos los días del año. Si enfrenta una urgencia como inundación por rotura de tubería, fuga grave de agua, taponamiento severo o cualquier problema que requiera atención inmediata, contáctenos y enviaremos un técnico lo antes posible. Nuestro personal de guardia está capacitado para manejar emergencias y minimizar daños a su propiedad.',
       
-      'Solicite su cotización gratuita llamando al 300 123 4567 o por WhatsApp. Le proporcionaremos un presupuesto claro y detallado antes de iniciar cualquier trabajo. Aceptamos diferentes formas de pago y ofrecemos garantía escrita en todos nuestros servicios para su total tranquilidad.'
+      'Solicite su cotización gratuita llamando al 314 815 3221 o por WhatsApp. Le proporcionaremos un presupuesto claro y detallado antes de iniciar cualquier trabajo. Aceptamos diferentes formas de pago y ofrecemos garantía escrita en todos nuestros servicios para su total tranquilidad.'
     ]
   },
   {
@@ -135,7 +135,7 @@ export const ZONAS: Zona[] = [
       
       'Trabajamos con propietarios de viviendas, inquilinos, administraciones de conjuntos residenciales, locales comerciales, restaurantes y empresas en Engativá. Ofrecemos presupuestos transparentes sin costos ocultos, con precios justos y competitivos. Para propiedades horizontales y conjuntos residenciales, disponemos de planes de mantenimiento preventivo con tarifas especiales que incluyen revisiones programadas, limpieza de tanques y mantenimiento de bombas.',
       
-      'Nuestro servicio de emergencias 24/7 está disponible todos los días en Engativá. Si enfrenta una urgencia de plomería como inundación, rotura de tubería, fuga grave, taponamiento severo o cualquier situación crítica, comuníquese inmediatamente al 300 123 4567 y enviaremos un técnico de guardia para atender su emergencia en el menor tiempo posible.',
+      'Nuestro servicio de emergencias 24/7 está disponible todos los días en Engativá. Si enfrenta una urgencia de plomería como inundación, rotura de tubería, fuga grave, taponamiento severo o cualquier situación crítica, comuníquese inmediatamente al 314 815 3221 y enviaremos un técnico de guardia para atender su emergencia en el menor tiempo posible.',
       
       'Solicite su cotización gratuita por WhatsApp o llámenos directamente. Le brindaremos un presupuesto detallado antes de comenzar el trabajo. Aceptamos múltiples formas de pago: efectivo, transferencias bancarias, Nequi, Daviplata y tarjetas de crédito/débito. Todos nuestros servicios incluyen garantía escrita para su total tranquilidad.'
     ]
@@ -161,7 +161,7 @@ export const ZONAS: Zona[] = [
       
       'Atendemos a propietarios residenciales, empresas, administraciones de conjuntos, bodegas, fábricas, hoteles, restaurantes y todo tipo de establecimientos comerciales en Fontibón. Ofrecemos presupuestos personalizados según las necesidades de cada cliente, con precios transparentes y competitivos. Para empresas, contamos con contratos de mantenimiento preventivo que garantizan el funcionamiento óptimo de las instalaciones hidráulicas.',
       
-      'El servicio de emergencias 24 horas en Fontibón está activo todos los días del año, incluidos domingos y festivos. Entendemos que tanto para hogares como para empresas, una emergencia de plomería puede causar pérdidas significativas. Si tiene una urgencia, llámenos al 300 123 4567 y enviaremos un técnico especializado inmediatamente.',
+      'El servicio de emergencias 24 horas en Fontibón está activo todos los días del año, incluidos domingos y festivos. Entendemos que tanto para hogares como para empresas, una emergencia de plomería puede causar pérdidas significativas. Si tiene una urgencia, llámenos al 314 815 3221 y enviaremos un técnico especializado inmediatamente.',
       
       'Solicite su cotización sin compromiso. Para servicios residenciales, ofrecemos precios accesibles con facilidades de pago. Para servicios comerciales e industriales, preparamos propuestas detalladas adaptadas a las necesidades específicas del proyecto. Todos nuestros trabajos incluyen garantía escrita y respaldo de una empresa con más de 10 años de experiencia.'
     ]
@@ -187,7 +187,7 @@ export const ZONAS: Zona[] = [
       
       'Trabajamos con propietarios de viviendas, inquilinos, administraciones de edificios residenciales y comerciales, oficinas, locales comerciales y entidades culturales en Teusaquillo. Entendemos el valor patrimonial de muchas edificaciones de la zona y ofrecemos soluciones técnicas que preservan este legado. Para edificios antiguos, ofrecemos planes de mantenimiento preventivo que incluyen revisión de redes hidráulicas para prevenir daños mayores.',
       
-      'Nuestro servicio de emergencias 24/7 está disponible todos los días en Teusaquillo. Entendemos que una emergencia de plomería puede poner en riesgo estructuras valiosas, por eso respondemos con rapidez y profesionalismo. Si tiene una fuga grave, inundación o taponamiento urgente, llámenos al 300 123 4567 para atención inmediata.',
+      'Nuestro servicio de emergencias 24/7 está disponible todos los días en Teusaquillo. Entendemos que una emergencia de plomería puede poner en riesgo estructuras valiosas, por eso respondemos con rapidez y profesionalismo. Si tiene una fuga grave, inundación o taponamiento urgente, llámenos al 314 815 3221 para atención inmediata.',
       
       'Solicite su cotización gratuita para cualquier servicio de plomería en Teusaquillo. Ofrecemos presupuestos transparentes con opciones de solución que respeten las características de su propiedad. Aceptamos diferentes formas de pago y todos nuestros servicios cuentan con garantía escrita. Protéjanos el patrimonio de su hogar o edificio con servicio profesional de calidad.'
     ]
@@ -213,7 +213,7 @@ export const ZONAS: Zona[] = [
       
       'Trabajamos con propietarios de viviendas, empresas manufactureras, bodegas, talleres, restaurantes, locales comerciales, administraciones de edificios y todo tipo de establecimientos en Puente Aranda. Para empresas, ofrecemos contratos de mantenimiento preventivo con revisión periódica de sistemas hidráulicos, limpieza de drenajes y atención prioritaria en emergencias. Nuestros presupuestos son transparentes y competitivos.',
       
-      'Disponemos de servicio de emergencias 24/7 en Puente Aranda todos los días del año. Entendemos que para empresas y bodegas, una emergencia de plomería puede detener la producción y generar pérdidas significativas. Si enfrenta una urgencia, llámenos al 300 123 4567 y enviaremos un técnico especializado de inmediato.',
+      'Disponemos de servicio de emergencias 24/7 en Puente Aranda todos los días del año. Entendemos que para empresas y bodegas, una emergencia de plomería puede detener la producción y generar pérdidas significativas. Si enfrenta una urgencia, llámenos al 314 815 3221 y enviaremos un técnico especializado de inmediato.',
       
       'Solicite su cotización gratuita para servicios residenciales, comerciales o industriales. Ofrecemos soluciones personalizadas según las necesidades de cada cliente con precios justos y transparentes. Aceptamos diferentes formas de pago y todos nuestros servicios incluyen garantía escrita. Confíe en una empresa con experiencia tanto en plomería residencial como industrial.'
     ]
@@ -239,7 +239,7 @@ export const ZONAS: Zona[] = [
       
       'Trabajamos con propietarios de viviendas, inquilinos, administraciones de conjuntos residenciales y edificios, locales comerciales y oficinas en Barrios Unidos. Ofrecemos presupuestos claros y transparentes sin costos ocultos, con precios justos y competitivos. Para propiedades horizontales, disponemos de planes de mantenimiento preventivo con tarifas especiales que incluyen revisiones programadas y atención prioritaria.',
       
-      'Nuestro servicio de emergencias 24 horas está disponible todos los días en Barrios Unidos. Si enfrenta una urgencia como inundación, rotura de tubería, fuga grave o taponamiento severo, comuníquese inmediatamente al 300 123 4567. Nuestro personal de guardia responderá su emergencia en el menor tiempo posible con atención profesional y solución efectiva.',
+      'Nuestro servicio de emergencias 24 horas está disponible todos los días en Barrios Unidos. Si enfrenta una urgencia como inundación, rotura de tubería, fuga grave o taponamiento severo, comuníquese inmediatamente al 314 815 3221. Nuestro personal de guardia responderá su emergencia en el menor tiempo posible con atención profesional y solución efectiva.',
       
       'Solicite su cotización gratuita por WhatsApp o teléfono. Le proporcionaremos un presupuesto detallado antes de iniciar el trabajo. Aceptamos efectivo, transferencias, Nequi, Daviplata y tarjetas. Para su tranquilidad, todos nuestros servicios cuentan con garantía escrita. Confíe en la experiencia de SEP Soluciones para resolver cualquier problema de plomería en su hogar o negocio.'
     ]
@@ -265,7 +265,7 @@ export const ZONAS: Zona[] = [
       
       'Atendemos a propietarios de viviendas, comerciantes del sector Restrepo, administraciones de edificios, restaurantes, oficinas y todo tipo de establecimientos en Antonio Nariño. Entendemos que cada cliente tiene necesidades y presupuestos diferentes, por eso ofrecemos soluciones personalizadas con precios transparentes y competitivos. Para locales comerciales, tenemos planes de mantenimiento que garantizan el funcionamiento óptimo de instalaciones hidráulicas.',
       
-      'El servicio de emergencias 24/7 en Antonio Nariño está activo todos los días incluidos domingos y festivos. Sabemos que una emergencia de plomería puede afectar su hogar o negativegocio. Si enfrenta una urgencia como inundación, fuga grave, taponamiento severo o cualquier situación crítica, llámenos al 300 123 4567 para atención inmediata.',
+      'El servicio de emergencias 24/7 en Antonio Nariño está activo todos los días incluidos domingos y festivos. Sabemos que una emergencia de plomería puede afectar su hogar o negativegocio. Si enfrenta una urgencia como inundación, fuga grave, taponamiento severo o cualquier situación crítica, llámenos al 314 815 3221 para atención inmediata.',
       
       'Solicite su cotización gratuita para cualquier servicio de plomería. Ofrecemos presupuestos claros sin costos ocultos, con opciones de solución adaptadas a sus necesidades.Aceptamos múltiples formas de pago y todos nuestros servicios incluyen garantía escrita. Confíe en SEP Soluciones para mantener su hogar o negocio con sistemas hidráulicos en perfecto funcionamiento.'
     ]
@@ -291,7 +291,7 @@ export const ZONAS: Zona[] = [
 
       'Atendemos propietarios de viviendas, administraciones de edificios, locales comerciales, restaurantes, hoteles y oficinas en Santa Fe. Ofrecemos presupuestos transparentes y precios competitivos. Para edificios y propiedades horizontales, disponemos de planes de mantenimiento preventivo.',
 
-      'Servicio de emergencias 24/7 disponible en Santa Fe. Inundaciones, fugas graves, taponamientos severos o cualquier urgencia, llámenos al 300 123 4567. Nuestro equipo de guardia responde cualquier día del año.',
+      'Servicio de emergencias 24/7 disponible en Santa Fe. Inundaciones, fugas graves, taponamientos severos o cualquier urgencia, llámenos al 314 815 3221. Nuestro equipo de guardia responde cualquier día del año.',
 
       'Solicite su cotización gratuita por WhatsApp o teléfono. Presupuestos claros sin costos ocultos. Aceptamos efectivo, transferencias, Nequi, Daviplata y tarjetas. Todos nuestros servicios incluyen garantía escrita.'
     ]
@@ -317,7 +317,7 @@ export const ZONAS: Zona[] = [
 
       'Atendemos propietarios de viviendas, arrendatarios, administraciones de conjuntos y locales comerciales. Ofrecemos precios justos con presupuestos transparentes. Para conjuntos residenciales, disponemos de planes de mantenimiento preventivo con tarifas especiales.',
 
-      'Emergencias 24/7 en San Cristóbal. Si tiene una urgencia de plomería como inundación, fuga grave o taponamiento severo, llámenos al 300 123 4567 y enviaremos un técnico de inmediato cualquier día de la semana.',
+      'Emergencias 24/7 en San Cristóbal. Si tiene una urgencia de plomería como inundación, fuga grave o taponamiento severo, llámenos al 314 815 3221 y enviaremos un técnico de inmediato cualquier día de la semana.',
 
       'Cotización gratuita por WhatsApp o teléfono. Presupuestos claros, sin costos ocultos. Aceptamos efectivo, transferencias, Nequi, Daviplata y tarjetas. Garantía escrita en todos nuestros servicios.'
     ]
@@ -343,7 +343,7 @@ export const ZONAS: Zona[] = [
 
       'Atendemos propietarios, arrendatarios, administraciones de conjuntos residenciales y locales comerciales en toda Usme. Presupuestos transparentes con precios justos. Para conjuntos residenciales, ofrecemos planes de mantenimiento preventivo.',
 
-      'Servicio de emergencias 24/7 en Usme. Urgencias como inundaciones, fugas graves o taponamientos severos, llámenos al 300 123 4567 para atención inmediata cualquier día del año.',
+      'Servicio de emergencias 24/7 en Usme. Urgencias como inundaciones, fugas graves o taponamientos severos, llámenos al 314 815 3221 para atención inmediata cualquier día del año.',
 
       'Solicite su cotización gratuita. Presupuestos claros sin costos ocultos. Aceptamos efectivo, transferencias, Nequi, Daviplata y tarjetas. Garantía escrita en todos nuestros servicios.'
     ]
@@ -369,7 +369,7 @@ export const ZONAS: Zona[] = [
 
       'Atendemos propietarios, arrendatarios, conjuntos residenciales y locales comerciales. Presupuestos transparentes y competitivos. Planes de mantenimiento preventivo disponibles.',
 
-      'Emergencias 24/7 en Tunjuelito. Inundaciones, fugas graves, taponamientos severos: llámenos al 300 123 4567 para atención inmediata.',
+      'Emergencias 24/7 en Tunjuelito. Inundaciones, fugas graves, taponamientos severos: llámenos al 314 815 3221 para atención inmediata.',
 
       'Cotización gratuita por WhatsApp o teléfono. Sin costos ocultos. Aceptamos efectivo, transferencias, Nequi, Daviplata y tarjetas. Garantía escrita.'
     ]
@@ -395,7 +395,7 @@ export const ZONAS: Zona[] = [
 
       'Atendemos propietarios, arrendatarios, administraciones de conjuntos y locales comerciales. Presupuestos transparentes con precios justos y competitivos. Planes de mantenimiento preventivo para conjuntos residenciales.',
 
-      'Emergencias 24/7 en Bosa. Inundaciones, fugas graves, taponamientos severos: llámenos al 300 123 4567 para atención inmediata cualquier día del año.',
+      'Emergencias 24/7 en Bosa. Inundaciones, fugas graves, taponamientos severos: llámenos al 314 815 3221 para atención inmediata cualquier día del año.',
 
       'Cotización gratuita por WhatsApp o teléfono. Sin costos ocultos. Aceptamos efectivo, transferencias, Nequi, Daviplata y tarjetas. Garantía escrita en todos nuestros servicios.'
     ]
@@ -421,7 +421,7 @@ export const ZONAS: Zona[] = [
 
       'Atendemos propietarios, comerciantes, administraciones de edificios y todo tipo de establecimientos. Presupuestos transparentes y precios competitivos. Servicios programables fuera de horario comercial.',
 
-      'Emergencias 24/7 en Los Mártires. Inundaciones, fugas graves, taponamientos: llámenos al 300 123 4567 para atención inmediata.',
+      'Emergencias 24/7 en Los Mártires. Inundaciones, fugas graves, taponamientos: llámenos al 314 815 3221 para atención inmediata.',
 
       'Cotización gratuita por WhatsApp o teléfono. Sin costos ocultos. Aceptamos efectivo, transferencias, Nequi, Daviplata y tarjetas. Garantía escrita.'
     ]
@@ -447,7 +447,7 @@ export const ZONAS: Zona[] = [
 
       'Atendemos propietarios, administraciones de edificios, instituciones, museos, restaurantes, hoteles boutique y oficinas. Soluciones respetuosas con el patrimonio arquitectónico. Presupuestos detallados y transparentes.',
 
-      'Emergencias 24/7 en La Candelaria. Fugas graves, inundaciones o cualquier urgencia: llámenos al 300 123 4567 para atención inmediata.',
+      'Emergencias 24/7 en La Candelaria. Fugas graves, inundaciones o cualquier urgencia: llámenos al 314 815 3221 para atención inmediata.',
 
       'Cotización gratuita por WhatsApp o teléfono. Presupuestos claros sin costos ocultos. Todos nuestros servicios incluyen garantía escrita.'
     ]
@@ -473,7 +473,7 @@ export const ZONAS: Zona[] = [
 
       'Atendemos propietarios, arrendatarios, conjuntos residenciales y locales comerciales. Presupuestos transparentes con precios competitivos. Planes de mantenimiento preventivo disponibles.',
 
-      'Emergencias 24/7 en Rafael Uribe Uribe. Inundaciones, fugas graves, taponamientos: llámenos al 300 123 4567 para atención inmediata.',
+      'Emergencias 24/7 en Rafael Uribe Uribe. Inundaciones, fugas graves, taponamientos: llámenos al 314 815 3221 para atención inmediata.',
 
       'Cotización gratuita. Sin costos ocultos. Aceptamos efectivo, transferencias, Nequi, Daviplata y tarjetas. Garantía escrita en todos nuestros servicios.'
     ]
@@ -499,7 +499,7 @@ export const ZONAS: Zona[] = [
 
       'Atendemos propietarios, arrendatarios, administraciones de conjuntos y locales comerciales. Presupuestos transparentes con precios justos. Planes de mantenimiento preventivo disponibles.',
 
-      'Emergencias 24/7 en Ciudad Bolívar. Urgencias como inundaciones o fugas graves: llámenos al 300 123 4567 para atención inmediata.',
+      'Emergencias 24/7 en Ciudad Bolívar. Urgencias como inundaciones o fugas graves: llámenos al 314 815 3221 para atención inmediata.',
 
       'Cotización gratuita por WhatsApp o teléfono. Sin costos ocultos. Aceptamos efectivo, transferencias, Nequi, Daviplata y tarjetas. Garantía escrita.'
     ]
@@ -525,7 +525,7 @@ export const ZONAS: Zona[] = [
 
       'Atendemos fincas, viviendas rurales, establecimientos comerciales y comunidades. Presupuestos detallados y transparentes adaptados a las necesidades rurales. Asesoría técnica para proyectos de instalación hidráulica.',
 
-      'Para emergencias en Sumapaz, llámenos al 300 123 4567. Coordinamos la atención más rápida posible según la ubicación.',
+      'Para emergencias en Sumapaz, llámenos al 314 815 3221. Coordinamos la atención más rápida posible según la ubicación.',
 
       'Cotización previa por WhatsApp o teléfono. Sin costos ocultos. Todos nuestros servicios incluyen garantía escrita. Aceptamos múltiples formas de pago.'
     ]

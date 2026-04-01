@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, afterNextRender, DestroyRef, ElementRef } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SeoService } from '../../core/services/seo.service';
 import { CONTACT_INFO } from '../../shared/constants/contact-info';
@@ -11,7 +11,47 @@ import { CONTACT_INFO } from '../../shared/constants/contact-info';
 })
 export default class Nosotros implements OnInit {
   private readonly seo = inject(SeoService);
+<<<<<<< HEAD
   readonly contact = CONTACT_INFO;
+=======
+  private readonly el = inject(ElementRef);
+  private readonly destroyRef = inject(DestroyRef);
+  readonly contact = CONTACT_INFO;
+
+  constructor() {
+    afterNextRender(() => {
+      this.initScrollAnimations();
+    });
+  }
+
+  private initScrollAnimations(): void {
+    if (globalThis.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const elements = this.el.nativeElement.querySelectorAll('[data-animate]') as NodeListOf<HTMLElement>;
+    if (!elements.length) return;
+
+    elements.forEach((el: HTMLElement) => {
+      el.classList.add('animate-init');
+      const delay = el.dataset['animateDelay'];
+      if (delay) el.style.transitionDelay = `${delay}ms`;
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            (entry.target as HTMLElement).classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        }
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    elements.forEach((el: HTMLElement) => observer.observe(el));
+    this.destroyRef.onDestroy(() => observer.disconnect());
+  }
+>>>>>>> origin/main
 
   ngOnInit(): void {
     this.seo.updateSeo({
