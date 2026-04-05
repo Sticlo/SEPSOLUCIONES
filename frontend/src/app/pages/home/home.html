@@ -35,14 +35,10 @@
       </p>
 
       <!-- CTAs -->
-      <div class="hero__actions">
+      <div class="hero__actions hero__actions--centered">
         <a [href]="contact.whatsapp" target="_blank" rel="noopener noreferrer" class="hero__cta-primary">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Solicitar Servicio Inmediato
-        </a>
-        <a [href]="'tel:' + contact.phoneFormatted" class="hero__cta-secondary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.46 16z"/></svg>
-          Llamar Ahora — 24/7
         </a>
       </div>
 
@@ -50,7 +46,7 @@
       <div class="hero__services">
         <a routerLink="/servicios/destaqueos-y-desagues" class="hero__service-chip">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-          Destaqueos
+          Destapes
         </a>
         <a routerLink="/servicios/deteccion-de-fugas" class="hero__service-chip">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
@@ -79,81 +75,50 @@
       </div>
     </div>
 
-    <!-- ─── Right column: Contact form ─── -->
-    <div class="hero__form-wrap">
-      <div class="hero__form-card">
-        <div class="hero__form-header">
-          <h2 class="hero__form-title">Agenda tu visita</h2>
-          <p class="hero__form-subtitle">Respuesta en menos de 30 minutos</p>
+    <!-- ─── Right column: CTA Llamada ─── -->
+    <div class="hero__call-cta">
+      <div class="hero__call-card">
+
+        <p class="hero__call-urgency">¿Urgencia de plomería?</p>
+        <h2 class="hero__call-title">Atención Inmediata<br><span>24/7</span></h2>
+
+        <!-- Phone ring animation wrapper -->
+        <div class="hero__call-ring-wrap">
+          <span class="hero__call-ring hero__call-ring--1"></span>
+          <span class="hero__call-ring hero__call-ring--2"></span>
+          <span class="hero__call-ring hero__call-ring--3"></span>
+          <a
+            [href]="'tel:' + contact.phoneFormatted"
+            class="hero__call-btn"
+            aria-label="Llamar ahora al {{ contact.phoneDisplay }}"
+          >
+            <svg class="hero__call-btn-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.46 16z"/></svg>
+          </a>
         </div>
 
-        <form class="hero__form" (ngSubmit)="sendWhatsApp()">
-          <div class="hero__form-row">
-            <div class="hero__form-group">
-              <label for="hero-name" class="hero__form-label">Nombre</label>
-              <input
-                type="text"
-                id="hero-name"
-                class="hero__form-input"
-                placeholder="Tu nombre"
-                [(ngModel)]="formData.nombre"
-                name="nombre"
-                required
-              />
-            </div>
-            <div class="hero__form-group">
-              <label for="hero-phone" class="hero__form-label">Teléfono</label>
-              <input
-                type="tel"
-                id="hero-phone"
-                class="hero__form-input"
-                placeholder="314 815 3221"
-                [(ngModel)]="formData.telefono"
-                name="telefono"
-                required
-              />
-            </div>
-          </div>
+        <a
+          [href]="'tel:' + contact.phoneFormatted"
+          class="hero__call-number"
+          aria-label="Llamar al {{ contact.phoneDisplay }}"
+        >
+          {{ contact.phoneDisplay }}
+        </a>
 
-          <div class="hero__form-group">
-            <label for="hero-service" class="hero__form-label">Servicio</label>
-            <select
-              id="hero-service"
-              class="hero__form-input hero__form-select"
-              [(ngModel)]="formData.servicio"
-              name="servicio"
-              required
-            >
-              <option value="" disabled>Selecciona un servicio</option>
-              @for (s of servicios; track s.slug) {
-                <option [value]="s.nombre">{{ s.nombre }}</option>
-              }
-              <option value="Otro">Otro</option>
-            </select>
-          </div>
+        <a
+          [href]="'tel:' + contact.phoneFormatted"
+          class="hero__call-action"
+          aria-label="Llamar ahora"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.46 16z"/></svg>
+          Llamar Ahora — Atención Inmediata
+        </a>
 
-          <div class="hero__form-group">
-            <label for="hero-message" class="hero__form-label">Mensaje</label>
-            <textarea
-              id="hero-message"
-              class="hero__form-input hero__form-textarea"
-              placeholder="Describe brevemente tu problema..."
-              rows="3"
-              [(ngModel)]="formData.mensaje"
-              name="mensaje"
-            ></textarea>
-          </div>
-
-          <button type="submit" class="hero__form-submit">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Agendar Visita por WhatsApp
-          </button>
-        </form>
-
-        <div class="hero__form-footer">
-          <span class="hero__form-footer-dot"></span>
+        <div class="hero__call-available">
+          <span class="hero__call-available-dot"></span>
           Técnicos disponibles ahora
         </div>
+
+        <p class="hero__call-location">Disponible en toda Bogotá y Sabana</p>
       </div>
     </div>
 
@@ -181,7 +146,7 @@
           <div class="scard__img-wrap">
             @switch (servicio.slug) {
               @case ('destaqueos-y-desagues') {
-                <img src="/images/servicios/destapedetuberias.webp" alt="Destaqueos y desagües profesionales" class="scard__img" width="400" height="250" loading="lazy" decoding="async" />
+                <img src="/images/servicios/destapedetuberias.webp" alt="Destapes y desagües profesionales" class="scard__img" width="400" height="250" loading="lazy" decoding="async" />
               }
               @case ('deteccion-de-fugas') {
                 <img src="/images/servicios/detecciondefugas.webp" alt="Detección de fugas sin romper" class="scard__img" width="400" height="250" loading="lazy" decoding="async" />
@@ -361,34 +326,6 @@
         </div>
       </div>
 
-      <div class="ventaja-card" data-animate="fade-up" data-animate-delay="300">
-        <div class="ventaja-card__accent"></div>
-        <div class="ventaja-card__icon-wrap">
-          <div class="ventaja-card__icon-bg">
-            <svg class="ventaja-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 8h28v16a14 14 0 0 1-28 0V8z" fill="currentColor" opacity=".12"/>
-              <path d="M18 8h28v16a14 14 0 0 1-28 0V8z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-              <path d="M18 14h-4a6 6 0 0 0 0 12h4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M46 14h4a6 6 0 0 1 0 12h-4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M32 14l2.5 5 5.5.8-4 3.9.9 5.5L32 26.7l-4.9 2.5.9-5.5-4-3.9 5.5-.8z" fill="currentColor" opacity=".25"/>
-              <path d="M32 14l2.5 5 5.5.8-4 3.9.9 5.5L32 26.7l-4.9 2.5.9-5.5-4-3.9 5.5-.8z" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M26 38v4c0 1-1 2-2 3l-2 3h20l-2-3c-1-1-2-2-2-3v-4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <line x1="18" y1="56" x2="46" y2="56" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-              <rect x="28" y="36" width="8" height="6" rx="1" fill="currentColor" opacity=".15" stroke="currentColor" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <div class="ventaja-card__icon-ring"></div>
-        </div>
-        <div class="ventaja-card__body">
-          <h3 class="ventaja-card__title">+10 Años de Experiencia</h3>
-          <p class="ventaja-card__description">Técnicos certificados con amplia experiencia en plomería profesional.</p>
-        </div>
-        <div class="ventaja-card__metric">
-          <span class="ventaja-card__metric-number">+500</span>
-          <span class="ventaja-card__metric-label">Clientes</span>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -427,6 +364,92 @@
         Ver todas las zonas de cobertura
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Formulario de contacto (movido del hero) ─── -->
+<section class="agenda-section">
+  <div class="container">
+    <div class="agenda-section__inner" data-animate="fade-up">
+      <div class="agenda-section__text">
+        <h2 class="agenda-section__title">Agenda tu visita</h2>
+        <p class="agenda-section__subtitle">Completa el formulario y te contactamos en menos de 30 minutos</p>
+      </div>
+      <div class="hero__form-card">
+        <div class="hero__form-header">
+          <h2 class="hero__form-title">Agenda tu visita</h2>
+          <p class="hero__form-subtitle">Respuesta en menos de 30 minutos</p>
+        </div>
+
+        <form class="hero__form" (ngSubmit)="sendWhatsApp()">
+          <div class="hero__form-row">
+            <div class="hero__form-group">
+              <label for="bottom-name" class="hero__form-label">Nombre</label>
+              <input
+                type="text"
+                id="bottom-name"
+                class="hero__form-input"
+                placeholder="Tu nombre"
+                [(ngModel)]="formData.nombre"
+                name="nombre"
+                required
+              />
+            </div>
+            <div class="hero__form-group">
+              <label for="bottom-phone" class="hero__form-label">Teléfono</label>
+              <input
+                type="tel"
+                id="bottom-phone"
+                class="hero__form-input"
+                placeholder="314 815 3221"
+                [(ngModel)]="formData.telefono"
+                name="telefono"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="hero__form-group">
+            <label for="bottom-service" class="hero__form-label">Servicio</label>
+            <select
+              id="bottom-service"
+              class="hero__form-input hero__form-select"
+              [(ngModel)]="formData.servicio"
+              name="servicio"
+              required
+            >
+              <option value="" disabled>Selecciona un servicio</option>
+              @for (s of servicios; track s.slug) {
+                <option [value]="s.nombre">{{ s.nombre }}</option>
+              }
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="hero__form-group">
+            <label for="bottom-message" class="hero__form-label">Mensaje</label>
+            <textarea
+              id="bottom-message"
+              class="hero__form-input hero__form-textarea"
+              placeholder="Describe brevemente tu problema..."
+              rows="3"
+              [(ngModel)]="formData.mensaje"
+              name="mensaje"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="hero__form-submit">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Agendar Visita por WhatsApp
+          </button>
+        </form>
+
+        <div class="hero__form-footer">
+          <span class="hero__form-footer-dot"></span>
+          Técnicos disponibles ahora
+        </div>
+      </div>
     </div>
   </div>
 </section>

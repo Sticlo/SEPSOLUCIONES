@@ -131,8 +131,8 @@ export default class ServiciosList implements OnInit {
   ngOnInit(): void {
     this.seo.updateSeo({
       title: 'Servicios de Plomería en Bogotá — Residencial, Empresarial y Especializado',
-      description: 'Servicios profesionales de plomería en Bogotá: residencial, empresarial y especializado. Destaqueos, sanitarios, calentadores, redes hidráulicas, restaurantes, hospitales y más. SEP Soluciones.',
-      keywords: 'servicios de plomeria bogota, plomeria residencial bogota, plomeria empresarial bogota, plomeria especializada bogota, destaqueos bogota, reparacion sanitarios bogota, calentadores bogota, redes hidraulicas bogota, plomeria restaurantes bogota, plomeria hospitales bogota, servicio plomeria bogota 24 horas',
+      description: 'Servicios profesionales de plomería en Bogotá: residencial, empresarial y especializado. Destapes, sanitarios, calentadores, redes hidráulicas, restaurantes, hospitales y más. SEP Soluciones.',
+      keywords: 'servicios de plomeria bogota, plomeria residencial bogota, plomeria empresarial bogota, plomeria especializada bogota, destapes bogota, reparacion sanitarios bogota, calentadores bogota, redes hidraulicas bogota, plomeria restaurantes bogota, plomeria hospitales bogota, servicio plomeria bogota 24 horas',
       canonicalUrl: '/servicios'
     });
 

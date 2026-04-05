@@ -181,6 +181,10 @@
     margin-bottom: 2rem;
     animation: content-fade-up 0.6s ease both;
     animation-delay: 0.42s;
+
+    &--centered {
+      justify-content: flex-start;
+    }
   }
 
   &__cta-primary {
@@ -553,6 +557,378 @@
       flex-shrink: 0;
     }
   }
+
+  // ── Right: CTA Llamada ────────────────────────
+  &__call-cta {
+    position: relative;
+    z-index: 1;
+    animation: form-slide-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: 0.3s;
+  }
+
+  &__call-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 2.5rem 2rem 2rem;
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow:
+      0 32px 64px rgba(0, 0, 0, 0.55),
+      0 0 0 1px rgba(255, 255, 255, 0.05),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    transition: box-shadow 0.3s, border-color 0.3s;
+
+    &:hover {
+      border-color: rgba(255, 107, 0, 0.25);
+      box-shadow:
+        0 40px 80px rgba(0, 0, 0, 0.6),
+        0 0 40px rgba(255, 107, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
+  }
+
+  // Pipe decoration
+  &__call-pipe {
+    position: absolute;
+    top: 0;
+    left: 24px;
+    width: 4px;
+    height: 100%;
+    pointer-events: none;
+
+    &-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, #2b6cb0, #1e3350);
+      border-radius: 2px;
+    }
+
+    &-flow {
+      position: absolute;
+      top: -20%;
+      left: -1px;
+      width: 6px;
+      height: 35%;
+      background: linear-gradient(180deg, transparent, #4fc3f7, #25d366, transparent);
+      border-radius: 3px;
+      animation: pipe-flow 3s ease-in-out infinite;
+      opacity: 0.7;
+    }
+
+    &-joint {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #1e3350;
+      border: 2px solid #2b6cb0;
+    }
+  }
+
+  // Water drops
+  &__call-drops {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    width: 60px;
+    height: 80px;
+    pointer-events: none;
+  }
+
+  &__call-drop {
+    position: absolute;
+    width: 6px;
+    height: 8px;
+    background: #4fc3f7;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    opacity: 0;
+    animation: drop-fall 2.8s ease-in infinite;
+
+    &--1 { left: 10px; animation-delay: 0s; }
+    &--2 { left: 28px; animation-delay: 0.9s; }
+    &--3 { left: 46px; animation-delay: 1.8s; }
+  }
+
+  &__call-urgency {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #FF3B3B;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px rgba(255, 59, 59, 0.4);
+    animation: content-fade-up 0.6s ease both;
+    animation-delay: 0.45s;
+  }
+
+  &__call-title {
+    font-size: clamp(1.6rem, 2.5vw, 2rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 0.4rem;
+    animation: content-fade-up 0.6s ease both;
+    animation-delay: 0.5s;
+
+    span {
+      color: #FF3B3B;
+      display: inline-block;
+      font-size: 2.4rem;
+      text-shadow: 0 0 30px rgba(255, 59, 59, 0.5);
+      animation: urgency-glow 2s ease-in-out infinite;
+    }
+  }
+
+  &__call-subtitle {
+    font-size: 0.88rem;
+    color: #FFD600;
+    margin-bottom: 2rem;
+    animation: content-fade-up 0.6s ease both;
+    animation-delay: 0.55s;
+  }
+
+  // Ring animation wrapper
+  &__call-ring-wrap {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__call-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 230, 118, 0.35);
+    animation: call-ring-expand 2.5s ease-out infinite;
+
+    &--1 { animation-delay: 0s; }
+    &--2 { animation-delay: 0.5s; }
+    &--3 { animation-delay: 1s; }
+  }
+
+  &__call-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00E676, #00C853);
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    box-shadow:
+      0 4px 24px rgba(0, 230, 118, 0.5),
+      0 0 0 0 rgba(0, 230, 118, 0.4);
+    animation: call-pulse 2s ease-in-out infinite;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s;
+
+    &:hover {
+      transform: scale(1.12);
+      box-shadow:
+        0 8px 40px rgba(0, 230, 118, 0.65),
+        0 0 24px rgba(0, 230, 118, 0.35);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+    &-icon {
+      animation: phone-shake 1.5s ease-in-out infinite;
+      animation-delay: 3s;
+    }
+  }
+
+  &__call-number {
+    display: block;
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    margin-bottom: 1rem;
+    transition: color 0.2s, text-shadow 0.2s;
+    animation: content-fade-up 0.6s ease both;
+    animation-delay: 0.65s;
+
+    &:hover {
+      color: #FF6B00;
+      text-shadow: 0 0 20px rgba(255, 107, 0, 0.4);
+    }
+  }
+
+  &__call-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    width: 100%;
+    padding: 1.1rem 1.5rem;
+    background: linear-gradient(135deg, #FF6B00, #FF8C00);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 14px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+      0 6px 28px rgba(255, 107, 0, 0.45),
+      0 0 0 0 rgba(255, 107, 0, 0.4),
+      0 1px 0 rgba(255,255,255,0.12) inset;
+    animation: cta-btn-pulse 2.5s ease-in-out infinite;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.25) 50%, transparent 70%);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+
+    &:hover {
+      transform: translateY(-3px) scale(1.02);
+      background: linear-gradient(135deg, #FF7B1A, #FF9A2E);
+      box-shadow:
+        0 12px 44px rgba(255, 107, 0, 0.6),
+        0 0 20px rgba(255, 107, 0, 0.2),
+        0 0 0 4px rgba(255, 107, 0, 0.15);
+
+      &::after {
+        transform: translateX(100%);
+      }
+    }
+
+    &:active {
+      transform: translateY(-1px) scale(0.99);
+    }
+
+    svg { flex-shrink: 0; }
+  }
+
+  &__call-available {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #00E676;
+
+    &-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #00E676;
+      box-shadow: 0 0 10px rgba(0, 230, 118, 0.9);
+      animation: hero-pulse 2s infinite;
+      flex-shrink: 0;
+    }
+  }
+
+  &__call-location {
+    font-size: 0.75rem;
+    color: #4a5568;
+    margin-top: 0.6rem;
+  }
+}
+
+// ── CTA Call Animations ────────────────────────
+@keyframes call-pulse {
+  0% {
+    box-shadow:
+      0 4px 24px rgba(0, 230, 118, 0.5),
+      0 0 0 0 rgba(0, 230, 118, 0.4);
+  }
+  70% {
+    box-shadow:
+      0 4px 24px rgba(0, 230, 118, 0.5),
+      0 0 0 18px rgba(0, 230, 118, 0);
+  }
+  100% {
+    box-shadow:
+      0 4px 24px rgba(0, 230, 118, 0.5),
+      0 0 0 0 rgba(0, 230, 118, 0);
+  }
+}
+
+@keyframes cta-btn-pulse {
+  0% {
+    box-shadow:
+      0 6px 28px rgba(255, 107, 0, 0.45),
+      0 0 0 0 rgba(255, 107, 0, 0.35);
+  }
+  50% {
+    box-shadow:
+      0 6px 28px rgba(255, 107, 0, 0.45),
+      0 0 0 10px rgba(255, 107, 0, 0);
+  }
+  100% {
+    box-shadow:
+      0 6px 28px rgba(255, 107, 0, 0.45),
+      0 0 0 0 rgba(255, 107, 0, 0);
+  }
+}
+
+@keyframes urgency-glow {
+  0%, 100% { text-shadow: 0 0 30px rgba(255, 59, 59, 0.5); }
+  50% { text-shadow: 0 0 40px rgba(255, 59, 59, 0.8), 0 0 60px rgba(255, 59, 59, 0.3); }
+}
+
+@keyframes call-ring-expand {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes phone-shake {
+  0%, 100% { transform: rotate(0deg); }
+  10% { transform: rotate(-12deg); }
+  20% { transform: rotate(12deg); }
+  30% { transform: rotate(-10deg); }
+  40% { transform: rotate(10deg); }
+  50% { transform: rotate(0deg); }
+}
+
+@keyframes pipe-flow {
+  0% { top: -35%; opacity: 0; }
+  10% { opacity: 0.7; }
+  90% { opacity: 0.7; }
+  100% { top: 100%; opacity: 0; }
+}
+
+@keyframes drop-fall {
+  0% { transform: translateY(0); opacity: 0; }
+  10% { opacity: 0.8; }
+  60% { opacity: 0.6; }
+  100% { transform: translateY(70px); opacity: 0; }
 }
 
 // ── Animations ─────────────────────────────────
@@ -602,7 +978,8 @@
     padding: 4rem 1.25rem 3.5rem;
   }
 
-  .hero__form-wrap {
+  .hero__form-wrap,
+  .hero__call-cta {
     max-width: 480px;
     width: 100%;
     margin: 0 auto;
@@ -1033,9 +1410,11 @@
   // ── Grid container ───────────────────────
   &__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.75rem;
     padding: 1.5rem 0;
+    max-width: 1000px;
+    margin: 0 auto;
 
     @media (max-width: 992px) {
       grid-template-columns: repeat(2, 1fr);
@@ -1561,6 +1940,64 @@
 }
 
 // ══════════════════════════════════════════════════════════
+//  AGENDA SECTION – Formulario movido del hero
+// ══════════════════════════════════════════════════════════
+.agenda-section {
+  padding: 5rem 0;
+  background: #070e1a;
+  position: relative;
+
+  &__inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  &__text {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    color: #fff;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 0.5rem;
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    color: #718096;
+    line-height: 1.65;
+  }
+
+  .hero__form-card {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero__form-header,
+  .hero__form-group,
+  .hero__form-submit {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .agenda-section {
+    padding: 3.5rem 0;
+
+    &__inner {
+      max-width: 100%;
+      padding: 0 1rem;
+    }
+  }
+}
+
+// ══════════════════════════════════════════════════════════
 //  CTA FINAL – Call to action
 // ══════════════════════════════════════════════════════════
 .cta-final {
@@ -1825,7 +2262,12 @@
   }
 
   .hero__content,
-  .hero__form-card {
+  .hero__form-card,
+  .hero__call-cta,
+  .hero__call-btn,
+  .hero__call-ring,
+  .hero__call-drop,
+  .hero__call-pipe-flow {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
