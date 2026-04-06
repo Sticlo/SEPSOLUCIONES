@@ -2,6 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { SeoService } from '../../../core/services/seo.service';
 import { SERVICIOS, Servicio } from '../../../shared/data/servicios.data';
+import { CONTACT_INFO } from '../../../shared/constants/contact-info';
 
 @Component({
   selector: 'app-servicio-detail',
@@ -13,6 +14,7 @@ export default class ServicioDetail implements OnInit {
   private readonly seo = inject(SeoService);
   private readonly route = inject(ActivatedRoute);
 
+  readonly contact = CONTACT_INFO;
   servicio!: Servicio;
   otrosServicios: Servicio[] = [];
 
@@ -42,7 +44,7 @@ export default class ServicioDetail implements OnInit {
         'provider': {
           '@type': 'LocalBusiness',
           'name': 'SEP Soluciones',
-          'telephone': '+573001234567',
+          'telephone': CONTACT_INFO.phoneFormatted,
           'address': {
             '@type': 'PostalAddress',
             'addressLocality': 'Bogotá',

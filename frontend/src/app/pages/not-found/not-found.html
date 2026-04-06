@@ -78,7 +78,7 @@
         </svg>
         <div>
           <strong>¿Tienes una emergencia de plomería?</strong>
-          <p>Llámanos al <a href="tel:+573001234567">300 123 4567</a> — Atención 24/7</p>
+          <p>Llámanos al <a [href]="'tel:' + contact.phoneFormatted">{{ contact.phoneDisplay }}</a> — Atención 24/7</p>
         </div>
       </div>
 

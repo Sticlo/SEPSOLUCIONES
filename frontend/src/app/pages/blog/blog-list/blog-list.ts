@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, afterNextRender, DestroyRef, ElementRef } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SeoService } from '../../../core/services/seo.service';
 import { BLOG_POSTS } from '../../../shared/data/blog.data';
@@ -11,13 +11,21 @@ import { BLOG_POSTS } from '../../../shared/data/blog.data';
 })
 export default class BlogList implements OnInit {
   private readonly seo = inject(SeoService);
+  private readonly el = inject(ElementRef);
+  private readonly destroyRef = inject(DestroyRef);
   readonly posts = BLOG_POSTS;
+
+  private readonly MONTHS = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+
+  constructor() {
+    afterNextRender(() => this.initScrollAnimations());
+  }
 
   ngOnInit(): void {
     this.seo.updateSeo({
-      title: 'Blog de Plomería - Consejos y Guías',
+      title: 'Blog de Plomería en Bogotá – Consejos y Guías | SEP Soluciones',
       description: 'Blog de plomería con consejos, guías y tips para el cuidado de las tuberías de su hogar en Bogotá. Información profesional de SEP Soluciones.',
-      keywords: 'blog plomeria, consejos plomeria, tips plomeria bogota, guias plomeria hogar, como destapar tuberias, como detectar fugas, mantenimiento plomeria, almacenes de plomeria, curso de plomeria bogota, blog plomeria profesional bogota',
+      keywords: 'blog plomeria, consejos plomeria, tips plomeria bogota, guias plomeria hogar, como destapar tuberias, como detectar fugas, mantenimiento plomeria, blog plomeria profesional bogota',
       canonicalUrl: '/blog'
     });
 
@@ -35,5 +43,21 @@ export default class BlogList implements OnInit {
         'description': post.extracto
       }))
     });
+  }
+
+  formatDate(fecha: string): string {
+    const [y, m, d] = fecha.split('-');
+    return `${parseInt(d)} ${this.MONTHS[parseInt(m) - 1]} ${y}`;
+  }
+
+  private initScrollAnimations(): void {
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); observer.unobserve(e.target); }
+      }),
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+    this.el.nativeElement.querySelectorAll('[data-animate]').forEach((el: Element) => observer.observe(el));
+    this.destroyRef.onDestroy(() => observer.disconnect());
   }
 }

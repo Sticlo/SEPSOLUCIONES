@@ -3,6 +3,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { SeoService } from '../../../core/services/seo.service';
 import { ZONAS, Zona } from '../../../shared/data/zonas.data';
 import { SERVICIOS } from '../../../shared/data/servicios.data';
+import { CONTACT_INFO } from '../../../shared/constants/contact-info';
 
 @Component({
   selector: 'app-zona-detail',
@@ -14,6 +15,7 @@ export default class ZonaDetail implements OnInit {
   private readonly seo = inject(SeoService);
   private readonly route = inject(ActivatedRoute);
 
+  readonly contact = CONTACT_INFO;
   zona!: Zona;
   servicios = SERVICIOS;
   otrasZonas: Zona[] = [];
@@ -39,7 +41,7 @@ export default class ZonaDetail implements OnInit {
         '@type': 'LocalBusiness',
         'name': `SEP Soluciones - Plomería en ${this.zona.nombre}`,
         'description': this.zona.descripcionSeo,
-        'telephone': '+573001234567',
+        'telephone': CONTACT_INFO.phoneFormatted,
         'address': {
           '@type': 'PostalAddress',
           'addressLocality': 'Bogotá',

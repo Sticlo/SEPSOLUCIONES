@@ -2,6 +2,7 @@ import { Component, OnInit, inject, afterNextRender, DestroyRef, ElementRef } fr
 import { Router, RouterLink } from '@angular/router';
 import { SeoService } from '../../../core/services/seo.service';
 import { ZONAS } from '../../../shared/data/zonas.data';
+import { CONTACT_INFO } from '../../../shared/constants/contact-info';
 
 @Component({
   selector: 'app-zonas-list',
@@ -14,6 +15,7 @@ export default class ZonasList implements OnInit {
   private readonly el = inject(ElementRef);
   private readonly destroyRef = inject(DestroyRef);
   private readonly router = inject(Router);
+  readonly contact = CONTACT_INFO;
   readonly zonas = ZONAS;
 
   hoveredSlug: string | null = null;
