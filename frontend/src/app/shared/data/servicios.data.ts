@@ -31,10 +31,10 @@ export const SERVICIOS: Servicio[] = [
   // ═══════════════════════════════════════════════
   {
     slug: 'destaqueos-y-desagues',
-    nombre: 'Destaqueos y Desagües',
+    nombre: 'Destapes y Desagües',
     descripcionCorta: 'Desobstrucción profesional de desagües y sifones con sonda eléctrica y equipos de alta presión.',
-    descripcionSeo: 'Destaqueos y desagües en Bogotá. Desobstrucción profesional de sifones, lavaplatos y cañerías con sonda eléctrica. Atención inmediata 24/7. SEP Soluciones.',
-    keywords: 'destaqueos bogota, destaqueo desagues bogota, destape desagues bogota, desobstruccion desagues bogota, plomero destaqueos bogota, destaqueo sifones bogota, destaqueo cañerias bogota, servicio destaqueos bogota 24 horas',
+    descripcionSeo: 'Destapes y desagües en Bogotá. Desobstrucción profesional de sifones, lavaplatos y cañerías con sonda eléctrica. Atención inmediata 24/7. SEP Soluciones.',
+    keywords: 'destapes bogota, destape desagues bogota, desobstruccion desagues bogota, plomero destapes bogota, destape sifones bogota, destape cañerias bogota, servicio destapes bogota 24 horas',
     icono: '🔧',
     idealPara: ['Casas', 'Apartamentos', 'Fincas'],
     contenido: [

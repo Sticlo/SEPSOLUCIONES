@@ -3,7 +3,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { SeoService } from '../../../core/services/seo.service';
 import { BLOG_POSTS, BlogPost } from '../../../shared/data/blog.data';
-import { CONTACT_INFO } from '../../../shared/constants/contact-info';
+import { CONTACT_INFO, whatsappLink } from '../../../shared/constants/contact-info';
 
 
 interface ContentBlock {
@@ -29,6 +29,7 @@ export default class BlogDetail implements OnInit {
   private readonly destroyRef = inject(DestroyRef);
 
   readonly contact = CONTACT_INFO;
+  readonly whatsappUrl = whatsappLink('Hola, vine por la página web y necesito un servicio de plomería.');
   post!: BlogPost;
   otrosPosts: BlogPost[] = [];
   contentBlocks: ContentBlock[] = [];
@@ -66,7 +67,7 @@ export default class BlogDetail implements OnInit {
       title: this.post.titulo + ' | SEP Soluciones',
       description: this.post.descripcionSeo,
       keywords: this.post.keywords,
-      canonicalUrl: `/blog/${slug}`,
+      canonicalUrl: `/plomero-bogota/blog/${slug}`,
       ogType: 'article'
     });
 
@@ -78,15 +79,15 @@ export default class BlogDetail implements OnInit {
         'description': this.post.descripcionSeo,
         'datePublished': this.post.fecha,
         'author': { '@type': 'Organization', 'name': 'SEP Soluciones' },
-        'publisher': { '@type': 'Organization', 'name': 'SEP Soluciones', 'url': 'https://www.sepsoluciones.com' }
+        'publisher': { '@type': 'Organization', 'name': 'SEP Soluciones', 'url': 'https://sepsolucioneselite.com' }
       },
       {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://www.sepsoluciones.com/' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Blog', 'item': 'https://www.sepsoluciones.com/blog' },
-          { '@type': 'ListItem', 'position': 3, 'name': this.post.titulo, 'item': `https://www.sepsoluciones.com/blog/${slug}` }
+          { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://sepsolucioneselite.com/plomero-bogota/' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Blog', 'item': 'https://sepsolucioneselite.com/plomero-bogota/blog' },
+          { '@type': 'ListItem', 'position': 3, 'name': this.post.titulo, 'item': `https://sepsolucioneselite.com/plomero-bogota/blog/${slug}` }
         ]
       }
     ]);

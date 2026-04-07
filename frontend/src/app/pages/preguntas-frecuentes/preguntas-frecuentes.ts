@@ -2,7 +2,7 @@ import { Component, OnInit, inject, afterNextRender, DestroyRef, ElementRef } fr
 import { RouterLink } from '@angular/router';
 import { SeoService } from '../../core/services/seo.service';
 import { FAQ_DATA } from '../../shared/data/faq.data';
-import { CONTACT_INFO } from '../../shared/constants/contact-info';
+import { CONTACT_INFO, whatsappLink } from '../../shared/constants/contact-info';
 
 @Component({
   selector: 'app-preguntas-frecuentes',
@@ -17,6 +17,7 @@ export default class PreguntasFrecuentes implements OnInit {
   private readonly destroyRef = inject(DestroyRef);
 
   readonly contact = CONTACT_INFO;
+  readonly whatsappUrl = whatsappLink('Hola, tengo una consulta sobre plomería y vine por la página web.');
   readonly faqs = FAQ_DATA;
   expandedIndex: number | null = null;
 
@@ -29,7 +30,7 @@ export default class PreguntasFrecuentes implements OnInit {
       title: 'Preguntas Frecuentes de Plomería en Bogotá | SEP Soluciones',
       description: 'Resolvemos tus dudas sobre plomería en Bogotá: costos, tiempos de respuesta, garantía, cobertura, emergencias 24 horas, métodos de pago y más. Plomero en Bogotá con servicio de plomería urgente.',
       keywords: 'preguntas frecuentes plomeria bogota, faq plomeria, cuanto cuesta plomero bogota, plomeria bogota precios, plomero emergencia bogota, plomero bogota 24 horas, servicio de plomeria urgente bogota, plomeria 24 horas, plomero en bogota',
-      canonicalUrl: '/preguntas-frecuentes'
+      canonicalUrl: '/plomero-bogota/preguntas-frecuentes'
     });
 
     this.seo.setJsonLd({

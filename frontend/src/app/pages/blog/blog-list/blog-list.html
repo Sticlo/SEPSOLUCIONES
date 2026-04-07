@@ -43,7 +43,7 @@
     <div class="blog-grid__list">
       @for (post of posts; track post.slug; let i = $index) {
         <article class="card" data-animate [style.animation-delay]="(i * 80) + 'ms'">
-          <a [routerLink]="['/blog', post.slug]" class="card__link">
+          <a [routerLink]="['/plomero-bogota/blog', post.slug]" class="card__link">
             <div class="card__cover">
               <img [src]="post.imagen" [alt]="post.titulo" class="card__cover-img" loading="lazy">
               <div class="card__cover-overlay"></div>

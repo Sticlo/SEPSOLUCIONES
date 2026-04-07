@@ -1,0 +1,28 @@
+# =====================================================
+# Reglas para agregar al .htaccess de WordPress (raíz)
+# Ubicar en: /public_html/.htaccess
+# AGREGAR ESTAS REGLAS **ANTES** de las reglas de WordPress
+# =====================================================
+
+# --- Angular sub-sitio: /plomero-bogota/ ---
+# Excluir la carpeta Angular del manejo de WordPress
+RewriteEngine On
+RewriteRule ^plomero-bogota(/|$) - [L]
+
+# Redirigir assets CSS/JS que referencian /images/ y /fonts/
+# desde la raíz hacia la carpeta Angular (solo si no existen en raíz)
+RewriteCond %{REQUEST_URI} ^/(images|fonts)/
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
+RewriteRule ^(.*)$ /plomero-bogota/$1 [L]
+
+# =====================================================
+# A CONTINUACIÓN van las reglas existentes de WordPress:
+# # BEGIN WordPress
+# RewriteEngine On
+# RewriteBase /
+# RewriteRule ^index\.php$ - [L]
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule . /index.php [L]
+# # END WordPress
+# =====================================================

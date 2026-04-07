@@ -6,3 +6,7 @@ export const CONTACT_INFO = {
   whatsapp: 'https://wa.me/573148153221',
 } as const;
 
+export function whatsappLink(message: string): string {
+  return `${CONTACT_INFO.whatsapp}?text=${encodeURIComponent(message)}`;
+}
+

@@ -32,5 +32,5 @@ export const serverRoutes: ServerRoute[] = [
     }
   },
   { path: 'preguntas-frecuentes', renderMode: RenderMode.Prerender },
-  { path: '**', renderMode: RenderMode.Server } // 404 usa Server rendering para evitar prerender de errores
+  { path: '**', renderMode: RenderMode.Client }
 ];

@@ -1,7 +1,7 @@
 import { Component, OnInit, inject, afterNextRender, DestroyRef, ElementRef } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SeoService } from '../../core/services/seo.service';
-import { CONTACT_INFO } from '../../shared/constants/contact-info';
+import { CONTACT_INFO, whatsappLink } from '../../shared/constants/contact-info';
 
 @Component({
   selector: 'app-nosotros',
@@ -13,6 +13,7 @@ export default class Nosotros implements OnInit {
   private readonly seo = inject(SeoService);
 
   readonly contact = CONTACT_INFO;
+  readonly whatsappUrl = whatsappLink('Hola, vine por la página web y me gustaría solicitar un servicio de plomería.');
 
   private readonly el = inject(ElementRef);
   private readonly destroyRef = inject(DestroyRef);
@@ -58,7 +59,7 @@ export default class Nosotros implements OnInit {
       title: 'Sobre Nosotros – Plomeros Profesionales en Bogotá | SEP Soluciones',
       description: 'Conozca a SEP Soluciones: empresa de plomería profesional en Bogotá con más de 10 años de experiencia. Técnicos certificados, garantía escrita, atención 24/7 en servicios hidráulicos.',
       keywords: 'plomería en bogotá, plomeros profesionales bogotá, servicios hidráulicos bogotá, reparaciones de agua bogotá, urgencias de plomería, empresa de plomería bogotá, sep soluciones, técnicos certificados plomería, plomero 24 horas bogotá',
-      canonicalUrl: '/nosotros'
+      canonicalUrl: '/plomero-bogota/nosotros'
     });
 
     this.seo.setJsonLd([
@@ -67,13 +68,13 @@ export default class Nosotros implements OnInit {
         '@type': 'AboutPage',
         'name': 'Sobre SEP Soluciones – Plomeros Profesionales en Bogotá',
         'description': 'Empresa de plomería profesional en Bogotá con más de 10 años de experiencia en servicios hidráulicos, reparaciones de agua y urgencias de plomería.',
-        'url': 'https://www.sepsoluciones.com/nosotros'
+        'url': 'https://sepsolucioneselite.com/plomero-bogota/nosotros'
       },
       {
         '@context': 'https://schema.org',
         '@type': 'Organization',
         'name': 'SEP Soluciones',
-        'url': 'https://www.sepsoluciones.com',
+        'url': 'https://sepsolucioneselite.com',
         'telephone': '+573148153221',
         'email': 'sepplomerosbogota@gmail.com',
         'areaServed': {
@@ -89,8 +90,8 @@ export default class Nosotros implements OnInit {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://www.sepsoluciones.com/' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Nosotros', 'item': 'https://www.sepsoluciones.com/nosotros' }
+          { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://sepsolucioneselite.com/plomero-bogota/' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Nosotros', 'item': 'https://sepsolucioneselite.com/plomero-bogota/nosotros' }
         ]
       }
     ]);

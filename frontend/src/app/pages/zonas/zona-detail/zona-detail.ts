@@ -1,9 +1,10 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, DestroyRef } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { SeoService } from '../../../core/services/seo.service';
 import { ZONAS, Zona } from '../../../shared/data/zonas.data';
 import { SERVICIOS } from '../../../shared/data/servicios.data';
-import { CONTACT_INFO } from '../../../shared/constants/contact-info';
+import { CONTACT_INFO, whatsappLink } from '../../../shared/constants/contact-info';
 
 @Component({
   selector: 'app-zona-detail',
@@ -14,25 +15,34 @@ import { CONTACT_INFO } from '../../../shared/constants/contact-info';
 export default class ZonaDetail implements OnInit {
   private readonly seo = inject(SeoService);
   private readonly route = inject(ActivatedRoute);
+  private readonly destroyRef = inject(DestroyRef);
 
   readonly contact = CONTACT_INFO;
   zona!: Zona;
   servicios = SERVICIOS;
   otrasZonas: Zona[] = [];
+  whatsappUrl: string = CONTACT_INFO.whatsapp;
 
   ngOnInit(): void {
-    const slug = this.route.snapshot.paramMap.get('slug')!;
+    this.route.paramMap.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(params => {
+      const slug = params.get('slug')!;
+      this.loadZona(slug);
+    });
+  }
+
+  private loadZona(slug: string): void {
     const found = ZONAS.find(z => z.slug === slug);
     if (!found) return;
 
     this.zona = found;
+    this.whatsappUrl = whatsappLink(`Hola, necesito un plomero en ${found.nombre} y vine por la página web.`);
     this.otrasZonas = ZONAS.filter(z => z.slug !== slug).slice(0, 5);
 
     this.seo.updateSeo({
       title: `Plomero en ${this.zona.nombre}, Bogotá`,
       description: this.zona.descripcionSeo,
       keywords: this.zona.keywords,
-      canonicalUrl: `/zonas/${slug}`
+      canonicalUrl: `/plomero-bogota/zonas/${slug}`
     });
 
     this.seo.setJsonLd([
@@ -61,22 +71,24 @@ export default class ZonaDetail implements OnInit {
             '@type': 'ListItem',
             'position': 1,
             'name': 'Inicio',
-            'item': 'https://www.sepsoluciones.com/'
+            'item': 'https://sepsolucioneselite.com/plomero-bogota/'
           },
           {
             '@type': 'ListItem',
             'position': 2,
             'name': 'Zonas',
-            'item': 'https://www.sepsoluciones.com/zonas'
+            'item': 'https://sepsolucioneselite.com/plomero-bogota/zonas'
           },
           {
             '@type': 'ListItem',
             'position': 3,
             'name': this.zona.nombre,
-            'item': `https://www.sepsoluciones.com/zonas/${slug}`
+            'item': `https://sepsolucioneselite.com/plomero-bogota/zonas/${slug}`
           }
         ]
       }
     ]);
+
+    globalThis.scrollTo?.({ top: 0 });
   }
 }
