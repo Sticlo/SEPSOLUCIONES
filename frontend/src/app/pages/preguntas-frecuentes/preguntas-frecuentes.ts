@@ -33,18 +33,38 @@ export default class PreguntasFrecuentes implements OnInit {
       canonicalUrl: '/plomero-bogota/preguntas-frecuentes'
     });
 
-    this.seo.setJsonLd({
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      'mainEntity': this.faqs.map(faq => ({
-        '@type': 'Question',
-        'name': faq.pregunta,
-        'acceptedAnswer': {
-          '@type': 'Answer',
-          'text': faq.respuesta
+    this.seo.setJsonLd([
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'name': 'Preguntas Frecuentes de Plomería en Bogotá',
+        'url': 'https://sepsolucioneselite.com/plomero-bogota/preguntas-frecuentes',
+        'mainEntity': this.faqs.map(faq => ({
+          '@type': 'Question',
+          'name': faq.pregunta,
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': faq.respuesta
+          }
+        })),
+        'about': {
+          '@type': 'Thing',
+          'name': 'Plomería en Bogotá',
+          'sameAs': 'https://es.wikipedia.org/wiki/Fontaner%C3%ADa'
+        },
+        'publisher': {
+          '@id': 'https://sepsolucioneselite.com/#organization'
         }
-      }))
-    });
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://sepsolucioneselite.com/plomero-bogota/' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Preguntas Frecuentes', 'item': 'https://sepsolucioneselite.com/plomero-bogota/preguntas-frecuentes' }
+        ]
+      }
+    ]);
   }
 
   toggle(index: number): void {

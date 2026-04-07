@@ -51,20 +51,52 @@ export default class ServicioDetail implements OnInit {
         '@type': 'Service',
         'name': this.servicio.nombre,
         'description': this.servicio.descripcionSeo,
+        'url': `https://sepsolucioneselite.com/plomero-bogota/servicios/${slug}`,
+        'serviceType': this.servicio.nombre,
+        'category': 'Plomería',
         'provider': {
-          '@type': 'LocalBusiness',
-          'name': 'SEP Soluciones',
+          '@type': 'Plumber',
+          '@id': 'https://sepsolucioneselite.com/#organization',
+          'name': 'SEP Soluciones Élite',
           'telephone': CONTACT_INFO.phoneFormatted,
+          'email': CONTACT_INFO.email,
           'address': {
             '@type': 'PostalAddress',
             'addressLocality': 'Bogotá',
+            'addressRegion': 'Cundinamarca',
             'addressCountry': 'CO'
           }
         },
         'areaServed': {
           '@type': 'City',
-          'name': 'Bogotá'
-        }
+          'name': 'Bogotá',
+          'sameAs': 'https://es.wikipedia.org/wiki/Bogot%C3%A1'
+        },
+        'availableChannel': {
+          '@type': 'ServiceChannel',
+          'servicePhone': {
+            '@type': 'ContactPoint',
+            'telephone': CONTACT_INFO.phoneFormatted,
+            'contactType': 'customer service',
+            'availableLanguage': 'Spanish',
+            'hoursAvailable': {
+              '@type': 'OpeningHoursSpecification',
+              'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+              'opens': '00:00',
+              'closes': '23:59'
+            }
+          }
+        },
+        'offers': {
+          '@type': 'Offer',
+          'availability': 'https://schema.org/InStock',
+          'areaServed': { '@type': 'City', 'name': 'Bogotá' },
+          'priceSpecification': {
+            '@type': 'PriceSpecification',
+            'priceCurrency': 'COP'
+          }
+        },
+        'termsOfService': 'Garantía escrita en todos los trabajos realizados'
       },
       {
         '@context': 'https://schema.org',

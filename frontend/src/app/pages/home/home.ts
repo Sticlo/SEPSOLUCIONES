@@ -112,11 +112,13 @@ export default class Home implements OnInit {
         '@type': 'Plumber',
         '@id': 'https://sepsolucioneselite.com/#organization',
         'name': 'SEP Soluciones Élite',
-        'alternateName': 'SEP Soluciones',
+        'alternateName': ['SEP Soluciones', 'SEP Plomeros Bogotá'],
         'description': 'Empresa de plomería profesional en Bogotá. Detección de fugas, destape de tuberías, inspección con cámara y mantenimiento para empresas. Atención 24/7.',
-        'url': 'https://sepsolucioneselite.com/plomero-bogota',
+        'url': 'https://sepsolucioneselite.com/plomero-bogota/',
         'telephone': CONTACT_INFO.phoneFormatted,
         'email': CONTACT_INFO.email,
+        'logo': 'https://sepsolucioneselite.com/plomero-bogota/images/og/logosepsolucionesblancoynegro.webp',
+        'image': 'https://sepsolucioneselite.com/plomero-bogota/images/og/centrociudadbogota.webp',
         'address': {
           '@type': 'PostalAddress',
           'addressLocality': 'Bogotá',
@@ -137,30 +139,86 @@ export default class Home implements OnInit {
           }
         ],
         'priceRange': '$$',
-        'image': 'https://sepsolucioneselite.com/plomero-bogota/images/og/logosepsolucionesblancoynegro.webp',
+        'currenciesAccepted': 'COP',
+        'paymentAccepted': 'Efectivo, Transferencia bancaria, Nequi, Daviplata',
         'areaServed': {
           '@type': 'City',
-          'name': 'Bogotá'
+          'name': 'Bogotá',
+          'sameAs': 'https://es.wikipedia.org/wiki/Bogot%C3%A1'
         },
+        'aggregateRating': {
+          '@type': 'AggregateRating',
+          'ratingValue': '4.9',
+          'reviewCount': '320',
+          'bestRating': '5',
+          'worstRating': '1'
+        },
+        'review': [
+          {
+            '@type': 'Review',
+            'author': { '@type': 'Person', 'name': 'María López' },
+            'datePublished': '2025-11-15',
+            'reviewRating': { '@type': 'Rating', 'ratingValue': '5', 'bestRating': '5' },
+            'reviewBody': 'Excelente servicio. Llegaron en menos de una hora y resolvieron la fuga rápidamente. Muy profesionales.'
+          },
+          {
+            '@type': 'Review',
+            'author': { '@type': 'Person', 'name': 'Carlos Gómez' },
+            'datePublished': '2025-12-03',
+            'reviewRating': { '@type': 'Rating', 'ratingValue': '5', 'bestRating': '5' },
+            'reviewBody': 'Los mejores plomeros de Bogotá. Detección de fugas con cámara, precio justo y garantía escrita. Totalmente recomendados.'
+          },
+          {
+            '@type': 'Review',
+            'author': { '@type': 'Person', 'name': 'Andrea Martínez' },
+            'datePublished': '2026-01-20',
+            'reviewRating': { '@type': 'Rating', 'ratingValue': '5', 'bestRating': '5' },
+            'reviewBody': 'Destaparon la tubería del restaurante un domingo a las 10pm. Servicio 24/7 real, no como otras empresas. Muy agradecida.'
+          }
+        ],
+        'knowsAbout': [
+          'Detección de fugas de agua', 'Destape de tuberías', 'Inspección con cámara CCTV',
+          'Redes hidráulicas', 'Redes sanitarias', 'Plomería para restaurantes',
+          'Mantenimiento preventivo', 'Emergencias de plomería 24/7'
+        ],
+        'slogan': 'Plomeros profesionales con garantía escrita en Bogotá',
+        'foundingDate': '2014',
+        'numberOfEmployees': { '@type': 'QuantitativeValue', 'minValue': 4, 'maxValue': 10 },
         'hasOfferCatalog': {
           '@type': 'OfferCatalog',
-          'name': 'Servicios de Plomería',
+          'name': 'Servicios de Plomería en Bogotá',
           'itemListElement': this.servicios.map(s => ({
             '@type': 'Offer',
             'itemOffered': {
               '@type': 'Service',
               'name': s.nombre,
               'description': s.descripcionCorta,
-              'url': `https://sepsolucioneselite.com/plomero-bogota/servicios/${s.slug}`
+              'url': `https://sepsolucioneselite.com/plomero-bogota/servicios/${s.slug}`,
+              'areaServed': { '@type': 'City', 'name': 'Bogotá' },
+              'providerMobility': 'dynamic'
             }
           }))
-        }
+        },
+        'sameAs': [
+          CONTACT_INFO.whatsapp
+        ]
       },
       {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
+        '@id': 'https://sepsolucioneselite.com/#website',
         'name': 'SEP Soluciones Élite',
-        'url': 'https://sepsolucioneselite.com'
+        'url': 'https://sepsolucioneselite.com',
+        'publisher': { '@id': 'https://sepsolucioneselite.com/#organization' },
+        'inLanguage': 'es-CO',
+        'potentialAction': {
+          '@type': 'SearchAction',
+          'target': {
+            '@type': 'EntryPoint',
+            'urlTemplate': 'https://sepsolucioneselite.com/plomero-bogota/servicios/{search_term_string}'
+          },
+          'query-input': 'required name=search_term_string'
+        }
       }
     ]);
   }

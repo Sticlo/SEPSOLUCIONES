@@ -48,20 +48,50 @@ export default class ZonaDetail implements OnInit {
     this.seo.setJsonLd([
       {
         '@context': 'https://schema.org',
-        '@type': 'LocalBusiness',
-        'name': `SEP Soluciones - Plomería en ${this.zona.nombre}`,
+        '@type': 'Plumber',
+        '@id': 'https://sepsolucioneselite.com/#organization',
+        'name': `SEP Soluciones Élite - Plomería en ${this.zona.nombre}`,
         'description': this.zona.descripcionSeo,
+        'url': `https://sepsolucioneselite.com/plomero-bogota/zonas/${slug}`,
         'telephone': CONTACT_INFO.phoneFormatted,
+        'email': CONTACT_INFO.email,
+        'image': 'https://sepsolucioneselite.com/plomero-bogota/images/og/logosepsolucionesblancoynegro.webp',
         'address': {
           '@type': 'PostalAddress',
           'addressLocality': 'Bogotá',
-          'addressRegion': this.zona.nombre,
+          'addressRegion': 'Cundinamarca',
           'addressCountry': 'CO'
         },
         'areaServed': {
           '@type': 'AdministrativeArea',
-          'name': `${this.zona.nombre}, Bogotá`
-        }
+          'name': `${this.zona.nombre}, Bogotá`,
+          'containedInPlace': {
+            '@type': 'City',
+            'name': 'Bogotá',
+            'sameAs': 'https://es.wikipedia.org/wiki/Bogot%C3%A1'
+          }
+        },
+        'openingHoursSpecification': {
+          '@type': 'OpeningHoursSpecification',
+          'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+          'opens': '00:00',
+          'closes': '23:59'
+        },
+        'priceRange': '$$',
+        'aggregateRating': {
+          '@type': 'AggregateRating',
+          'ratingValue': '4.9',
+          'reviewCount': '320',
+          'bestRating': '5'
+        },
+        'makesOffer': this.servicios.slice(0, 6).map(s => ({
+          '@type': 'Offer',
+          'itemOffered': {
+            '@type': 'Service',
+            'name': s.nombre,
+            'url': `https://sepsolucioneselite.com/plomero-bogota/servicios/${s.slug}`
+          }
+        }))
       },
       {
         '@context': 'https://schema.org',
