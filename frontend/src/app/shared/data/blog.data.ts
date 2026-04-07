@@ -17,7 +17,7 @@ export const BLOG_POSTS: BlogPost[] = [
     descripcionSeo: 'Guía completa para destapar tuberías en Bogotá. Métodos caseros y profesionales para destapar cañerías. Consejos de expertos en plomería. SEP Soluciones.',
     keywords: 'como destapar tuberia, destapar cañeria, metodos destape tuberia, plomero destapes bogota',
     fecha: '2026-03-15',
-    imagen: '/images/Blog/tuberias.webp',
+    imagen: 'images/Blog/tuberias.webp',
     contenido: [
       'Las tuberías tapadas son uno de los problemas de plomería más comunes en hogares y oficinas de Bogotá. El agua que no drena correctamente, los malos olores y los rebosamientos son señales claras de que existe una obstrucción en el sistema de desagüe. Este problema puede presentarse en lavaplatos, sanitarios, duchas, lavaderos y cualquier punto de desagüe de su propiedad.',
       
@@ -57,7 +57,7 @@ export const BLOG_POSTS: BlogPost[] = [
     descripcionSeo: 'Aprenda a detectar fugas de agua en su casa en Bogotá. Señales de alerta, métodos de detección y cuándo llamar a un experto. SEP Soluciones.',
     keywords: 'detectar fugas agua, fugas agua casa, señales fuga agua, humedad paredes bogota, como detectar fugas agua, fugas ocultas casa, consumo anormal agua, filtraciones casa, deteccion fugas hogar',
     fecha: '2026-03-01',
-    imagen: '/images/Blog/fugas.webp',
+    imagen: 'images/Blog/fugas.webp',
     contenido: [
       'Las fugas de agua en el hogar son uno de los problemas más costosos y dañinos que puede enfrentar un propietario. Un goteo aparentemente inofensivo puede desperdiciar miles de litros de agua al año y generar facturas excesivas. Pero más allá del costo económico, las fugas no detectadas pueden causar daños estructurales graves: humedades en paredes y techos, deterioro de cimientos, aparición de moho, daño en pisos y acabados, y en casos extremos, comprometer la seguridad estructural de la vivienda.',
       
@@ -101,7 +101,7 @@ export const BLOG_POSTS: BlogPost[] = [
     descripcionSeo: 'Importancia del mantenimiento preventivo de plomería en Bogotá. Evite emergencias costosas con revisiones periódicas. Consejos profesionales. SEP Soluciones.',
     keywords: 'mantenimiento preventivo plomeria, revision tuberias, evitar emergencias plomeria, cuidado tuberias bogota, mantenimiento hidr sanitario, revision plomeria preventiva, plan mantenimiento plomeria, inspeccion tuberias periodica',
     fecha: '2026-02-15',
-    imagen: '/images/Blog/Mantenimientopreventivo.webp',
+    imagen: 'images/Blog/Mantenimientopreventivo.webp',
     contenido: [
       'El mantenimiento preventivo de plomería es la mejor inversión que puede hacer para proteger su hogar o negocio de costosas emergencias hidr\u00e1ulicas. Mientras que muchos propietarios solo piensan en plomería cuando enfrentan un problema urgente, aquellos que implementan un programa de mantenimiento preventivo ahorran significativamente en reparaciones mayores, prolongan la vida \u00fatil de sus instalaciones y evitan los inconvenientes y estrés de las emergencias. En este art\u00edculo explicaremos por qu\u00e9 el mantenimiento preventivo es crucial y qu\u00e9 debe incluir.',
       
@@ -144,7 +144,7 @@ export const BLOG_POSTS: BlogPost[] = [
     descripcionSeo: 'Cuánto cuesta un plomero en Bogotá. Precios de servicios de plomería: destapes, reparación de fugas, emergencias 24h. Guía de costos actualizada 2026. SEP Soluciones.',
     keywords: 'cuanto cuesta plomero bogota, plomeria bogota precios, cuanto cobra plomero, tarifas plomero bogota, precio destape tuberias bogota, costo reparacion fuga, plomero bogota economico, presupuesto plomeria',
     fecha: '2026-03-10',
-    imagen: '/images/og/logosepsoluciones.webp',
+    imagen: 'images/og/logosepsoluciones.webp',
     contenido: [
       'Encontrar un plomero confiable a precio justo es una preocupación común entre propietarios y arrendatarios en Bogotá. Los costos de servicios de plomería varían significativamente dependiendo del tipo de trabajo, la complejidad, la urgencia y la zona de la ciudad. En este artículo desglosaremos los rangos de precios típicos para diferentes servicios de plomería en Bogotá en 2026, los factores que afectan estos costos, y cómo asegurarse de obtener un presupuesto justo y transparente.',
       
@@ -184,7 +184,7 @@ export const BLOG_POSTS: BlogPost[] = [
     descripcionSeo: 'Problemas de plomería en temporada de lluvias en Bogotá. Prevención de inundaciones, bajantes tapados y filtraciones. Consejos de expertos. SEP Soluciones.',
     keywords: 'problemas plomeria lluvias bogota, inundaciones por lluvias, bajantes tapados, desagues llovias, filtraciones temporada lluvias, plomeria invierno bogota, prevencion inundaciones',
     fecha: '2026-02-25',
-    imagen: '/images/Blog/Plomerialluvias.webp',
+    imagen: 'images/Blog/Plomerialluvias.webp',
     contenido: [
       'Bogotá experimenta dos temporadas de lluvias intensas al año, típicamente de abril a mayo y de octubre a noviembre. Durante estos períodos, los sistemas de plomería y drenaje de hogares y edificios enfrentan una presión adicional que puede revelar problemas existentes o crear nuevos desafíos. En este artículo analizaremos los problemas más comunes de plomería durante la temporada lluviosa y cómo preparar su propiedad para minimizar riesgos.',
       
@@ -232,7 +232,7 @@ export const BLOG_POSTS: BlogPost[] = [
     descripcionSeo: 'Cómo elegir un buen plomero en Bogotá. Guía para contratar plomeros confiables: certificaciones, referencias, presupuestos y garantías. SEP Soluciones.',
     keywords: 'como elegir plomero bogota, contratar plomero confiable, plomero certificado bogota, mejor plomero bogota, plomero recomendado bogota, como encontrar buen plomero, referencias plomero bogota, consejos contratar plomero',
     fecha: '2026-03-25',
-    imagen: '/images/Blog/plomero.webp',
+    imagen: 'images/Blog/plomero.webp',
     contenido: [
       'Contratar un plomero es una decisión importante que puede ahorrarle dinero y problemas, o costarle caro si elige mal. En Bogotá, como en cualquier ciudad grande, existe una amplia variedad de profesionales de la plomería: desde técnicos altamente capacitados y certificados hasta improvisados sin experiencia real. Este artículo le proporcionará las herramientas y conocimientos necesarios para identificar y contratar a un plomero confiable que realice trabajos de calidad a precios justos.',
       
@@ -284,7 +284,7 @@ export const BLOG_POSTS: BlogPost[] = [
     descripcionSeo: 'Guía completa de calentadores de agua en Bogotá. Tipos, comparación, instalación, mantenimiento y ahorro. Calentadores de paso y acumulación. SEP Soluciones.',
     keywords: 'calentadores agua bogota, tipos calentadores, calentador de paso, calentador electrico, calentador a gas, instalacion calentadores bogota, mantenimiento calentadores, mejor calentador agua',
     fecha: '2026-03-26',
-    imagen: '/images/Blog/calentador.webp',
+    imagen: 'images/Blog/calentador.webp',
     contenido: [
       'El agua caliente es una comodidad esencial en cualquier hogar, especialmente en Bogotá donde las temperaturas pueden ser bajas. Elegir el calentador de agua adecuado es una decisión importante que afectará su comodidad diaria, consumo energético y presupuesto durante años. Esta guía completa le ayudará a entender los diferentes tipos de calentadores disponibles en el mercado colombiano, sus ventajas y desventajas, consideraciones de instalación, mantenimiento necesario, y cómo elegir el mejor para sus necesidades específicas.',
       
@@ -334,7 +334,7 @@ export const BLOG_POSTS: BlogPost[] = [
     descripcionSeo: 'Qué hacer en emergencia de plomería en Bogotá. Guía para controlar fugas, inundaciones y destapes urgentes. Plomero 24 horas SEP Soluciones.',
     keywords: 'emergencia plomeria bogota, que hacer fuga agua, plomero urgente bogota, inundacion casa, destape urgente, plomero 24 horas bogota, controlar fuga agua, emergencia tuberia rota',
     fecha: '2026-03-27',
-    imagen: '/images/Blog/emergencia.webp',
+    imagen: 'images/Blog/emergencia.webp',
     contenido: [
       'Una emergencia de plomería puede ocurrir en cualquier momento: una tubería que revienta a medianoche, un sanitario que se desborda durante una reunión familiar, o una fuga masiva que inunda su cocina. En estos momentos críticos, saber qué hacer puede marcar la diferencia entre un problema menor controlado y miles de pesos en daños adicionales. Esta guía le proporciona los pasos exactos a seguir en diferentes tipos de emergencias de plomería, desde los primeros segundos hasta la llegada del plomero profesional.',
       
@@ -396,7 +396,7 @@ export const BLOG_POSTS: BlogPost[] = [
     descripcionSeo: 'Plomería ecológica en Bogotá. Sistemas de ahorro de agua, reciclaje de aguas grises, sanitarios ahorradores. Reduce tu factura con SEP Soluciones.',
     keywords: 'plomeria ecologica bogota, ahorro agua bogota, sanitarios ahorradores, grifos ahorradores, aguas grises, reducir consumo agua, sistemas ecologicos plomeria, plomeria sostenible',
     fecha: '2026-03-28',
-    imagen: '/images/Blog/ecologica.webp',
+    imagen: 'images/Blog/ecologica.webp',
     contenido: [
       'El agua es un recurso cada vez más escaso y valioso. En Bogotá, donde el crecimiento poblacional presiona constantemente el sistema de acueducto, cada gota cuenta. La PLOMería ecológica no es solo una tendencia "verde" - es una necesidad práctica que beneficia simultáneamente su bolsillo y el medio ambiente. Este artículo le mostrará cómo implementar soluciones de plomería ecológica en su hogar o negocio, reducir su consumo de agua hasta 50%, y recuperar la inversión en 2-4 años mediante ahorro en facturas.',
       
@@ -454,7 +454,7 @@ export const BLOG_POSTS: BlogPost[] = [
     descripcionSeo: 'Tuberías antiguas: ¿reparar o reemplazar en Bogotá? Guía para evaluar tuberías de hierro, galvanizadas y plomo. Reemplazo de plomería en SEP Soluciones.',
     keywords: 'tuberias antiguas bogota, reemplazar tuberias, tuberias hierro galvanizado, tuberias plomo, cambio tuberias, reparar o reemplazar plomeria, repiping bogota, edad de tuberias',
     fecha: '2026-03-29',
-    imagen: '/images/Blog/Tuberiaantigua.webp',
+    imagen: 'images/Blog/Tuberiaantigua.webp',
     contenido: [
       'Las tuberías de plomería no duran eternamente. Si su propiedad tiene más de 40-50 años, probablemente enfrenta o enfrentará pronto decisiones críticas sobre sus sistemas de Tupperware. ¿Reparar ese escape que apareció, o es hora de reemplazar todo el sistema? Esta es una de las decisiones de mantenimiento de hogar más importantes y costosas. Una elección incorrecta puede significar desperdiciar dinero en reparaciones interminables de un sistema moribundo, o innecesariamente gastar decenas de millones en reemplazo prematuro. Este título le dará las herramientas para tomar una decisión informada.',
       

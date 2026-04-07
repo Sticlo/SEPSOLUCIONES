@@ -26,7 +26,7 @@ export default class BlogList implements OnInit {
       title: 'Blog de Plomería en Bogotá – Consejos y Guías | SEP Soluciones',
       description: 'Blog de plomería con consejos, guías y tips para el cuidado de las tuberías de su hogar en Bogotá. Información profesional de SEP Soluciones.',
       keywords: 'blog plomeria, consejos plomeria, tips plomeria bogota, guias plomeria hogar, como destapar tuberias, como detectar fugas, mantenimiento plomeria, blog plomeria profesional bogota',
-      canonicalUrl: '/blog'
+      canonicalUrl: '/plomero-bogota/blog'
     });
 
     this.seo.setJsonLd({
@@ -38,7 +38,7 @@ export default class BlogList implements OnInit {
         '@type': 'ListItem',
         'position': index + 1,
         'name': post.titulo,
-        'url': `https://www.sepsoluciones.com/blog/${post.slug}`,
+        'url': `https://sepsolucioneselite.com/plomero-bogota/blog/${post.slug}`,
         'datePublished': post.fecha,
         'description': post.extracto
       }))

@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './core/layout/header/header';
 import { Footer } from './core/layout/footer/footer';
+import { WhatsappFloat } from './shared/components/whatsapp-float/whatsapp-float';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Footer],
+  imports: [RouterOutlet, Header, Footer, WhatsappFloat],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

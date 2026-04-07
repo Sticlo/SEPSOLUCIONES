@@ -1,14 +1,13 @@
 import { Component, OnInit, inject, afterNextRender, DestroyRef, ElementRef } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { FormsModule } from '@angular/forms';
 import { SeoService } from '../../core/services/seo.service';
 import { SERVICIOS } from '../../shared/data/servicios.data';
 import { ZONAS } from '../../shared/data/zonas.data';
-import { CONTACT_INFO } from '../../shared/constants/contact-info';
+import { CONTACT_INFO, whatsappLink } from '../../shared/constants/contact-info';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, FormsModule],
+  imports: [RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
@@ -17,6 +16,7 @@ export default class Home implements OnInit {
   private readonly el = inject(ElementRef);
   private readonly destroyRef = inject(DestroyRef);
   readonly contact = CONTACT_INFO;
+  readonly whatsappUrl = whatsappLink('Hola, necesito un servicio de plomería y vine por la página web.');
   readonly servicios = SERVICIOS;
   readonly serviciosDestacados = SERVICIOS.filter(s =>
     ['destaqueos-y-desagues', 'deteccion-de-fugas', 'redes-hidraulicas-y-sanitarias', 'plomeria-restaurantes'].includes(s.slug)
@@ -98,42 +98,23 @@ export default class Home implements OnInit {
     this.destroyRef.onDestroy(() => observer.disconnect());
   }
 
-  formData = {
-    nombre: '',
-    telefono: '',
-    servicio: '',
-    mensaje: ''
-  };
-
-  sendWhatsApp(): void {
-    const { nombre, telefono, servicio, mensaje } = this.formData;
-    const lines = [
-      `Hola, soy *${nombre}*`,
-      telefono ? `Mi teléfono: ${telefono}` : '',
-      servicio ? `Servicio: ${servicio}` : '',
-      mensaje ? `Mensaje: ${mensaje}` : ''
-    ].filter(Boolean);
-    const text = encodeURIComponent(lines.join('\n'));
-    window.open(`${this.contact.whatsapp}?text=${text}`, '_blank');
-  }
-
   ngOnInit(): void {
     this.seo.updateSeo({
       title: 'Plomería Profesional en Bogotá — Emergencias 24/7',
       description: 'SEP Soluciones Élite: plomería profesional en Bogotá. Detección de fugas, destape de tuberías, inspección con cámara y mantenimiento para empresas. Respuesta en menos de 60 minutos. Llámanos.',
       keywords: 'plomeria bogota, plomero bogota, servicio de plomeria bogota, empresa de plomeria bogota, plomeria bogota 24 horas, urgencias plomeria bogota 24 horas, plomeria a domicilio bogota, plomero bogota norte, plomeria bogota norte, plomeros en bogota norte, servicio de plomeria bogota suba, servicio de plomeria bogota chapinero, plomeria bogota precios, expertos en plomeria bogota, destapes bogota, deteccion de fugas bogota, plomero profesional bogota, emergencias plomeria bogota, plomeria bogotá, servicio de plomeria bogota 24 horas, plomeria en bogota norte',
-      canonicalUrl: '/'
+      canonicalUrl: '/plomero-bogota'
     });
 
     this.seo.setJsonLd([
       {
         '@context': 'https://schema.org',
         '@type': 'Plumber',
-        '@id': 'https://www.sepsoluciones.com/#organization',
+        '@id': 'https://sepsolucioneselite.com/#organization',
         'name': 'SEP Soluciones Élite',
         'alternateName': 'SEP Soluciones',
         'description': 'Empresa de plomería profesional en Bogotá. Detección de fugas, destape de tuberías, inspección con cámara y mantenimiento para empresas. Atención 24/7.',
-        'url': 'https://www.sepsoluciones.com',
+        'url': 'https://sepsolucioneselite.com/plomero-bogota',
         'telephone': CONTACT_INFO.phoneFormatted,
         'email': CONTACT_INFO.email,
         'address': {
@@ -156,7 +137,7 @@ export default class Home implements OnInit {
           }
         ],
         'priceRange': '$$',
-        'image': 'https://www.sepsoluciones.com/images/og/logosepsolucionesblancoynegro.webp',
+        'image': 'https://sepsolucioneselite.com/plomero-bogota/images/og/logosepsolucionesblancoynegro.webp',
         'areaServed': {
           '@type': 'City',
           'name': 'Bogotá'
@@ -170,7 +151,7 @@ export default class Home implements OnInit {
               '@type': 'Service',
               'name': s.nombre,
               'description': s.descripcionCorta,
-              'url': `https://www.sepsoluciones.com/servicios/${s.slug}`
+              'url': `https://sepsolucioneselite.com/plomero-bogota/servicios/${s.slug}`
             }
           }))
         }
@@ -179,7 +160,7 @@ export default class Home implements OnInit {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
         'name': 'SEP Soluciones Élite',
-        'url': 'https://www.sepsoluciones.com'
+        'url': 'https://sepsolucioneselite.com'
       }
     ]);
   }

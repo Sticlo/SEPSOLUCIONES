@@ -2,7 +2,7 @@ import { Component, OnInit, inject, afterNextRender, DestroyRef, ElementRef } fr
 import { Router, RouterLink } from '@angular/router';
 import { SeoService } from '../../../core/services/seo.service';
 import { ZONAS } from '../../../shared/data/zonas.data';
-import { CONTACT_INFO } from '../../../shared/constants/contact-info';
+import { CONTACT_INFO, whatsappLink } from '../../../shared/constants/contact-info';
 
 @Component({
   selector: 'app-zonas-list',
@@ -16,6 +16,7 @@ export default class ZonasList implements OnInit {
   private readonly destroyRef = inject(DestroyRef);
   private readonly router = inject(Router);
   readonly contact = CONTACT_INFO;
+  readonly whatsappUrl = whatsappLink('Hola, necesito un plomero en Bogotá y vine por la página web.');
   readonly zonas = ZONAS;
 
   hoveredSlug: string | null = null;
@@ -57,7 +58,7 @@ export default class ZonasList implements OnInit {
       title: 'Zonas de Servicio de Plomería en Bogotá',
       description: 'Cobertura de plomería profesional en todas las localidades de Bogotá: Usaquén, Chapinero, Suba, Kennedy, Engativá, Fontibón y más. Respuesta inmediata 24/7. SEP Soluciones.',
       keywords: 'plomero bogota norte, plomeria bogota norte, plomeros en bogota norte, plomeria en bogota norte, plomero chapinero, plomero suba, plomero usaquen, plomero kennedy, plomero engativa, plomero fontibon, zonas de cobertura plomeria bogota, plomero bogota todas las localidades, servicio de plomeria bogota suba, servicio de plomeria bogota chapinero, plomeria a domicilio bogota',
-      canonicalUrl: '/zonas'
+      canonicalUrl: '/plomero-bogota/zonas'
     });
 
     this.seo.setJsonLd({
@@ -69,7 +70,7 @@ export default class ZonasList implements OnInit {
         '@type': 'ListItem',
         'position': index + 1,
         'name': `Plomería en ${zona.nombre}`,
-        'url': `https://www.sepsoluciones.com/zonas/${zona.slug}`,
+        'url': `https://sepsolucioneselite.com/plomero-bogota/zonas/${zona.slug}`,
         'description': zona.descripcionSeo
       }))
     });
