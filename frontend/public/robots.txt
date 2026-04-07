@@ -1,5 +1,4 @@
 User-agent: *
-Allow: /plomero-bogota/
-Disallow: /api/
+Allow: /
 
 Sitemap: https://sepsolucioneselite.com/plomero-bogota/sitemap.xml

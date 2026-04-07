@@ -75,11 +75,45 @@ export default class BlogDetail implements OnInit {
       {
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
+        'mainEntityOfPage': {
+          '@type': 'WebPage',
+          '@id': `https://sepsolucioneselite.com/plomero-bogota/blog/${slug}`
+        },
         'headline': this.post.titulo,
         'description': this.post.descripcionSeo,
+        'articleBody': this.post.contenido.join(' ').replace(/<[^>]*>/g, '').substring(0, 5000),
         'datePublished': this.post.fecha,
-        'author': { '@type': 'Organization', 'name': 'SEP Soluciones' },
-        'publisher': { '@type': 'Organization', 'name': 'SEP Soluciones', 'url': 'https://sepsolucioneselite.com' }
+        'dateModified': this.post.fecha,
+        'wordCount': this.post.contenido.join(' ').split(/\s+/).length,
+        'inLanguage': 'es-CO',
+        'image': this.post.imagen ? `https://sepsolucioneselite.com/plomero-bogota/${this.post.imagen}` : 'https://sepsolucioneselite.com/plomero-bogota/images/og/logosepsolucionesblancoynegro.webp',
+        'keywords': this.post.keywords,
+        'author': {
+          '@type': 'Organization',
+          '@id': 'https://sepsolucioneselite.com/#organization',
+          'name': 'SEP Soluciones Élite',
+          'url': 'https://sepsolucioneselite.com'
+        },
+        'publisher': {
+          '@type': 'Organization',
+          '@id': 'https://sepsolucioneselite.com/#organization',
+          'name': 'SEP Soluciones Élite',
+          'url': 'https://sepsolucioneselite.com',
+          'logo': {
+            '@type': 'ImageObject',
+            'url': 'https://sepsolucioneselite.com/plomero-bogota/images/og/logosepsolucionesblancoynegro.webp'
+          }
+        },
+        'isPartOf': {
+          '@type': 'Blog',
+          'name': 'Blog de Plomería - SEP Soluciones',
+          'url': 'https://sepsolucioneselite.com/plomero-bogota/blog'
+        },
+        'about': {
+          '@type': 'Thing',
+          'name': 'Plomería',
+          'sameAs': 'https://es.wikipedia.org/wiki/Plomer%C3%ADa'
+        }
       },
       {
         '@context': 'https://schema.org',

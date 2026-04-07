@@ -10,6 +10,18 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Proteger archivos SEO críticos — servir tal cual, NUNCA reescribir
+RewriteRule ^robots\.txt$ - [L]
+RewriteRule ^sitemap\.xml$ - [L]
+
+# Forzar Content-Type correcto para robots.txt
+<Files "robots.txt">
+  ForceType text/plain
+</Files>
+<Files "sitemap.xml">
+  ForceType application/xml
+</Files>
+
 # SPA Fallback: si el archivo/directorio no existe, redirigir a index.html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

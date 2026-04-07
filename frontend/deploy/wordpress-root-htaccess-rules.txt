@@ -26,3 +26,27 @@ RewriteRule ^(.*)$ /plomero-bogota/$1 [L]
 # RewriteRule . /index.php [L]
 # # END WordPress
 # =====================================================
+
+# =====================================================
+# IMPORTANTE SOBRE ROBOTS.TXT:
+# =====================================================
+# Google SOLO lee robots.txt desde la RAÍZ del dominio:
+#   https://sepsolucioneselite.com/robots.txt
+#
+# El archivo /plomero-bogota/robots.txt NO es leído por Google.
+#
+# Debes editar el robots.txt de WordPress (raíz) y agregar
+# la línea del sitemap de Angular. El robots.txt en
+# /public_html/robots.txt debe contener algo como:
+#
+#   User-agent: *
+#   Disallow: /wp-admin/
+#   Allow: /wp-admin/admin-ajax.php
+#   Allow: /plomero-bogota/
+#
+#   Sitemap: https://sepsolucioneselite.com/sitemap.xml
+#   Sitemap: https://sepsolucioneselite.com/plomero-bogota/sitemap.xml
+#
+# Si WordPress genera robots.txt dinámicamente (via Yoast/RankMath),
+# agrega el sitemap desde el plugin de SEO en su configuración.
+# =====================================================

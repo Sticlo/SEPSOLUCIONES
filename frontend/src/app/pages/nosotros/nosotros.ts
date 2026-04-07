@@ -68,23 +68,55 @@ export default class Nosotros implements OnInit {
         '@type': 'AboutPage',
         'name': 'Sobre SEP Soluciones – Plomeros Profesionales en Bogotá',
         'description': 'Empresa de plomería profesional en Bogotá con más de 10 años de experiencia en servicios hidráulicos, reparaciones de agua y urgencias de plomería.',
-        'url': 'https://sepsolucioneselite.com/plomero-bogota/nosotros'
+        'url': 'https://sepsolucioneselite.com/plomero-bogota/nosotros',
+        'mainEntity': { '@id': 'https://sepsolucioneselite.com/#organization' }
       },
       {
         '@context': 'https://schema.org',
-        '@type': 'Organization',
+        '@type': 'Plumber',
+        '@id': 'https://sepsolucioneselite.com/#organization',
         'name': 'SEP Soluciones',
         'url': 'https://sepsolucioneselite.com',
+        'logo': {
+          '@type': 'ImageObject',
+          'url': 'https://sepsolucioneselite.com/plomero-bogota/images/og/og-home.webp',
+          'width': 1200,
+          'height': 630
+        },
+        'image': 'https://sepsolucioneselite.com/plomero-bogota/images/og/og-home.webp',
         'telephone': '+573148153221',
         'email': 'sepplomerosbogota@gmail.com',
+        'address': {
+          '@type': 'PostalAddress',
+          'addressLocality': 'Bogotá',
+          'addressRegion': 'Cundinamarca',
+          'addressCountry': 'CO'
+        },
         'areaServed': {
           '@type': 'City',
           'name': 'Bogotá',
           'sameAs': 'https://es.wikipedia.org/wiki/Bogot%C3%A1'
         },
-        'serviceType': ['Plomería', 'Servicios hidráulicos', 'Reparaciones de agua', 'Urgencias de plomería'],
+        'knowsAbout': ['Plomería residencial', 'Plomería comercial', 'Detección de fugas', 'Destape de cañerías', 'Instalación de calentadores', 'Reparación de tuberías', 'Mantenimiento hidráulico preventivo'],
         'foundingDate': '2014',
-        'slogan': 'Plomeros profesionales con garantía escrita en Bogotá'
+        'numberOfEmployees': { '@type': 'QuantitativeValue', 'minValue': 10, 'maxValue': 20 },
+        'slogan': 'Plomeros profesionales con garantía escrita en Bogotá',
+        'aggregateRating': {
+          '@type': 'AggregateRating',
+          'ratingValue': '4.9',
+          'reviewCount': '320',
+          'bestRating': '5',
+          'worstRating': '1'
+        },
+        'member': [
+          { '@type': 'Person', 'name': 'David Murillo', 'jobTitle': 'Fundador & Director de Operaciones' },
+          { '@type': 'Person', 'name': 'Dairon Poveda', 'jobTitle': 'Jefe Técnico de Plomería' },
+          { '@type': 'Person', 'name': 'Daniel Murillo', 'jobTitle': 'Técnico Especialista en Detección de Fugas' },
+          { '@type': 'Person', 'name': 'Adriana Coronado', 'jobTitle': 'Coordinadora de Servicio al Cliente' }
+        ],
+        'sameAs': [
+          'https://wa.me/573148153221'
+        ]
       },
       {
         '@context': 'https://schema.org',
