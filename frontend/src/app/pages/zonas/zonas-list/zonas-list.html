@@ -133,7 +133,7 @@
       <!-- Cards premium -->
       <div class="zonas-main__cards">
         @for (zona of zonas; track zona.slug; let i = $index) {
-          <a [routerLink]="['/plomero-bogota/zonas', zona.slug]" class="zona-card"
+          <a [routerLink]="['/zonas', zona.slug]" class="zona-card"
              [class.is-active]="hoveredSlug === zona.slug"
              (mouseenter)="hoveredSlug = zona.slug"
              (mouseleave)="hoveredSlug = null"

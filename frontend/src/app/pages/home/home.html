@@ -124,7 +124,7 @@
 
     <div class="servicios-home__grid">
       @for (servicio of serviciosDestacados; track servicio.slug; let i = $index) {
-        <a [routerLink]="['/plomero-bogota/servicios', servicio.slug]" class="scard" [attr.data-index]="i" data-animate="fade-up" [attr.data-animate-delay]="i * 120">
+        <a [routerLink]="['/servicios', servicio.slug]" class="scard" [attr.data-index]="i" data-animate="fade-up" [attr.data-animate-delay]="i * 120">
 
           <!-- Service image -->
           <div class="scard__img-wrap">
@@ -355,7 +355,7 @@
 
     <div class="zonas-home__grid">
       @for (zona of zonas; track zona.slug; let i = $index) {
-        <a [routerLink]="['/plomero-bogota/zonas', zona.slug]" class="zona-card" data-animate="fade-up" [attr.data-animate-delay]="i * 80">
+        <a [routerLink]="['/zonas', zona.slug]" class="zona-card" data-animate="fade-up" [attr.data-animate-delay]="i * 80">
           <div class="zona-card__pin">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>

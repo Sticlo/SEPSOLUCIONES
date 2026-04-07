@@ -73,7 +73,7 @@
           <h3>Artículos Relacionados</h3>
           <div class="bd-card-items">
             @for (otro of otrosPosts; track otro.slug) {
-              <a [routerLink]="['/plomero-bogota/blog', otro.slug]" class="bd-side-link">
+              <a [routerLink]="['/blog', otro.slug]" class="bd-side-link">
                 <time>{{ formatDate(otro.fecha) }}</time>
                 <h4>{{ otro.titulo }}</h4>
               </a>

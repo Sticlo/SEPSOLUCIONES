@@ -72,7 +72,7 @@
         <h2>Servicios de Plomería en {{ zona.nombre }}</h2>
         <div class="zona-detail__servicios">
           @for (servicio of servicios; track servicio.slug) {
-            <a [routerLink]="['/plomero-bogota/servicios', servicio.slug]" class="servicio-mini">
+            <a [routerLink]="['/servicios', servicio.slug]" class="servicio-mini">
               <div>
                 <h3>{{ servicio.nombre }}</h3>
                 <p>{{ servicio.descripcionCorta }}</p>
@@ -106,7 +106,7 @@
         <div class="sidebar-card">
           <h3>Otras Zonas de Servicio</h3>
           @for (otra of otrasZonas; track otra.slug) {
-            <a [routerLink]="['/plomero-bogota/zonas', otra.slug]" class="sidebar-link">
+            <a [routerLink]="['/zonas', otra.slug]" class="sidebar-link">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               {{ otra.nombre }}
               <span class="sidebar-link__time">{{ otra.tiempoRespuesta }}</span>
