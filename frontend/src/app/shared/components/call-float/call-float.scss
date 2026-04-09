@@ -1,0 +1,185 @@
+// ══════════════════════════════════════════════════════════
+//  CALL FLOATING BUTTON – Global CTA
+//  Fixed position, bottom-left, with pulse animation
+// ══════════════════════════════════════════════════════════
+
+.call-float {
+  // ── Position & Layout ────────────────────────
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 9999;
+
+  // ── Sizing ────────────────────────────────────
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+
+  // ── Visual styling ───────────────────────────
+  background: linear-gradient(135deg, #1a73e8, #0d5fc4);
+  color: #fff;
+  box-shadow:
+    0 6px 20px rgba(26, 115, 232, 0.4),
+    0 2px 8px rgba(0, 0, 0, 0.15);
+
+  // ── Flexbox centering ────────────────────────
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // ── Interaction ──────────────────────────────
+  text-decoration: none;
+  cursor: pointer;
+
+  // ── Transitions ──────────────────────────────
+  transition:
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.3s ease;
+
+  // ── Animation entry ──────────────────────────
+  animation: call-slide-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+
+  // ── Icon ─────────────────────────────────────
+  &__icon {
+    width: 36px;
+    height: 36px;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+  }
+
+  // ── Tooltip (appears on hover) ───────────────
+  &__tooltip {
+    position: absolute;
+    left: calc(100% + 1rem);
+    top: 50%;
+    transform: translateY(-50%) translateX(-10px);
+
+    // Styling
+    background: rgba(26, 32, 44, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 0.6rem 1.1rem;
+    border-radius: 10px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+    // Hidden by default
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    // Transition
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease,
+      transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    // Arrow pointing left (toward the button)
+    &::before {
+      content: '';
+      position: absolute;
+      left: -6px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 6px solid transparent;
+      border-right-color: rgba(26, 32, 44, 0.95);
+      border-left: 0;
+    }
+  }
+
+  // ── Pulse rings ──────────────────────────────
+  &__pulse {
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 2px solid rgba(26, 115, 232, 0.5);
+    opacity: 0;
+    animation: call-pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+    &--delayed {
+      animation-delay: 1.25s;
+    }
+  }
+
+  // ── Hover state ──────────────────────────────
+  &:hover {
+    transform: translateY(-4px) scale(1.08);
+    box-shadow:
+      0 12px 32px rgba(26, 115, 232, 0.5),
+      0 4px 16px rgba(0, 0, 0, 0.2);
+
+    .call-float__icon {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .call-float__tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(-50%) translateX(0);
+    }
+  }
+
+  // ── Active/Click state ───────────────────────
+  &:active {
+    transform: translateY(-2px) scale(1.04);
+  }
+
+  // ── Focus state (accessibility) ──────────────
+  &:focus-visible {
+    outline: 3px solid rgba(26, 115, 232, 0.4);
+    outline-offset: 4px;
+  }
+}
+
+// ══════════════════════════════════════════════════════════
+//  ANIMATIONS
+// ══════════════════════════════════════════════════════════
+
+@keyframes call-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes call-pulse {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+// ══════════════════════════════════════════════════════════
+//  RESPONSIVE
+// ══════════════════════════════════════════════════════════
+
+@media (max-width: 768px) {
+  .call-float {
+    width: 56px;
+    height: 56px;
+    bottom: 1.5rem;
+    left: 1.5rem;
+
+    &__icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    &__tooltip {
+      display: none;
+    }
+  }
+}
