@@ -4,6 +4,7 @@ import { SeoService } from '../../core/services/seo.service';
 import { SERVICIOS } from '../../shared/data/servicios.data';
 import { ZONAS } from '../../shared/data/zonas.data';
 import { CONTACT_INFO, whatsappLink } from '../../shared/constants/contact-info';
+import { FAQ_DATA } from '../../shared/data/faq.data';
 
 @Component({
   selector: 'app-home',
@@ -22,6 +23,7 @@ export default class Home implements OnInit {
     ['destaqueos-y-desagues', 'deteccion-de-fugas', 'redes-hidraulicas-y-sanitarias', 'plomeria-restaurantes'].includes(s.slug)
   );
   readonly zonas = ZONAS.slice(0, 6);
+  readonly faqItems = FAQ_DATA.slice(0, 6);
 
   constructor() {
     afterNextRender(() => {
@@ -100,9 +102,9 @@ export default class Home implements OnInit {
 
   ngOnInit(): void {
     this.seo.updateSeo({
-      title: 'Plomería Profesional en Bogotá — Emergencias 24/7',
-      description: 'SEP Soluciones Élite: plomería profesional en Bogotá. Detección de fugas, destape de tuberías, inspección con cámara y mantenimiento para empresas. Respuesta en menos de 60 minutos. Llámanos.',
-      keywords: 'plomeria bogota, plomero bogota, servicio de plomeria bogota, empresa de plomeria bogota, plomeria bogota 24 horas, urgencias plomeria bogota 24 horas, plomeria a domicilio bogota, plomero bogota norte, plomeria bogota norte, plomeros en bogota norte, servicio de plomeria bogota suba, servicio de plomeria bogota chapinero, plomeria bogota precios, expertos en plomeria bogota, destapes bogota, deteccion de fugas bogota, plomero profesional bogota, emergencias plomeria bogota, plomeria bogotá, servicio de plomeria bogota 24 horas, plomeria en bogota norte',
+      title: 'Plomero en Bogotá en 30 Min | Urgencias 24/7 ',
+      description: '¿Tienes una fuga o tubería tapada? Llegamos en menos de 30 min en Bogotá. Servicio 24/7, técnicos certificados y garantía total. ¡Contáctanos ahora!',
+      keywords: 'plomero bogota, plomeria bogota, plomero en bogota, plomero bogota 24 horas, plomero urgencias bogota, plomero a domicilio bogota, plomero barato bogota, plomero cerca de mi bogota, servicio de plomeria bogota, empresa de plomeria bogota, plomeria bogota 24 horas, urgencias plomeria bogota, plomero bogota norte, plomero bogota sur, plomeros en bogota usaquen, plomeros en bogota suba, plomeros en bogota chapinero, plomeros en bogota kennedy, plomeros en bogota engativa, destapes bogota, destape tuberias bogota, deteccion de fugas bogota, fuga de agua bogota, tuberia tapada bogota, plomero profesional bogota, plomero certificado bogota, plomero emergencias bogota, reparacion tuberias bogota',
       canonicalUrl: '/plomero-bogota'
     });
 
@@ -146,36 +148,6 @@ export default class Home implements OnInit {
           'name': 'Bogotá',
           'sameAs': 'https://es.wikipedia.org/wiki/Bogot%C3%A1'
         },
-        'aggregateRating': {
-          '@type': 'AggregateRating',
-          'ratingValue': '4.9',
-          'reviewCount': '320',
-          'bestRating': '5',
-          'worstRating': '1'
-        },
-        'review': [
-          {
-            '@type': 'Review',
-            'author': { '@type': 'Person', 'name': 'María López' },
-            'datePublished': '2025-11-15',
-            'reviewRating': { '@type': 'Rating', 'ratingValue': '5', 'bestRating': '5' },
-            'reviewBody': 'Excelente servicio. Llegaron en menos de una hora y resolvieron la fuga rápidamente. Muy profesionales.'
-          },
-          {
-            '@type': 'Review',
-            'author': { '@type': 'Person', 'name': 'Carlos Gómez' },
-            'datePublished': '2025-12-03',
-            'reviewRating': { '@type': 'Rating', 'ratingValue': '5', 'bestRating': '5' },
-            'reviewBody': 'Los mejores plomeros de Bogotá. Detección de fugas con cámara, precio justo y garantía escrita. Totalmente recomendados.'
-          },
-          {
-            '@type': 'Review',
-            'author': { '@type': 'Person', 'name': 'Andrea Martínez' },
-            'datePublished': '2026-01-20',
-            'reviewRating': { '@type': 'Rating', 'ratingValue': '5', 'bestRating': '5' },
-            'reviewBody': 'Destaparon la tubería del restaurante un domingo a las 10pm. Servicio 24/7 real, no como otras empresas. Muy agradecida.'
-          }
-        ],
         'knowsAbout': [
           'Detección de fugas de agua', 'Destape de tuberías', 'Inspección con cámara CCTV',
           'Redes hidráulicas', 'Redes sanitarias', 'Plomería para restaurantes',
@@ -219,6 +191,30 @@ export default class Home implements OnInit {
           },
           'query-input': 'required name=search_term_string'
         }
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': this.faqItems.map(faq => ({
+          '@type': 'Question',
+          'name': faq.pregunta,
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': faq.respuesta
+          }
+        }))
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Inicio',
+            'item': 'https://sepsolucioneselite.com/plomero-bogota/'
+          }
+        ]
       }
     ]);
   }
