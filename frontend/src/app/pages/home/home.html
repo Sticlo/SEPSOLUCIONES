@@ -3,10 +3,10 @@
   <!-- Announcement bar -->
   <div class="hero__announcement">
     <span class="hero__announcement-dot"></span>
-    <span>Atención en Bogotá y toda la Sabana</span>
+    <span>⚡ Plomeros disponibles AHORA en Bogotá</span>
     <span class="hero__announcement-divider">|</span>
-    <span>Urgencias 24 horas</span>
-    <a [href]="whatsappUrl" target="_blank" rel="noopener noreferrer" class="hero__announcement-cta">Contáctanos
+    <span>Emergencias 24/7 — Sin recargo</span>
+    <a [href]="whatsappUrl" target="_blank" rel="noopener noreferrer" class="hero__announcement-cta">Pedir plomero ya
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -18,33 +18,35 @@
 
       <div class="hero__badge">
         <span class="hero__badge-dot"></span>
-        Servicio Élite en Bogotá
+        ⚡ Técnicos disponibles AHORA en tu zona
       </div>
 
       <h1 class="hero__headline">
-        Plomería Élite en Bogotá:
-        <span class="hero__headline-accent">soluciones rápidas, limpias</span> y garantizadas.
+        Plomero en Bogotá
+        <span class="hero__headline-accent">en menos de 30 minutos.</span>
+        Urgencias 24/7.
       </h1>
 
       <p class="hero__tagline">
-        <strong>Fugas, rebosamientos o taponamientos:</strong> lo resolvemos hoy mismo.
+        <strong>¿Fuga de agua, tubería tapada o rebosamiento?</strong> Lo solucionamos hoy — garantizado.
       </p>
 
       <p class="hero__description">
-        En SEP Soluciones Élite contamos con tecnología avanzada y técnicos certificados que garantizan resultados desde la primera visita.
+        Cada minuto que pasa, el daño empeora. Técnicos certificados con equipos profesionales listos para salir a tu ubicación en Bogotá. Garantía escrita en cada trabajo.
       </p>
 
       <!-- CTAs -->
       <div class="hero__actions">
         <a [href]="whatsappUrl" target="_blank" rel="noopener noreferrer" class="hero__cta-primary">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Solicitar Servicio Inmediato
+          ¡Pedir Plomero Ahora!
         </a>
         <a [href]="'tel:' + contact.phoneFormatted" class="hero__cta-secondary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.46 16z"/></svg>
-          Llamar Ahora — 24/7
+          Llamar: {{ contact.phoneDisplay }}
         </a>
       </div>
+      <p class="hero__microcopy">⚡ Respuesta inmediata · ✓ Sin costos ocultos · ✓ Garantía escrita</p>
 
       <!-- Service quick links -->
       <div class="hero__services">
@@ -69,12 +71,16 @@
       <!-- Stats -->
       <div class="hero__stats">
         <div class="hero__stat">
+          <span class="hero__stat-number">&lt;30</span>
+          <span class="hero__stat-label">Min. de respuesta</span>
+        </div>
+        <div class="hero__stat">
           <span class="hero__stat-number">24/7</span>
           <span class="hero__stat-label">Disponibilidad</span>
         </div>
         <div class="hero__stat">
           <span class="hero__stat-number">100%</span>
-          <span class="hero__stat-label">Trabajo Garantizado</span>
+          <span class="hero__stat-label">Garantizado</span>
         </div>
       </div>
     </div>
@@ -102,10 +108,34 @@
 
       <div class="hero__visual-badge hero__visual-badge--bottom">
         <span class="hero__visual-badge-dot"></span>
-        <span>Disponibles 24/7</span>
+        <span>Plomeros disponibles ahora</span>
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- ═══ URGENCY STRIP ═══ -->
+<section class="trust-strip">
+  <div class="container">
+    <div class="trust-strip__grid">
+      <div class="trust-strip__item" data-animate="fade-up">
+        <span class="trust-strip__number">&lt;30 min</span>
+        <span class="trust-strip__label">Llegamos a tu puerta</span>
+      </div>
+      <div class="trust-strip__item" data-animate="fade-up" data-animate-delay="100">
+        <span class="trust-strip__number">24/7</span>
+        <span class="trust-strip__label">Incluye domingos y festivos</span>
+      </div>
+      <div class="trust-strip__item" data-animate="fade-up" data-animate-delay="200">
+        <span class="trust-strip__number">100%</span>
+        <span class="trust-strip__label">Garantía escrita</span>
+      </div>
+      <div class="trust-strip__item" data-animate="fade-up" data-animate-delay="300">
+        <span class="trust-strip__number">$0</span>
+        <span class="trust-strip__label">Cotización sin compromiso</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -113,12 +143,12 @@
   <div class="container">
 
     <div class="servicios-home__header" data-animate="fade-up">
-      <span class="servicios-home__label">Nuestros Servicios</span>
+      <span class="servicios-home__label">Servicios de Plomería en Bogotá</span>
       <h2 class="servicios-home__headline">
-        Soluciones precisas para cada<br>problema hidráulico
+        Solucionamos cualquier emergencia<br>de plomería en Bogotá — hoy mismo
       </h2>
       <p class="servicios-home__subtitle">
-        Tecnología de diagnóstico avanzada, técnicos certificados y resultados garantizados desde la primera visita.
+        Destapes, fugas, redes hidráulicas y más. Técnicos certificados con equipos profesionales y garantía escrita.
       </p>
     </div>
 
@@ -200,19 +230,60 @@
     <!-- Emergency CTA strip -->
     <div class="servicios-home__emergency" data-animate="fade-up">
       <div class="servicios-home__emergency-text">
-        <strong>¿Emergencia en este momento?</strong>
-        <span>Atendemos urgencias 24/7 — sin costo de visita diagnóstica.</span>
+        <strong>🚨 ¿Emergencia de plomería AHORA MISMO?</strong>
+        <span>Cada minuto cuenta. Un técnico puede estar en tu puerta en menos de 30 min.</span>
       </div>
       <div class="servicios-home__emergency-actions">
         <a [href]="'tel:' + contact.phoneFormatted" class="servicios-home__emergency-btn servicios-home__emergency-btn--call">
-          Llamar ahora — 24/7
+          📞 Llamar ahora — 24/7
         </a>
         <a [href]="whatsappUrl" target="_blank" rel="noopener noreferrer" class="servicios-home__emergency-btn servicios-home__emergency-btn--wa">
-          Escribir por WhatsApp
+          💬 WhatsApp inmediato
         </a>
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- ═══ CÓMO TRABAJAMOS (Process) ═══ -->
+<section class="proceso-home">
+  <div class="container">
+    <div class="proceso-home__header" data-animate="fade-up">
+      <span class="proceso-home__label">Así de fácil</span>
+      <h2 class="proceso-home__title">¿Cómo Solicitar un Plomero en Bogotá?</h2>
+      <p class="proceso-home__subtitle">3 pasos y listo. Sin complicaciones, sin esperas.</p>
+    </div>
+
+    <div class="proceso-home__steps">
+      <div class="proceso-step" data-animate="fade-up">
+        <div class="proceso-step__number">1</div>
+        <h3 class="proceso-step__title">Contáctanos</h3>
+        <p class="proceso-step__desc">Llámanos o escríbenos por WhatsApp. Cuéntanos tu problema y te damos un presupuesto inmediato sin compromiso.</p>
+      </div>
+      <div class="proceso-step__arrow" data-animate="fade-up" data-animate-delay="80">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+      <div class="proceso-step" data-animate="fade-up" data-animate-delay="150">
+        <div class="proceso-step__number">2</div>
+        <h3 class="proceso-step__title">Llegamos en 30 min</h3>
+        <p class="proceso-step__desc">Un técnico certificado llega a tu ubicación en Bogotá con todas las herramientas profesionales necesarias.</p>
+      </div>
+      <div class="proceso-step__arrow" data-animate="fade-up" data-animate-delay="230">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+      <div class="proceso-step" data-animate="fade-up" data-animate-delay="300">
+        <div class="proceso-step__number">3</div>
+        <h3 class="proceso-step__title">Problema resuelto</h3>
+        <p class="proceso-step__desc">Solucionamos tu emergencia con garantía escrita. Pagas solo cuando estés 100% satisfecho con el resultado.</p>
+      </div>
+    </div>
+
+    <div class="proceso-home__cta" data-animate="fade-up">
+      <a [href]="whatsappUrl" target="_blank" rel="noopener noreferrer" class="proceso-home__btn">
+        Solicitar plomero ahora →
+      </a>
+    </div>
   </div>
 </section>
 
@@ -223,8 +294,8 @@
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         Nuestras ventajas
       </span>
-      <h2 class="porque-elegirnos__title">¿Por Qué Elegir SEP Soluciones?</h2>
-      <p class="porque-elegirnos__subtitle">Compromiso, calidad y experiencia en cada servicio</p>
+      <h2 class="porque-elegirnos__title">¿Por Qué Llamarnos a Nosotros y No a Otro?</h2>
+      <p class="porque-elegirnos__subtitle">Porque llegamos rápido, cobramos justo y si el problema vuelve, volvemos gratis</p>
     </div>
   </div>
 
@@ -253,8 +324,8 @@
           <div class="ventaja-card__icon-ring"></div>
         </div>
         <div class="ventaja-card__body">
-          <h3 class="ventaja-card__title">Respuesta Inmediata</h3>
-          <p class="ventaja-card__description">Llegamos en el menor tiempo posible a cualquier punto de Bogotá.</p>
+          <h3 class="ventaja-card__title">Llegamos en &lt;30 Minutos</h3>
+          <p class="ventaja-card__description">Plomeros disponibles ahora mismo en toda Bogotá. Respuesta inmediata a emergencias.</p>
         </div>
         <div class="ventaja-card__metric">
           <span class="ventaja-card__metric-number">24/7</span>
@@ -276,8 +347,8 @@
           <div class="ventaja-card__icon-ring"></div>
         </div>
         <div class="ventaja-card__body">
-          <h3 class="ventaja-card__title">Trabajo Garantizado</h3>
-          <p class="ventaja-card__description">Garantía escrita en todos nuestros servicios de plomería profesional.</p>
+          <h3 class="ventaja-card__title">Garantía Escrita al 100%</h3>
+          <p class="ventaja-card__description">Si el problema vuelve, volvemos nosotros gratis. Garantía real, no de palabra.</p>
         </div>
         <div class="ventaja-card__metric">
           <span class="ventaja-card__metric-number">100%</span>
@@ -301,8 +372,8 @@
           <div class="ventaja-card__icon-ring"></div>
         </div>
         <div class="ventaja-card__body">
-          <h3 class="ventaja-card__title">Precios Justos</h3>
-          <p class="ventaja-card__description">Cotización sin compromiso y precios transparentes sin costos ocultos.</p>
+          <h3 class="ventaja-card__title">Precios Sin Sorpresas</h3>
+          <p class="ventaja-card__description">Cotización gratuita antes de empezar. Cero costos ocultos. Usted aprueba antes de que toquemos una tubería.</p>
         </div>
         <div class="ventaja-card__metric">
           <span class="ventaja-card__metric-number">Gratis</span>
@@ -329,12 +400,12 @@
           <div class="ventaja-card__icon-ring"></div>
         </div>
         <div class="ventaja-card__body">
-          <h3 class="ventaja-card__title">+10 Años de Experiencia</h3>
-          <p class="ventaja-card__description">Técnicos certificados con amplia experiencia en plomería profesional.</p>
+          <h3 class="ventaja-card__title">Técnicos Certificados</h3>
+          <p class="ventaja-card__description">Personal con años de experiencia real resolviendo emergencias de plomería en Bogotá.</p>
         </div>
         <div class="ventaja-card__metric">
-          <span class="ventaja-card__metric-number">+500</span>
-          <span class="ventaja-card__metric-label">Clientes</span>
+          <span class="ventaja-card__metric-number">Pro</span>
+          <span class="ventaja-card__metric-label">Certificados</span>
         </div>
       </div>
 
@@ -349,8 +420,8 @@
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         Cobertura
       </span>
-      <h2 class="zonas-home__title">Zonas de Servicio en Bogotá</h2>
-      <p class="zonas-home__subtitle">Llegamos a las principales localidades de Bogotá con respuesta inmediata</p>
+      <h2 class="zonas-home__title">Plomeros a Domicilio en Toda Bogotá</h2>
+      <p class="zonas-home__subtitle">Servicio de plomería con cobertura en las principales localidades. Llegamos rápido a tu zona.</p>
     </div>
 
     <div class="zonas-home__grid">
@@ -380,15 +451,58 @@
   </div>
 </section>
 
+<!-- ═══ URGENCIA MID-PAGE CTA ═══ -->
+<section class="mid-cta">
+  <div class="container">
+    <div class="mid-cta__content" data-animate="fade-up">
+      <h2 class="mid-cta__title">⏰ Mientras lees esto, el agua sigue corriendo.</h2>
+      <p class="mid-cta__text">Una fuga pequeña puede convertirse en una inundación en horas. No arriesgues tu casa ni tu negocio.</p>
+      <div class="mid-cta__actions">
+        <a [href]="whatsappUrl" target="_blank" rel="noopener noreferrer" class="mid-cta__btn mid-cta__btn--wa">💬 Pedir plomero por WhatsApp</a>
+        <a [href]="'tel:' + contact.phoneFormatted" class="mid-cta__btn mid-cta__btn--call">📞 Llamar ahora — 24/7</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ – PREGUNTAS FRECUENTES (Rich Snippets) ═══ -->
+<section class="faq-home">
+  <div class="container">
+    <div class="faq-home__header" data-animate="fade-up">
+      <span class="faq-home__label">Preguntas frecuentes</span>
+      <h2 class="faq-home__title">Todo Sobre Nuestro Servicio de Plomería en Bogotá</h2>
+      <p class="faq-home__subtitle">Resolvemos tus dudas antes de llamar</p>
+    </div>
+
+    <div class="faq-home__list">
+      @for (faq of faqItems; track $index; let i = $index) {
+        <details class="faq-home__item" data-animate="fade-up" [attr.data-animate-delay]="i * 80">
+          <summary class="faq-home__question">
+            {{ faq.pregunta }}
+            <svg class="faq-home__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-home__answer">
+            <p>{{ faq.respuesta }}</p>
+          </div>
+        </details>
+      }
+    </div>
+
+    <div class="faq-home__footer" data-animate="fade-up">
+      <p>¿Tienes otra pregunta? <a [href]="whatsappUrl" target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp</a> y te respondemos al instante.</p>
+    </div>
+  </div>
+</section>
+
 <section class="cta-final">
   <div class="container">
     <div class="cta-final__content" data-animate="scale-up">
       <span class="cta-final__badge">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        Disponible 24/7
+        Plomeros disponibles ahora
       </span>
-      <h2 class="cta-final__title">¿Necesita un Plomero en Bogotá?</h2>
-      <p class="cta-final__subtitle">Contáctenos ahora y reciba atención inmediata. Respuesta garantizada en menos de 60 minutos.</p>
+      <h2 class="cta-final__title">¿Necesitas un Plomero en Bogotá Ya?</h2>
+      <p class="cta-final__subtitle">Cada minuto que pasa, el daño crece. Llámanos AHORA y en menos de 30 minutos un técnico estará en tu puerta con todo lo necesario para resolver.</p>
       <div class="cta-final__actions">
         <a [href]="'tel:' + contact.phoneFormatted" class="cta-btn cta-btn--phone">
           <span class="cta-btn__icon">
@@ -411,7 +525,7 @@
       </div>
       <p class="cta-final__guarantee">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        Servicio garantizado · Plomeros certificados · Precios transparentes
+        Garantía escrita · Técnicos certificados · Sin costos ocultos · Atención inmediata
       </p>
     </div>
   </div>

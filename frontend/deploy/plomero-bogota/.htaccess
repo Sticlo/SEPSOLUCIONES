@@ -1,14 +1,19 @@
 # =================================================
-# .htaccess para Angular SPA en /plomero-bogota/
+# .htaccess para Angular SSG (prerender) en /plomero-bogota/
 # Ubicar en: /public_html/plomero-bogota/.htaccess
 # =================================================
+
+# Evitar que Apache agregue trailing slash (301) a directorios
+# Las sub-rutas prerenderizadas se sirven internamente sin redirect
+DirectorySlash Off
 
 # Habilitar mod_rewrite
 RewriteEngine On
 
-# Forzar HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# NOTA: NO forzar HTTPS aquí.
+# El .htaccess raíz de WordPress/LiteSpeed ya maneja HTTPS a nivel dominio.
+# Duplicarlo aquí causa redirect loop porque LiteSpeed proxy
+# siempre reporta HTTPS=off al backend.
 
 # Proteger archivos SEO críticos — servir tal cual, NUNCA reescribir
 RewriteRule ^robots\.txt$ - [L]
@@ -22,9 +27,17 @@ RewriteRule ^sitemap\.xml$ - [L]
   ForceType application/xml
 </Files>
 
-# SPA Fallback: si el archivo/directorio no existe, redirigir a index.html
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
+# Archivos existentes → servir directamente
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Directorios prerenderizados → servir su index.html SIN redirect 301
+# /servicios → sirve internamente servicios/index.html (sin 301 a /servicios/)
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.+?)/?$ $1/index.html [L]
+
+# SPA Fallback: solo si no hay archivo ni directorio prerenderizado
 RewriteRule ^ index.html [L]
 
 # ---- Compresión GZIP ----

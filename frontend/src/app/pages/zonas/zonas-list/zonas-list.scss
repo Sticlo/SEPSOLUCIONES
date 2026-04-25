@@ -735,6 +735,92 @@ $ease-out:      cubic-bezier(0.22, 1, 0.36, 1);
   }
 }
 
+// ── Medellín banner ─────────────────────────────
+.zonas-medellin {
+  padding: 2rem 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+    border: 1px solid $border-soft;
+    border-radius: $radius-lg;
+    padding: 1.5rem 2rem;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: rgba($brand-blue, 0.08);
+    border-radius: 12px;
+    flex-shrink: 0;
+    color: $brand-blue;
+  }
+
+  &__text {
+    flex: 1;
+
+    p {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: $text-primary;
+      margin: 0;
+
+      strong { color: $brand-blue; }
+    }
+
+    span {
+      font-size: 0.85rem;
+      color: $text-secondary;
+      margin-top: 0.15rem;
+      display: block;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: $brand-blue;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.25rem;
+    border-radius: $radius-md;
+    border: 1px solid rgba($brand-blue, 0.2);
+    white-space: nowrap;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
+
+    &:hover {
+      background: rgba($brand-blue, 0.06);
+      border-color: rgba($brand-blue, 0.4);
+      transform: translateX(2px);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .zonas-medellin__inner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25rem;
+  }
+
+  .zonas-medellin__link {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 // ── CTA Bottom ─────────────────────────────────
 .zonas-cta {
   padding: 5rem 0;
