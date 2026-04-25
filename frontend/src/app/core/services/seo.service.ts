@@ -23,7 +23,7 @@ export class SeoService {
   private readonly siteName = 'SEP Soluciones Élite';
 
   updateSeo(config: SeoConfig): void {
-    const fullTitle = `${config.title} | ${this.siteName}`;
+    const fullTitle = this.buildTitle(config.title);
     this.titleService.setTitle(fullTitle);
 
     this.meta.updateTag({ name: 'description', content: config.description });
@@ -51,7 +51,7 @@ export class SeoService {
     this.meta.updateTag({ name: 'twitter:description', content: config.description });
     this.meta.updateTag({ name: 'twitter:image', content: config.ogImage ?? this.defaultImage });
     this.meta.updateTag({ name: 'twitter:image:alt', content: config.title });
-    this.meta.updateTag({ name: 'twitter:image:alt', content: config.title });
+    this.meta.updateTag({ name: 'twitter:site', content: '@sepsolucioneselite' });
 
     // Canonical URL
     this.updateCanonicalUrl(config.canonicalUrl ?? '');
@@ -106,5 +106,12 @@ export class SeoService {
   removeJsonLd(): void {
     const scripts = this.document.querySelectorAll('script[type="application/ld+json"]');
     scripts.forEach(s => s.remove());
+  }
+
+  private buildTitle(title: string): string {
+    const normalizedTitle = title.toLowerCase();
+    const normalizedSite = this.siteName.toLowerCase();
+    const hasBrandAlready = normalizedTitle.includes('sep soluciones') || normalizedTitle.includes(normalizedSite);
+    return hasBrandAlready ? title : `${title} | ${this.siteName}`;
   }
 }

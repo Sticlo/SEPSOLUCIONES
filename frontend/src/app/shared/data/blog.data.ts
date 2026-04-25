@@ -544,6 +544,162 @@ export const BLOG_POSTS: BlogPost[] = [
       
       'No espere al desastre. Llámenos hoy para evaluación: 314 815 3221. La tranquilidad tiene valor.'
     ]
+  },
+
+  // ─── POST 11 ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'sanitario-tapado-bogota',
+    titulo: 'Sanitario Tapado en Bogotá: Causas, Soluciones y Cuándo Llamar al Plomero',
+    extracto: 'El sanitario tapado es una de las emergencias más frecuentes en hogares bogotanos. Aprenda a identificar la causa, qué puede hacer usted mismo y cuándo es indispensable llamar a un profesional.',
+    descripcionSeo: 'Sanitario tapado en Bogotá: causas más frecuentes, soluciones caseras y cuándo llamar a un plomero profesional. Servicio de destape 24/7. SEP Soluciones.',
+    keywords: 'sanitario tapado bogota, destape sanitario bogota, sanitario obstruido bogota, plomero sanitario bogota, sanitario no descarga bogota, desatascar sanitario bogota, sanitario se devuelve agua bogota, sanitario tapado urgente bogota',
+    fecha: '2026-04-10',
+    imagen: 'images/Blog/tuberias.webp',
+    contenido: [
+      'Un sanitario tapado en Bogotá es una emergencia que no puede esperar. A diferencia de un lavaplatos lento o una ducha con poca presión, un sanitario bloqueado puede hacer imposible el uso del baño y generar situaciones de higiene crítica para toda la familia. En SEP Soluciones atendemos cientos de casos de sanitarios tapados al mes en toda Bogotá, y en este artículo compartimos lo que más necesita saber.',
+
+      '**¿Por qué se tapa un sanitario?** La causa más común es el exceso de papel higiénico en una sola descarga. Sin embargo, en Bogotá también vemos con mucha frecuencia: toallitas húmedas (que aunque el empaque diga "desechable" NO se disuelven), juguetes pequeños o artículos caídos accidentalmente, acumulación de cal y minerales del agua bogotana en el cuello del sanitario, objetos de higiene femenina, y en edificios antiguos de Chapinero, Teusaquillo o La Candelaria, tuberías angostas con décadas de sedimento.',
+
+      '**Señales claras de sanitario tapado:** El agua sube hasta el borde de la taza cuando jala la palanca. El sanitario descarga muy lento y el nivel del agua baja despacio. Escucha borboteos en el desagüe del piso o en la ducha cuando usa el sanitario (señal de taponamiento más profundo en la red). El sanitario se desborda o el agua se devuelve.',
+
+      '**Lo que puede intentar en casa:** Si el tapón es superficial, un destapador de copa (plunger) puede resolver el problema. Pasos: asegúrese de que haya suficiente agua en la taza para cubrir la copa, coloque el destapador creando sello hermético sobre el orificio, bombee vigorosa y rítmicamente 10-15 veces sin romper el sello, luego jale rápido hacia arriba. Repita 3-4 veces. Si el agua empieza a drenar más rápido, continúe hasta que fluya con normalidad.',
+
+      'Otra opción casera: mezcle media taza de bicarbonato con media taza de vinagre blanco, viértalo en el sanitario, tape con un trapo 20 minutos y luego enjuague con agua caliente (no hirviendo, puede dañar la porcelana). Esto funciona para obstrucciones de papel y materia orgánica, pero no para objetos sólidos.',
+
+      '**Cuándo NO intentar resolverlo solo:** Si el agua sale burbujeando de otros desagües del baño, el problema está en la tubería de bajante y requiere equipo profesional. Si ya intentó el destapador y no funcionó en 2-3 rondas, seguir puede empeorar la obstrucción. Si sospecha que cayó un objeto sólido (juguete, tapa de champú, celular), el destapador podría empujarlo más profundo. En esos casos, lo correcto es llamar a un plomero con sonda eléctrica.',
+
+      '**El proceso profesional de destape de sanitarios:** En SEP Soluciones usamos sonda eléctrica flexible de hasta 30 metros que entra por el desagüe del sanitario y rompe o extrae la obstrucción mecánicamente. Para taponamientos en la bajante del edificio, usamos sonda de mayor calibre. En algunos casos hacemos inspección con cámara de video para localizar objetos o acumulaciones difíciles. Todo el proceso es limpio y sin necesidad de romper paredes.',
+
+      '**Mantenimiento preventivo para evitar taponamientos futuros:** La regla de oro es simple: al sanitario solo entran desechos corporales y papel higiénico en cantidad moderada. Nada más. Instale papeleras en todos los baños para evitar la tentación de tirar al sanitario lo que no debe ir ahí. Cada 3 meses, vierta un litro de agua caliente con una cucharada de jabón líquido para disolver residuos que se acumulan en el cuello. En edificios con agua dura (que tiene mucho calcio), considere un limpiador de tanque que evite la formación de incrustaciones.',
+
+      '**Costos de destape de sanitario en Bogotá:** Un destape simple de sanitario en Bogotá cuesta entre $80.000 y $150.000 dependiendo de la complejidad y la hora del servicio. Destapes en la bajante o que requieren sonda industrial tienen un costo mayor. En SEP Soluciones siempre damos presupuesto antes de comenzar, sin costos ocultos. Atendemos las 24 horas incluyendo domingos y festivos.',
+
+      '**Recuerde:** Un sanitario tapado no es solo una molestia; si deja rebosar agua contaminada puede dañar el piso, bajar al apartamento de abajo y generar problemas legales con vecinos. Actúe rápido. Si los métodos caseros no funcionan en el primer intento, llámenos al 314 815 3221. Llegamos en menos de 30 minutos en la mayoría de zonas de Bogotá.'
+    ]
+  },
+
+  // ─── POST 12 ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'fuga-agua-bano-bogota',
+    titulo: 'Fuga de Agua en el Baño: Qué Hacer Paso a Paso en Bogotá',
+    extracto: 'Una fuga en el baño puede generar daños estructurales y problemas con vecinos si no se atiende a tiempo. Sepa cómo identificarla, contenerla y resolverla en Bogotá.',
+    descripcionSeo: 'Fuga de agua en el baño en Bogotá: cómo detectarla, contenerla y repararla. Servicio profesional de detección y reparación de fugas 24/7. SEP Soluciones.',
+    keywords: 'fuga agua baño bogota, fuga de agua bogota, reparar fuga baño bogota, plomero fugas bogota, fuga ducha bogota, fuga sanitario bogota, tuberia rota baño bogota, humedad baño bogota, fuga agua apartamento bogota, goteo baño bogota',
+    fecha: '2026-04-12',
+    imagen: 'images/Blog/fugas.webp',
+    contenido: [
+      'Una fuga de agua en el baño es uno de los problemas de plomería que más daños secundarios puede generar si no se atiende a tiempo. En Bogotá, donde muchos hogares son apartamentos en edificios de varios pisos, una fuga no controlada puede afectar al vecino de abajo, generar problemas con la administración y terminar en gastos de reparación mucho mayores que el costo original de arreglar la fuga. Este artículo le explica cómo actuar paso a paso.',
+
+      '**Tipos de fugas de agua en el baño:** No todas las fugas son iguales. Es importante identificar el tipo para saber qué tan urgente es actuar. Fugas visibles: goteo constante del grifo de la ducha o el lavamanos aunque esté cerrado, agua acumulada en el piso alrededor del sanitario, humedad o manchas bajo el lavamanos, agua que sale por la base del sanitario al descargarlo. Fugas ocultas: manchas amarillas o marrones que aparecen en el techo del baño o en la pared sin causa aparente, olor a humedad persistente sin fuente visible, pintura que se desprende o abomba en paredes del baño, factura de agua que sube sin explicación.',
+
+      '**Lo primero: corte el suministro de agua.** Si detecta una fuga activa con agua saliendo, lo primero es cerrar la llave de paso del baño (generalmente debajo del sanitario o detrás del acceso de la ducha). Si no hay llave de paso parcial, cierre la llave de paso principal de la vivienda. Esto detiene el daño mientras llega el plomero. No intente reparar una tubería bajo presión.',
+
+      '**Documente el daño.** Tome fotos antes de intentar limpiar o secar. Si vive en apartamento, notifique de inmediato a la administración del edificio. Si la fuga está afectando al vecino de abajo, es mejor avisar proactivamente. Esto es importante tanto por cortesía como por aspectos legales del reglamento de propiedad horizontal.',
+
+      '**Causas más frecuentes de fugas en baños bogotanos:** La grifería desgastada es la causa número uno. Los grifos tienen empaques de caucho que se deterioran con el tiempo y el uso; cuando fallan, producen goteos que parecen pequeños pero que desperdician cientos de litros al mes. El sello de cera del sanitario (la junta entre el sanitario y el tubo de piso) puede romperse por microvibraciones o movimiento del sanitario, causando fugas en la base. Las tuberías de alimentación flexibles bajo el lavamanos o el sanitario también fallan, especialmente si son antiguas o de baja calidad. En duchas, el silicona sellante entre la cabina, el piso y la pared se degrada y permite infiltración.',
+
+      '**Reparaciones simples que puede hacer usted mismo:** Cambiar el empaque de un grifo monobloc es posible si tiene conocimientos básicos y las herramientas correctas: llave inglesa, destornillador y el empaque o cartucho nuevo (lleve el viejo a la ferretería para conseguir el idéntico). Cambiar la manguera flexible de alimentación del sanitario o lavamanos requiere cerrar la llave de paso, soltar las tuercas, cambiar la manguera y volver a apretar. No use fuerza excesiva o dañará la rosca. Reaplicar silicona en la ducha: retire la silicona vieja con espátula, limpie bien la superficie, aplique silicona nueva de forma continua sin huecos.',
+
+      '**Cuándo debe llamar a un plomero:** Cuando la fuga está dentro de la pared o del piso (manchas de humedad sin fuga visible). Cuando involucra tuberías de cobre o PVC empotradas. Cuando el goteo del grifo persiste después de cambiar el empaque (puede ser el asiento de la válvula dañado). Cuando hay fuga en la base del sanitario y el cambio de sello de cera no resolvió. Cuando afecta al vecino de abajo. En SEP Soluciones usamos tecnología de geófono digital y cámara termográfica para localizar fugas sin romper paredes innecesariamente.',
+
+      '**Daños por fugas prolongadas en Bogotá:** La humedad sostenida detrás de paredes genera moho, que es un riesgo para la salud respiratoria. Daña la estructura del edificio: corroe el hierro de refuerzo, deteriora el concreto, pudre maderas. En pisos de madera o madera laminada, una fuga pequeña puede arruinar el piso completo en semanas. El costo de reparar daños por humedad prolongada puede ser 5-10 veces mayor que el costo de haber reparado la fuga a tiempo.',
+
+      '**Nuestro servicio de reparación de fugas en Bogotá:** En SEP Soluciones atendemos fugas en baños las 24 horas, los 7 días de la semana, en todas las localidades de Bogotá. Damos presupuesto antes de comenzar, usamos materiales de primera calidad y otorgamos garantía escrita en todos los trabajos. Llámenos al 314 815 3221 o escríbanos por WhatsApp para atención inmediata.'
+    ]
+  },
+
+  // ─── POST 13 ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'presion-agua-baja-bogota',
+    titulo: 'Baja Presión de Agua en Bogotá: Causas Reales y Soluciones Definitivas',
+    extracto: 'La baja presión de agua en casa puede tener muchas causas. Algunas las puede resolver usted mismo; otras requieren un plomero. Aprenda a diagnosticar y solucionar este problema en Bogotá.',
+    descripcionSeo: 'Baja presión de agua en Bogotá: por qué ocurre y cómo solucionarlo. Diagnóstico profesional de presión de agua en hogares y apartamentos. SEP Soluciones.',
+    keywords: 'baja presion agua bogota, poca presion agua bogota, presion agua baja apartamento bogota, presion agua ducha bogota, como aumentar presion agua bogota, plomero presion agua bogota, bomba de agua bogota, regulador presion agua bogota, problemas presion agua bogota, ducha sin presion bogota',
+    fecha: '2026-04-14',
+    imagen: 'images/Blog/fugas.webp',
+    contenido: [
+      'La ducha que gotea en vez de fluir, el grifo de la cocina que tarda una eternidad en llenar una olla, el lavamanos con un chorro ridículo: la baja presión de agua es uno de los problemas de plomería que más afectan la calidad de vida en hogares y apartamentos de Bogotá. La buena noticia es que tiene solución. La clave está en identificar correctamente la causa, porque la solución varía completamente dependiendo del origen del problema.',
+
+      '**Primero: ¿es problema de toda la ciudad o solo de su casa?** Antes de llamar a un plomero, verifique si el problema es del acueducto. Pregunte a vecinos si tienen la misma situación. Consulte la página o redes de la EAAB (Empresa de Acueducto y Alcantarillado de Bogotá) para ver si hay trabajos de mantenimiento en su sector. Si el problema es general en el barrio, tendrá que esperar a que el acueducto lo resuelva. Si solo le pasa a usted, el origen está en sus instalaciones.',
+
+      '**Causa 1: Llave de paso parcialmente cerrada.** Suena obvio pero es sorprendentemente común. La llave de paso principal de la vivienda (generalmente junto al medidor de agua) puede quedar parcialmente cerrada después de una reparación o por movimiento accidental. Verifique que esté completamente abierta. También revise las llaves de paso individuales de cada baño y la cocina.',
+
+      '**Causa 2: Tuberías con sedimento o cal.** El agua de Bogotá tiene minerales que con el tiempo se depositan en el interior de las tuberías, reduciendo gradualmente el diámetro útil. Esto afecta especialmente a viviendas con tuberías de hierro galvanizado antiguo o en zonas con agua muy dura. La solución es limpieza química de tuberías o, si el deterioro es avanzado, reemplazo de la red.',
+
+      '**Causa 3: Regulador de presión descalibrado o dañado.** Muchos edificios y conjuntos residenciales de Bogotá tienen reguladores de presión para evitar que la presión del acueducto dañe las tuberías internas. Con el tiempo, estos reguladores se descalibran o fallan, reduciendo la presión más de lo necesario. Un plomero puede recalibrarlos o reemplazarlos; el trabajo no es costoso y tiene un impacto inmediato.',
+
+      '**Causa 4: Bomba de agua dañada o insuficiente.** Los edificios altos y conjuntos residenciales usan bombas hidroneumáticas para garantizar presión en los pisos superiores. Si la bomba está en mal estado, los pisos altos sufren primero. En casas individuales, las bombas de presión se instalan específicamente para aumentar presión cuando la del acueducto no es suficiente. Si tiene bomba y la presión bajó de repente, probablemente necesita mantenimiento o reemplazo.',
+
+      '**Causa 5: Fuga oculta en la red.** Una fuga dentro de una pared o bajo el piso "roba" presión al resto del sistema. Si su presión bajó gradualmente y no hay otra explicación, mande revisar si hay fuga oculta. En SEP Soluciones hacemos detección de fugas con geófono digital sin romper nada.',
+
+      '**Causa 6: Acumuladores o tanques de almacenamiento sucios.** Los tanques de agua con sedimento acumulado en el fondo pueden obstruir parcialmente la salida. Además, las mallas o filtros de entrada suelen taparse con cal y basura del acueducto. Limpiar el tanque y cambiar los filtros puede mejorar notablemente la presión.',
+
+      '**Causa 7: Ducha con cabezal obstruido.** A veces el problema no es la presión de toda la casa sino solo la ducha. Los cabezales de ducha tienen pequeños orificios que se tapan con cal. Desatornille el cabezal, sumérjalo en vinagre blanco durante una hora, frótelo con un cepillo de dientes y vuelva a instalarlo. Este mantenimiento simple puede hacer maravillas.',
+
+      '**Soluciones profesionales para baja presión:** La instalación de una bomba de presión es la solución definitiva cuando el problema viene del acueducto o de una red de tuberías antiguas. En SEP Soluciones instalamos bombas de las marcas Pedrollo, Grundfos y WEG, con cálculo previo del caudal y presión necesarios para su vivienda. También hacemos diagnóstico completo de presión con manómetro para identificar exactamente dónde está la pérdida.',
+
+      '**Cuánto cuesta solucionar baja presión en Bogotá:** El diagnóstico de presión es gratuito cuando se realiza con trabajo. Limpiar un cabezal de ducha: puede hacerlo usted solo. Recalibrar regulador de presión: $120.000 - $200.000. Instalar bomba de presión doméstica: $600.000 - $1.200.000 con materiales. Reemplazar tuberías internas: varía según extensión. En todos los casos damos presupuesto detallado antes de comenzar.',
+
+      'Si lleva semanas o meses con poca presión y ya revisó las causas simples, llámenos al 314 815 3221. Hacemos diagnóstico técnico de presión en su hogar y le damos la solución correcta, no la más cara.'
+    ]
+  },
+
+  // ─── POST 14 ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'plomero-urgente-bogota',
+    titulo: 'Plomero Urgente en Bogotá: Cuándo Llamar y Qué Esperar del Servicio',
+    extracto: 'No todas las emergencias de plomería son iguales. Sepa cuándo realmente necesita un plomero urgente en Bogotá, qué hacer mientras llega y cómo elegir un servicio confiable a cualquier hora.',
+    descripcionSeo: 'Plomero urgente en Bogotá disponible 24/7. Sepa cuándo es una emergencia real, qué hacer mientras llega el técnico y cómo elegir un servicio confiable. SEP Soluciones.',
+    keywords: 'plomero urgente bogota, plomero emergencia bogota, plomero 24 horas bogota, urgencias plomeria bogota, plomero nocturno bogota, plomero rapido bogota, emergencia tuberia bogota, fontanero urgente bogota, plomero disponible ahora bogota, servicio plomeria urgente bogota',
+    fecha: '2026-04-16',
+    imagen: 'images/Blog/Mantenimientopreventivo.webp',
+    contenido: [
+      'Son las 2 de la madrugada y escucha agua corriendo detrás de la pared. O llega a casa y el techo del baño está goteando sobre el piso del vecino de abajo. O el sanitario se desbordó y el agua va directo al pasillo. Estas son emergencias de plomería reales que requieren atención inmediata, no pueden esperar hasta el lunes en la mañana. En este artículo le explicamos cómo actuar y qué esperar de un servicio de plomería urgente en Bogotá.',
+
+      '**¿Qué cuenta como emergencia de plomería real?** No toda situación de plomería es una emergencia que justifica llamar a las 3 am con tarifa de urgencia. Una emergencia real cumple uno o más de estos criterios: hay agua activa saliendo que no puede detener con la llave de paso, el agua está causando daño visible a estructura, muebles, electrónica o al vecino de abajo, todos los sanitarios de la vivienda están bloqueados simultáneamente, hay ruptura en tubería principal de alimentación, o hay inundación activa. Situaciones como un grifo goteando despacio, una ducha con poca presión o un sanitario algo lento pueden esperar al día siguiente y no justifican el costo adicional de urgencias.',
+
+      '**Lo primero: controle el agua antes de llamar.** Mientras busca un plomero, haga estas acciones inmediatas para minimizar daños: Cierre la llave de paso principal de la vivienda. En apartamentos generalmente está en el cuarto de contadores o dentro del apartamento cerca a la cocina. Si no sabe dónde está, llame al portero del edificio, que debe saberlo. Proteja electrodomésticos, electrónica y documentos del alcance del agua. Retire tapetes y muebles del área afectada. Si hay riesgo de que el agua llegue al cableado eléctrico, apague el interruptor general de energía. Documente con fotos antes de limpiar.',
+
+      '**Cómo elegir un plomero urgente confiable en Bogotá:** Este es el punto más crítico, porque en momentos de emergencia es fácil tomar decisiones apresuradas de las que luego se arrepiente. Señales de un servicio confiable: da precio aproximado por teléfono antes de enviar técnico, llega en el tiempo prometido, el técnico llega uniformado e identificado, da diagnóstico antes de cobrar, entrega cotización escrita antes de iniciar trabajo. Señales de alerta: no da precio hasta que ya está en su casa con las herramientas afuera, cobra solo por llegar una tarifa abusiva, no tiene RUT ni datos de empresa verificables, presiona para que firme sin leer.',
+
+      '**Tarifas normales de urgencias de plomería en Bogotá:** En horario normal (7am-7pm días hábiles), los servicios urgentes tienen un costo similar al normal más un recargo por velocidad de respuesta. En horario nocturno (7pm-7am) o fines de semana y festivos, es normal que haya un recargo del 30-50% sobre la tarifa diurna. Una llamada urgente de destape sencillo en horario normal: $100.000-$180.000. La misma llamada a las 2am un domingo puede costar $160.000-$280.000. Desconfíe de servicios que cobren $500.000 o más por urgencias simples.',
+
+      '**Qué pasa cuando llega el plomero de emergencia:** Un buen servicio de urgencias sigue este protocolo: evaluación inicial del problema (5-10 minutos), diagnóstico verbal de causa y solución, cotización escrita con precio total antes de tocar nada, inicio del trabajo con su aprobación explícita, solución del problema o contención segura si la solución definitiva requiere trabajo de día, limpieza básica del área de trabajo, explicación de lo que se hizo y recomendaciones para evitar recurrencia. En SEP Soluciones seguimos exactamente este protocolo en cada urgencia.',
+
+      '**Preparación: lo que puede hacer antes de que ocurra la emergencia:** La mejor estrategia es estar preparado antes de que ocurra la urgencia. Sepa dónde está la llave de paso principal de su vivienda y asegúrese de que funcione (ábrala y ciérrela al menos una vez al año para que no se atasque). Tenga el número de un plomero de confianza guardado en el teléfono. Revise anualmente las mangueras flexibles bajo lavamanos y sanitarios; después de 5 años es recomendable cambiarlas preventivamente. Conozca la ubicación del tablero eléctrico para poder apagarlo si hay riesgo de contacto con agua.',
+
+      '**SEP Soluciones: servicio urgente en toda Bogotá.** Atendemos emergencias de plomería las 24 horas, los 365 días del año, en todas las localidades de Bogotá. Tiempo de llegada promedio: 30 minutos en la mayoría de zonas. Técnicos uniformados, identificados y con experiencia certificada. Presupuesto antes de iniciar. Garantía en el trabajo. Llame al 314 815 3221 o escríbanos por WhatsApp en este momento si tiene una urgencia.'
+    ]
+  },
+
+  // ─── POST 15 ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'reparacion-grifos-bogota',
+    titulo: 'Reparación de Grifos en Bogotá: Cuándo Cambiar Usted Mismo y Cuándo Llamar al Plomero',
+    extracto: 'Un grifo goteando desperdicia cientos de litros de agua al mes y aumenta su factura. Aprenda a identificar el tipo de falla, qué puede arreglar solo y cuándo necesita un plomero en Bogotá.',
+    descripcionSeo: 'Reparación de grifos en Bogotá: cambio de empaques, cartuchos y grifería. Servicio profesional a domicilio con garantía. SEP Soluciones.',
+    keywords: 'reparacion grifos bogota, grifo goteando bogota, cambio grifo bogota, plomero grifos bogota, cambio empaque grifo bogota, grifo dañado bogota, instalacion griferia bogota, griferia monomando bogota, arreglo grifo bogota, grifo cocina bogota',
+    fecha: '2026-04-18',
+    imagen: 'images/Blog/fugas.webp',
+    contenido: [
+      'Un grifo que gotea puede parecer un problema menor, pero las cifras cuentan una historia diferente: un grifo con una gota por segundo desperdicia aproximadamente 11.000 litros de agua al año. En Bogotá, donde el agua tiene un costo creciente y el acueducto puede aplicar cargos por consumo excesivo, arreglar un grifo goteando es una inversión que se recupera rápido. Este artículo le explica cómo funciona la grifería moderna, qué puede reparar usted mismo y cuándo conviene llamar a un plomero profesional.',
+
+      '**Tipos de grifería más comunes en Bogotá:** Antes de intentar cualquier reparación, identifique el tipo de grifo que tiene. Grifo de rosca (dos manijas, una para frío y otra para caliente): el más antiguo y aún común en casas de estrato 2 y 3 de Bogotá. El goteo casi siempre es por un empaque de caucho desgastado. Son fáciles de reparar. Grifo monomando (una sola palanca que regula frío, caliente y caudal): el más común en construcciones de los últimos 20 años. El componente clave es el cartucho cerámico o de disco. Cuando falla, lo correcto es cambiar el cartucho completo. Grifo termoestático: más sofisticado, mantiene temperatura constante. Su reparación es más compleja y generalmente requiere profesional.',
+
+      '**Herramientas básicas que necesita para reparar un grifo:** Llave inglesa ajustable, destornilladores (plano y de estrella), llave Allen (hexagonal) juego completo, trapo o tela para proteger superficies cromadas, cinta teflón, vaselina técnica para empaques. Y lo más importante: el repuesto correcto. Antes de desarmarlo, identifique marca y modelo del grifo para conseguir el cartucho o empaque idéntico en una ferretería de plomería.',
+
+      '**Reparación de grifo de rosca (paso a paso):** 1. Cierre la llave de paso del baño o cocina. 2. Abra el grifo para vaciar el agua que queda en la tubería. 3. Retire la tapa decorativa de la manija (generalmente una pequeña tapa de plástico con una muesca). 4. Destornille el tornillo central que fija la manija y retire la manija. 5. Destornille la tuerca prensaestopas con llave inglesa (gire en contra de las agujas del reloj). 6. Extraiga el vástago girándolo. 7. Al final del vástago encontrará el empaque: un disco de caucho fijado con un tornillo pequeño. Retire el tornillo, cambie el empaque por uno del mismo tamaño. 8. Ensamble en orden inverso. Si el goteo persiste después de cambiar el empaque, el asiento de la válvula (la superficie metálica contra la que presiona el empaque) puede estar dañado. Eso requiere herramienta especial o cambio del grifo completo.',
+
+      '**Cambio de cartucho en grifo monomando:** 1. Cierre la llave de paso. 2. Retire la tapa del logo (generalmente encima de la palanca). 3. Afloje el tornillo central y retire la palanca. 4. Retire la tuerca de ajuste con llave. 5. El cartucho queda expuesto: generalmente está fijado con un pin o clip de retención, retírelo. Extraiga el cartucho hacia arriba. 6. Lleve el cartucho viejo a la ferretería para conseguir el reemplazo exacto (marca, altura y número de orificios). 7. Instale el cartucho nuevo en la misma posición del viejo (la orientación importa). 8. Ensamble en orden inverso y pruebe.',
+
+      '**Cuándo no vale la pena reparar: cambio completo de grifería.** Si el grifo tiene más de 15 años, el acabado cromado está deteriorado, el cuerpo tiene fisuras o si ya cambió el cartucho y sigue goteando, probablemente sea más económico y estético cambiar el grifo completo. En SEP Soluciones instalamos grifería nueva para cocinas, baños, lavamanos y duchas de todas las marcas: Grival, Gravita, Briggs, Grohe, American Standard, entre otras. El trabajo incluye retiro del grifo viejo, instalación del nuevo con todos los accesorios de conexión y prueba de funcionamiento.',
+
+      '**Problemas adicionales que puede detectar al revisar la grifería:** Al revisar un grifo, aproveche para verificar el estado de las mangueras flexibles de alimentación (las que conectan la tubería de pared con el grifo). Estas mangueras tienen una vida útil de aproximadamente 5 años. Si están hinchadas, agrietadas, decoloradas o tienen más de 5 años, cámbielas preventivamente. Una manguera que revienta puede causar una inundación seria en minutos.',
+
+      '**Costos de reparación e instalación de grifería en Bogotá:** Cambio de empaque o cartucho en grifo existente: $60.000 - $100.000 mano de obra. Instalación de grifo nuevo de cocina: $80.000 - $140.000 mano de obra (grifería aparte). Instalación de grifo nuevo de baño (lavamanos): $70.000 - $120.000. Instalación de mezcladora de ducha: $100.000 - $180.000. En todos los casos, los materiales van aparte y los precios varían según complejidad y hora del servicio.',
+
+      'Para cotización exacta o si su grifo presenta un problema que no puede resolver solo, llámenos al 314 815 3221 o escríbanos por WhatsApp. Atendemos en toda Bogotá de lunes a domingo, con horario extendido hasta las 8pm y servicio de urgencias 24 horas.'
+    ]
   }
 ];
 

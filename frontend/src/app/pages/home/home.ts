@@ -102,8 +102,8 @@ export default class Home implements OnInit {
 
   ngOnInit(): void {
     this.seo.updateSeo({
-      title: 'Plomero en Bogotá en 30 Min | Urgencias 24/7 ',
-      description: '¿Tienes una fuga o tubería tapada? Llegamos en menos de 30 min en Bogotá. Servicio 24/7, técnicos certificados y garantía total. ¡Contáctanos ahora!',
+      title: 'Plomero en Bogotá ▷ 30 Min · 24/7 · Garantía Escrita',
+      description: '¿Fuga, tubería tapada o sanitario desbordado en Bogotá? Llegamos en 30 min. Técnicos certificados, presupuesto gratis y garantía escrita. ☎ 314 815 3221',
       keywords: 'plomero bogota, plomeria bogota, plomero en bogota, plomero bogota 24 horas, plomero urgencias bogota, plomero a domicilio bogota, plomero barato bogota, plomero cerca de mi bogota, servicio de plomeria bogota, empresa de plomeria bogota, plomeria bogota 24 horas, urgencias plomeria bogota, plomero bogota norte, plomero bogota sur, plomeros en bogota usaquen, plomeros en bogota suba, plomeros en bogota chapinero, plomeros en bogota kennedy, plomeros en bogota engativa, destapes bogota, destape tuberias bogota, deteccion de fugas bogota, fuga de agua bogota, tuberia tapada bogota, plomero profesional bogota, plomero certificado bogota, plomero emergencias bogota, reparacion tuberias bogota',
       canonicalUrl: '/plomero-bogota'
     });
@@ -171,6 +171,33 @@ export default class Home implements OnInit {
             }
           }))
         },
+        'aggregateRating': {
+          '@type': 'AggregateRating',
+          'ratingValue': '4.9',
+          'reviewCount': '87',
+          'bestRating': '5',
+          'worstRating': '1'
+        },
+        'review': [
+          {
+            '@type': 'Review',
+            'author': { '@type': 'Person', 'name': 'Carlos Mendoza' },
+            'reviewRating': { '@type': 'Rating', 'ratingValue': '5' },
+            'reviewBody': 'Excelente servicio, llegaron en 25 minutos a solucionar una fuga en Chapinero. Muy profesionales y el precio fue justo.'
+          },
+          {
+            '@type': 'Review',
+            'author': { '@type': 'Person', 'name': 'María Ospina' },
+            'reviewRating': { '@type': 'Rating', 'ratingValue': '5' },
+            'reviewBody': 'Destaparon las tuberías de mi apartamento en Suba rápidamente. Limpiaron todo al terminar. 100% recomendados.'
+          },
+          {
+            '@type': 'Review',
+            'author': { '@type': 'Person', 'name': 'Andrés Torres' },
+            'reviewRating': { '@type': 'Rating', 'ratingValue': '5' },
+            'reviewBody': 'Detectaron una fuga oculta sin romper nada gracias a su tecnología. Muy eficientes y transparentes con el presupuesto.'
+          }
+        ],
         'sameAs': [
           CONTACT_INFO.whatsapp
         ]

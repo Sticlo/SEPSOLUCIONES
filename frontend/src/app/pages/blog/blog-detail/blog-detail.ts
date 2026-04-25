@@ -1,5 +1,5 @@
 import { Component, OnInit, inject, afterNextRender, DestroyRef, ElementRef, ViewEncapsulation } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { SeoService } from '../../../core/services/seo.service';
 import { BLOG_POSTS, BlogPost } from '../../../shared/data/blog.data';
@@ -25,12 +25,13 @@ interface ContentBlock {
 export default class BlogDetail implements OnInit {
   private readonly seo = inject(SeoService);
   private readonly route = inject(ActivatedRoute);
+  private readonly router = inject(Router);
   private readonly el = inject(ElementRef);
   private readonly destroyRef = inject(DestroyRef);
 
   readonly contact = CONTACT_INFO;
   readonly whatsappUrl = whatsappLink('Hola, vine por la página web y necesito un servicio de plomería.');
-  post!: BlogPost;
+  post: BlogPost | null = null;
   otrosPosts: BlogPost[] = [];
   contentBlocks: ContentBlock[] = [];
   readProgress = 0;
@@ -48,14 +49,21 @@ export default class BlogDetail implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(params => {
-      const slug = params.get('slug')!;
+      const slug = params.get('slug');
+      if (!slug) {
+        this.router.navigate(['/blog']);
+        return;
+      }
       this.loadPost(slug);
     });
   }
 
   private loadPost(slug: string): void {
     const found = BLOG_POSTS.find(p => p.slug === slug);
-    if (!found) return;
+    if (!found) {
+      this.router.navigate(['/blog']);
+      return;
+    }
 
     this.post = found;
     this.otrosPosts = BLOG_POSTS.filter(p => p.slug !== slug).slice(0, 5);
@@ -171,17 +179,31 @@ export default class BlogDetail implements OnInit {
   }
 
   private initScrollAnimations(): void {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    const animated = this.el.nativeElement.querySelectorAll('.bd-anim');
+    if (typeof IntersectionObserver === 'undefined') {
+      animated.forEach((el: Element) => el.classList.add('is-visible'));
+      return;
+    }
+
     const observer = new IntersectionObserver(
       entries => entries.forEach(e => {
         if (e.isIntersecting) { e.target.classList.add('is-visible'); observer.unobserve(e.target); }
       }),
       { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
     );
-    this.el.nativeElement.querySelectorAll('.bd-anim').forEach((el: Element) => observer.observe(el));
+    animated.forEach((el: Element) => observer.observe(el));
     this.destroyRef.onDestroy(() => observer.disconnect());
   }
 
   private initProgressBar(): void {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
     const handler = () => {
       const body = this.el.nativeElement.querySelector('.bd-body');
       if (!body) return;
